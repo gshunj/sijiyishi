@@ -168,7 +168,7 @@
 }
 
 .live-video-wrapper .live-video-content .live-video-items .live-video-item .content-div .desc-time-split {
-    border: 10px solid rgb(255, 255, 255);
+    border-top: 10px solid rgb(255, 255, 255);
 }
 
 .live-video-wrapper .live-video-content .live-video-items .live-video-item .content-div .time span {
