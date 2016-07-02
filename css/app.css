@@ -18,7 +18,6 @@ a:active {
     position: fixed;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.9);
-    border-bottom: 1px solid #EFEFEF;
 }
 
 .top-header-wrapper .header {
@@ -121,7 +120,6 @@ a:active {
 
 .login-div {
     height: 60px;
-    border-top: 1px solid #EFEFEF;
     padding: 0 0 0 0;
     width: 1300px;
     margin: 0 auto;
@@ -191,6 +189,10 @@ a:active {
 
 .hid {
     display: none;
+}
+
+.spit-hr-1 {
+    border-top: 1px solid #EFEFEF;
 }
 
 /*底部样式*/
