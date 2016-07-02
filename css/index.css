@@ -129,22 +129,27 @@
     height: 78px;
 }
 
+.live-video-wrapper .live-video-content .live-video-items .live-video-item .content-div .content-div-title {
+    text-align: center;
+}
+
 .live-video-wrapper .live-video-content .live-video-items .live-video-item .content-div .title {
     height: 16px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    margin-top: 4px;
     margin-top: 10px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .live-video-wrapper .live-video-content .live-video-items .live-video-item .content-div .desc {
-    height: 48px;
+    height: 71px;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 0;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 14px;
+    margin-top: -20px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 12px;
     font-style: italic;
     background-color: rgb(255, 255, 255);
 }

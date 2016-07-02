@@ -1,4 +1,4 @@
-* {
+body {
     margin: 0;
     padding: 0;
     font-family: simsun;
@@ -8,6 +8,7 @@
 
 a {
     text-decoration: none;
+    color: rgba(0, 0, 0, 1);
 }
 
 a:active {
@@ -86,6 +87,7 @@ a:active {
 .top-header-wrapper .header-main .search-div input {
     height: 40px;
     width: 240px;
+    font-size: 15px;
 }
 
 .top-header-wrapper .header-main .search-div img {
@@ -116,6 +118,10 @@ a:active {
     text-decoration: none;
     color: #2B2B29;
     font-size: 16px;
+}
+
+.ul-li-horizontal li a:active {
+    color: rgba(255, 48, 48, 1);
 }
 
 .login-div {
@@ -159,7 +165,6 @@ a:active {
 }
 
 .login-div .login-ul li a {
-    color: white;
     display: block;
     float: left;
     margin-left: 40px;
