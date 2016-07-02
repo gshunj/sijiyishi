@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/app.css" />
+		<link href="css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="js/jquery-3.0.0.min.js">
+		</script>
+		<script>
+			$(function() {
+				$('.live-video-item').mouseover(function() {
+					var _this = $(this);
+					_this.find('.desc').show();
+					//					_this.parents('.live-video-items').css('height', "auto");
+					//					_this.css('height', "auto");
+					//					_this.addClass('height-auto');
+					//					_this
+					//					$(_this.find("div")).each(function(_inx, _item) {
+					//						$(_item).css('z-index', 999);
+					//					});
+				});
+				$('.live-video-item').mouseout(function() {
+					var _this = $(this);
+					//					_this.find('.desc').hide();
+					//					_this.removeClass('height-auto');
+				});
+
+			})
+		</script>
+
+		<style>
+			.main-content-wrapper {
+				top: 120px;
+				position: relative;
+				z-index: -1;
+			}
+			
+			.main-content-wrapper .main-content-wrapper-split {
+				position: absolute;
+				width: 100%;
+			}
+			
+			.main-content-wrapper .main-content-wrapper-split .main-content-wrapper-module {
+				width: 1000px;
+				margin: 0 auto;
+			}
+			
+			.main-content-wrapper .main-content-wrapper-split .banner {
+				height: 200px;
+				margin-top: 5px;
+			}
+			
+			.main-content-wrapper .main-content-wrapper-split .module {
+				width: 1000px;
+				height: 184px;
+			}
+			
+			.main-content-wrapper .main-content-wrapper-split .module .module-li {
+				border: 1px solid #EFEFEF;
+				float: left;
+				width: 182px;
+				height: 182px;
+				margin-left: 20px;
+			}
+			
+			.main-content-wrapper .main-content-wrapper-split .module .module-li .module-li-desc {
+				text-align: center;
+				font-style: italic;
+			}
+			
+			.main-content-wrapper .main-content-wrapper-split .module .module-li .module-li-main {
+				display: block;
+				border: 1px solid rgba(0, 0, 0, 0.4);
+				border-radius: 50px;
+				width: 100px;
+				height: 100px;
+				margin: 20px auto;
+				text-align: center;
+				line-height: 100px;
+			}
+			
+			.main-content-wrapper .main-content-wrapper-split .module .module-li .module-li-main .title {
+				font-size: 40px;
+				font-weight: lighter;
+			}
+			
+			.main-content-wrapper .main-content-wrapper-split .module .module-li:nth-of-type(1) {
+				margin-left: 0;
+			}
+			
+			.live-video-wrapper {
+				height: 510px;
+				margin-top: 5px;
+			}
+			
+			.live-video-wrapper .live-video-header {
+				height: 30px;
+				line-height: 30px;
+				background-color: RGBA(242, 244, 234, 0.5);
+				color: rgba(205, 129, 98, 1);
+			}
+			
+			.live-video-wrapper .live-video-header i {
+				color: rgba(205, 129, 98, 1);
+			}
+			
+			.live-video-wrapper .live-video-header span {
+				font-size: 17px;
+				font-weight: 800;
+				color: rgba(205, 129, 98, 1);
+			}
+			
+			.live-video-wrapper .live-video-header .title {
+				margin-left: 0;
+				display: inline;
+				color: rgba(205, 129, 98, 1);
+			}
+			
+			.live-video-wrapper .live-video-header .live-more {
+				margin-top: 5px;
+				display: block;
+				float: right;
+				line-height: 30px;
+				font-style: italic;
+			}
+			
+			.live-video-wrapper .live-video-content {
+				height: 479px;
+			}
+			
+			.live-video-wrapper .live-video-content .live-video-items {
+				height: 233px;
+				margin-top: 10px;
+			}
+			
+			.live-video-wrapper .live-video-content .live-video-items:nth-of-type(1) {
+				margin-top: 0;
+			}
+			
+			.live-video-wrapper .live-video-content .live-video-items .live-video-item {
+				width: 233px;
+				height: 233px;
+				border: 1px solid #EFEFEF;
+				float: left;
+				margin-left: 20px;
+			}
+			
+			.live-video-wrapper .live-video-content .live-video-items .live-video-item:nth-of-type(1) {
+				margin-left: 0;
+			}
+			
+			.live-video-wrapper .live-video-content .live-video-items .live-video-item .img-div {
+				height: 155px;
+			}
+			
+			.live-video-wrapper .live-video-content .live-video-items .live-video-item .img-div .img {
+				height: 155px;
+				width: 100%;
+			}
+			
+			.live-video-wrapper .live-video-content .live-video-items .live-video-item .content-div {
+				height: 78px;
+			}
+			
+			.live-video-wrapper .live-video-content .live-video-items .live-video-item .content-div .title {
+				height: 16px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				margin-top: 4px;
+				margin-top: 10px;
+			}
+			
+			.live-video-wrapper .live-video-content .live-video-items .live-video-item .content-div .desc {
+				height: 46px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				margin-top: 0;
+				color: rgba(0, 0, 0, 0.5);
+				font-size: 14px;
+				font-style: italic;
+			}
+			
+			.live-video-wrapper .live-video-content .live-video-items .live-video-item .content-div .time {
+				height: 30px;
+				margin-top: 18px;
+				line-height: 30px;
+				color: rgba(0, 0, 0, 0.5);
+				font-weight: 600;
+				font-size: 14px;
+			}
+			
+			.live-video-wrapper .live-video-content .live-video-items .live-video-item .content-div .time span {
+				color: rgba(0, 0, 0, 0.5);
+				font-weight: 600;
+				font-size: 14px;
+			}
+			
+			.live-video-wrapper .live-video-content .live-video-items .live-video-item .content-div .time > div:nth-of-type(1) {
+				float: left;
+			}
+			
+			.live-video-wrapper .live-video-content .live-video-items .live-video-item .content-div .time > div:nth-of-type(2) {
+				float: right;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="top-header-wrapper">
+			<div class="header-li header-li1">
+				<div>
+					<div>
+						<a href=""><img class="logo-img" src="img/logo5.png"></a>
+					</div>
+
+					<div class="search-div">
+						<div>
+							<input type="text" placeholder="输入搜索关键字" />
+						</div>
+						<div>
+							<a href=""><img src="img/search.jpg" /></a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<nav class="nav">
+						<ul class="ul-li-horizontal">
+							<li><a href="">首页</a></li>
+							<li><a href="">精油/植物油/纯露/浸泡油</a></li>
+							<li><a href="">精油运用法及其他疗法</a></li>
+							<!--<li><a href="">疾病与病症</a></li>-->
+							<li><a href="">...</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div>
+					<div>
+						<img src="img/1.jpg" />
+						<span>用户名</span>
+					</div>
+				</div>
+			</div>
+			<div class="clear-both"></div>
+			<div class="login-div">
+				<div>
+					获取更多的精油资讯 &gt;
+				</div>
+				<div>
+					<ul class="ul-li-horizontal login-ul">
+						<li>
+							<a href="">
+								<span>登入</span>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<span>注册</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<section class="main-content-wrapper">
+			<div class="main-content-wrapper-split">
+				<article class="banner">
+					<img src="img/banner.jpg" style="height: 200px;width: 100%;" />
+				</article>
+				<div class="main-content-wrapper-module">
+					<article class="module">
+						<div class="module-li">
+							<a class="module-li-main" href="">
+								<span class="title">资讯</span>
+							</a>
+							<div class="module-li-desc">精油资讯信息</div>
+						</div>
+						<div class="module-li">
+							<a class="module-li-main" href="">
+								<span class="title">资讯</span>
+							</a>
+							<div class="module-li-desc">精油资讯信息</div>
+						</div>
+						<div class="module-li">
+							<a class="module-li-main" href="">
+								<span class="title">资讯</span>
+							</a>
+							<div class="module-li-desc">精油资讯信息</div>
+						</div>
+						<div class="module-li">
+							<a class="module-li-main" href="">
+								<span class="title">资讯</span>
+							</a>
+							<div class="module-li-desc">精油资讯信息</div>
+						</div>
+						<div class="module-li">
+							<a class="module-li-main" href="">
+								<span class="title">资讯</span>
+							</a>
+							<div class="module-li-desc">精油资讯信息</div>
+						</div>
+					</article>
+					<div class="live-video-wrapper">
+						<div class="live-video-header">
+							<div class="title">
+								<i class="fa fa-youtube-play fa-lg"></i>
+								<span>视频</span>
+							</div>
+							<a class="live-more" href="">
+								<i class="fa fa-angle-double-right pull-right">查看更多</i>
+							</a>
+						</div>
+						<div class="clear-both"></div>
+						<div class="live-video-content">
+							<div class="live-video-items">
+								<div class="live-video-item">
+									<div class="img-div">
+										<a href="">
+											<img class="img" src="img/3.jpg" />
+										</a>
+									</div>
+									<div class="content-div">
+										<a href="">
+											<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
+										</a>
+
+										<div class="desc hid">
+											霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+										</div>
+
+										<div class="time">
+											<div>
+												<span>5课时 71分钟</span>
+											</div>
+											<div>
+												<span>22288人观看</span>
+											</div>
+										</div>
+										<div class="clear-both"></div>
+									</div>
+								</div>
+								<div class="live-video-item">
+									<div class="img-div">
+										<img class="img" src="img/3.jpg" />
+									</div>
+									<div class="content-div">
+										<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
+
+										<!--<div class="desc" >
+											霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+										</div>-->
+
+										<div class="time">
+											<div>
+												<span>5课时 71分钟</span>
+											</div>
+											<div>
+												<span>22288人观看</span>
+											</div>
+										</div>
+										<div class="clear-both"></div>
+									</div>
+								</div>
+								<div class="live-video-item">
+									<div class="img-div">
+										<img class="img" src="img/3.jpg" />
+									</div>
+									<div class="content-div">
+										<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
+
+										<!--<div class="desc" >
+											霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+										</div>-->
+
+										<div class="time">
+											<div>
+												<span>5课时 71分钟</span>
+											</div>
+											<div>
+												<span>22288人观看</span>
+											</div>
+										</div>
+										<div class="clear-both"></div>
+									</div>
+								</div>
+								<div class="live-video-item">
+									<div class="img-div">
+										<img class="img" src="img/3.jpg" />
+									</div>
+									<div class="content-div">
+										<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
+
+										<!--<div class="desc" >
+											霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+										</div>-->
+
+										<div class="time">
+											<div>
+												<span>5课时 71分钟</span>
+											</div>
+											<div>
+												<span>22288人观看</span>
+											</div>
+										</div>
+										<div class="clear-both"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="live-video-items">
+								<div class="live-video-item">
+									<div class="img-div">
+										<img class="img" src="img/3.jpg" />
+									</div>
+									<div class="content-div">
+										<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
+
+										<!--<div class="desc" >
+											霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+										</div>-->
+
+										<div class="time">
+											<div>
+												<span>5课时 71分钟</span>
+											</div>
+											<div>
+												<span>22288人观看</span>
+											</div>
+										</div>
+										<div class="clear-both"></div>
+									</div>
+								</div>
+								<div class="live-video-item">
+									<div class="img-div">
+										<img class="img" src="img/3.jpg" />
+									</div>
+									<div class="content-div">
+										<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
+
+										<!--<div class="desc" >
+											霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+										</div>-->
+
+										<div class="time">
+											<div>
+												<span>5课时 71分钟</span>
+											</div>
+											<div>
+												<span>22288人观看</span>
+											</div>
+										</div>
+										<div class="clear-both"></div>
+									</div>
+								</div>
+								<div class="live-video-item">
+									<div class="img-div">
+										<img class="img" src="img/3.jpg" />
+									</div>
+									<div class="content-div">
+										<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
+
+										<!--<div class="desc" >
+											霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+										</div>-->
+
+										<div class="time">
+											<div>
+												<span>5课时 71分钟</span>
+											</div>
+											<div>
+												<span>22288人观看</span>
+											</div>
+										</div>
+										<div class="clear-both"></div>
+									</div>
+								</div>
+								<div class="live-video-item">
+									<div class="img-div">
+										<img class="img" src="img/3.jpg" />
+									</div>
+									<div class="content-div">
+										<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
+
+										<!--<div class="desc" >
+											霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+										</div>-->
+
+										<div class="time">
+											<div>
+												<span>5课时 71分钟</span>
+											</div>
+											<div>
+												<span>22288人观看</span>
+											</div>
+										</div>
+										<div class="clear-both"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+	</body>
+
+</html>
