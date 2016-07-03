@@ -4,10 +4,13 @@
 <head>
     <meta charset="utf-8"/>
     <title>四季一时/星海阿尔法</title>
+    <link href="bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="font/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="css/index.css"/>
-    <link href="css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
     <script src="js/jquery-3.0.0.min.js" type="text/javascript">
+
     </script>
     <script src="js/app.js" type="text/javascript">
     </script>
@@ -42,7 +45,7 @@
                     <li><a href=""><span>精油/植物油/纯露/浸泡油</span></a></li>
                     <li><a href=""><span>精油运用法及其他疗法</span></a></li>
                     <!--<li><a href="">疾病与病症</a></li>-->
-                    <li><a href=""><span>...</span></a></li>
+                    <li><a href="#" class="show-top-header-sidebar-a" id=""><span>...</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -69,14 +72,54 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="register.html">
                         <span>注册</span>
                     </a>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="spit-hr-1"></div>
+    <div class="spit-hr-1 clear-both"></div>
+
+    <div class="sidebar hid">
+        <div class="left-side"></div>
+        <div class="right-side">
+            <div class="side-close">
+                <a href="#" class="side-close-btn"> <i class="icon-remove"></i></a>
+            </div>
+            <div class="clear-both"></div>
+            <nav>
+                <ul class="list-group sidebar-ul">
+                    <a href="">
+                        <li class="list-group-item">精油/植物油/纯露/浸泡油</li>
+                    </a>
+                    <a href="">
+                        <li class="list-group-item">精油的相关名词</li>
+                    </a>
+                    <a href="">
+                        <li class="list-group-item">化学成分及激素</li>
+                    </a>
+
+                    <a href="">
+                        <li class="list-group-item">精油运用法及其他疗法</li>
+                    </a>
+
+                    <a href="">
+                        <li class="list-group-item">
+                            <!--<span class="badge">新</span>-->
+                            疾病与病症
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="list-group-item" onclick="">其他
+                            <!--<span class="badge">新</span>-->
+                        </li>
+                    </a>
+                </ul>
+
+            </nav>
+        </div>
+    </div>
 </header>
 
 <div class="main-content-wrapper">
@@ -121,7 +164,7 @@
                 <div class="live-video-wrapper">
                     <div class="live-video-header">
                         <div class="title">
-                            <i class="fa fa-youtube-play fa-lg"></i>
+                            <i class="icon-facetime-video icon-large"></i>
                             <span>视频</span>
                         </div>
                         <div class="live-more">

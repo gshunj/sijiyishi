@@ -4,6 +4,10 @@
     margin: 0 auto;
 }
 
+.main-content-wrapper .main-content-wrapper-split .main-content-wrapper-module a:active {
+    color: rgba(255, 48, 48, 1);
+}
+
 .main-content-wrapper .main-content-wrapper-split .banner {
     height: 200px;
     margin-top: 5px;

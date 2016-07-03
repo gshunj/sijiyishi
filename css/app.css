@@ -15,6 +15,11 @@ a:active {
     color: rgba(255, 48, 48, 1);
 }
 
+a:hover {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+}
+
 .top-header-wrapper {
     position: fixed;
     width: 100%;
@@ -47,6 +52,9 @@ a:active {
     font-weight: 800;
     margin-left: 0;
     margin-top: 20px;
+}
+
+.top-header-wrapper .header-main .nav .show-top-header-sidebar-a {
 }
 
 .top-header-wrapper .header-main .name-div {
@@ -124,7 +132,7 @@ a:active {
     color: rgba(255, 48, 48, 1);
 }
 
-.login-div {
+.top-header-wrapper .login-div {
     height: 60px;
     padding: 0 0 0 0;
     width: 1300px;
@@ -133,7 +141,7 @@ a:active {
     margin: 0 auto;
 }
 
-.login-div .desc {
+.top-header-wrapper .login-div .desc {
     border-bottom-right-radius: 80px;
     border-top-right-radius: 80px;
     font-size: 22px;
@@ -147,24 +155,24 @@ a:active {
     margin-left: -100px;
 }
 
-.login-div .ul {
+.top-header-wrapper .login-div .ul {
     float: left;
     height: 60px;
 }
 
-.login-div .login-ul {
+.top-header-wrapper .login-div .login-ul {
     margin-left: 0;
     margin-top: 0;
 }
 
-.login-div .login-ul li {
+.top-header-wrapper .login-div .login-ul li {
     margin-left: 40px;
     padding: 0;
     float: none;
     display: inline;
 }
 
-.login-div .login-ul li a {
+.top-header-wrapper .login-div .login-ul li a {
     display: block;
     float: left;
     margin-left: 40px;
@@ -177,13 +185,51 @@ a:active {
     width: 56px;
 }
 
-.login-div .login-ul li a span {
+.top-header-wrapper .login-div .login-ul li a span {
     font-size: 25px;
     font-weight: 900;
 }
 
-.login-div .login-ul li a:active {
+.top-header-wrapper .login-div .login-ul li a:active {
     color: red;
+}
+
+.top-header-wrapper .sidebar {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.top-header-wrapper .sidebar .left-side {
+    background-color: rgba(0, 0, 0, 0.4);
+    float: left;
+    width: 75%;
+    height: 100%;
+}
+
+.top-header-wrapper .sidebar .right-side {
+    background-color: rgb(255, 255, 255);
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+.top-header-wrapper .sidebar .side-close {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+}
+
+.top-header-wrapper .sidebar .side-close 。side-close-btn {
+}
+
+.top-header-wrapper .sidebar .sidebar-ul a:active {
+    color: rgba(255, 48, 48, 1);
 }
 
 .clear-both {
@@ -211,7 +257,7 @@ a:active {
     color: rgba(0, 0, 0, 0.4);
 }
 
-/*主体样式*/
+/*主体内容包装样式*/
 .main-content-wrapper {
     top: 120px;
     position: relative;
