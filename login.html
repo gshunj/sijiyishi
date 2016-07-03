@@ -6,9 +6,8 @@
     <title>四季一时/星海阿尔法</title>
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="bootstrap-3.3.5/css/bootstrap.min.css"/>
-    <!--<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css"/>-->
-
     <link href="font/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/login.css"/>
 
     <script src="js/jquery-2.1.4.min.js" type="text/javascript">
     </script>
@@ -18,46 +17,6 @@
     <script src="js/app.js" type="text/javascript">
     </script>
 
-
-    <style>
-        .bottom-footer-wrapper {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .main-content-wrapper .main-content-wrapper-split .login-div {
-            width: 900px;
-            height: 600px;
-            margin-top: 4px;
-        }
-
-        .main-content-wrapper .main-content-wrapper-split .login-div .login-form-div {
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            width: 600px;
-            height: 600px;
-            margin: 0 auto;
-            border-radius: 600px;
-        }
-
-        .main-content-wrapper .main-content-wrapper-split .login-div .login-form {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            width: 400px;
-            height: 400px;
-            margin: 100px auto;
-        }
-
-        .main-content-wrapper .main-content-wrapper-split .login-div .form-legend {
-            color: rgba(205, 129, 98, 1);
-        }
-
-        .main-content-wrapper .main-content-wrapper-split .login-div .login-form .validata-img {
-            width: 120px;
-            height: 35px;
-        }
-
-
-    </style>
 </head>
 
 <body>
@@ -65,7 +24,7 @@
     <div class="header header-main">
         <div class="logo-div">
             <div>
-                <a href=""><img class="logo-img" src="img/logo5.png"></a>
+                <a href="index.html"><img class="logo-img" src="img/logo5.png"></a>
             </div>
 
             <div class="search-div">
@@ -80,7 +39,7 @@
         <div class="nav-div">
             <nav class="nav">
                 <ul class="ul-li-horizontal">
-                    <li><a href=""><span>首页</span></a></li>
+                    <li><a href="index.html"><span>首页</span></a></li>
                     <li><a href=""><span>精油/植物油/纯露/浸泡油</span></a></li>
                     <li><a href=""><span>精油运用法及其他疗法</span></a></li>
                     <!--<li><a href="">疾病与病症</a></li>-->
@@ -104,20 +63,20 @@
                             <div id="legend" class="">
                                 <legend class="form-legend">信息窗</legend>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group has-warning">
                                 <label for="inputAccount" class="col-sm-2 control-label">账户</label>
                                 <div class="col-sm-10">
                                     <input type="email" class="form-control" id="inputAccount" placeholder="请输入手机号">
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group has-success">
                                 <label for="inputPassword" class="col-sm-2 control-label">密码</label>
                                 <div class="col-sm-10">
                                     <input type="password" class="form-control" id="inputPassword" placeholder="请输入密码">
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group has-error">
                                 <label for="inputValidata" class="col-sm-2 control-label">
                                     <!--验证码-->
                                 </label>
@@ -132,13 +91,18 @@
 
 
                             <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
+                                <div class="col-sm-offset-2 col-sm-4">
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox"> 记住密码
                                         </label>
                                     </div>
                                 </div>
+                                <div class="col-sm-3 forget-password">
+                                    <a href="">忘记密码</a>
+                                </div>
+                                <div class="col-sm-3 register">
+                                    <a href="">注册</a></div>
                             </div>
 
                             <div class="form-group">
@@ -161,20 +125,6 @@
 
     </div>
 </div>
-
-
-<!--<div class="alert alert-warning fade in -self-alert-div-class-"-->
-<!--style="position: fixed;width: 100%;height: 60px;top: 0;font-size: 16px;letter-spacing: 3px;text-align: center;line-height: 30px;opacity:0.9;">-->
-<!--<strong>!</strong>请输入用户名和密码-->
-<!--<a href="#" class="close -self-alert-div-a-class-" data-dismiss="alert">-->
-<!--&times;-->
-<!--</a>-->
-<!--</div>-->
-
-<!--<div class="bg-warning"-->
-<!--style="height: 70px;margin: 0 auto;text-align: center;line-height: 70px;font-size: 16px;font-weight: 600;letter-spacing: 3px;color: rgba(0,0,0,0.4);">-->
-<!--请输入用户名和密码-->
-<!--</div>-->
 
 <script>
 
@@ -236,8 +186,6 @@
 
     });
 </script>
-
-<div style="position: fixed;top: 0;"></div>
 
 </body>
 </html>
