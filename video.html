@@ -1,186 +1,345 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="utf-8" />
-		<title>四季一时</title>
-		<link href="bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
-		<link href="font/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet" />
-		<link href="jQuery-video5.8/css/video-js.min.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8"/>
+    <title>四季一时</title>
+    <link href="bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="font/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="jQuery-video5.8/css/video-js.min.css" rel="stylesheet">
 
-		<link rel="stylesheet" href="css/app.css" />
-		<link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/app.css"/>
 
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-	      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-	      <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
-	    <![endif]-->
-		<script src="js/jquery-2.1.4.min.js" type="text/javascript">
-		</script>
-		<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-2.1.4.min.js" type="text/javascript">
+    </script>
+    <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/app.js" type="text/javascript">
+    </script>
+    <script src="js/common.js" type="text/javascript">
+    </script>
 
-		<script src="js/app.js" type="text/javascript">
-		</script>
-		<script src="js/index.js" type="text/javascript">
-		</script>
 
-		<script type="text/javascript">
-		</script>
-	</head>
+    <script type="text/javascript">
+    </script>
+    <style>
+        .main-content .video-nav {
+            height: 40px;
+            margin-top: 2px;
+            font-size: 13px;
+        }
 
-	<body>
-		<header class="top-header-wrapper">
-			<div class="header header-main">
-				<div class="logo-div">
-					<div class="logo">
-						<a href="index.html"><span><i class="icon-home"></i>四季一时</span></a>
-					</div>
+        .main-content .video-nav .video-nav-ol {
+            background-color: rgba(255, 255, 255, 1);
+        }
 
-					<div class="search-div">
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="请输入搜索关键字">
+        .main-content .video-main-wrapper {
+            height: 800px;
+            border: 1px solid blue;
+        }
+
+        .main-content .video-main-wrapper .video-title {
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .main-content .video-main-wrapper .video-tool-wrapper {
+            width: 95%;
+            height: 540px;
+            float: left;
+        }
+
+        .main-content .video-main-wrapper .video-tool-wrapper .video-tool-main {
+            width: 100%;
+            height: 540px;
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper {
+            width: 5%;
+            height: 540px;
+            float: left;
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main {
+            position: absolute;
+            margin-top: 0;
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .video-bar {
+            width: 50px;
+            height: 48px;
+            font-size: 10px;
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .catalog {
+            border-radius: 0;
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .download {
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .collection {
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .share {
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .play-continuously {
+            width: 50px;
+            height: 48px;
+            font-size: 10px;
+            margin-top: 255px;
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .turn-off-the-light {
+            border-radius: 0;
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .video-bar-extra {
+            font-size: 13px;
+            background-color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            line-height: 48px;
+            position: absolute;
+            height: 48px;
+            width: 150px;
+            z-index: 1000;
+            margin-left: -150px;
+
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra {
+            border: 1px solid yellow;
+            height: 540px;
+            width: 400px;
+            z-index: 1000;
+            margin-left: -400px;
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .download-extra {
+            margin-top: 48px;
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .collection-extra {
+            margin-top: 96px;
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .share-extra {
+            margin-top: 144px;
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .play-continuously-extra {
+            margin-top: 442px;
+        }
+
+        .main-content .video-main-wrapper .video-tool-bar-wrapper .turn-off-the-light-extra {
+            margin-top: 490px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<header class="top-header-wrapper">
+    <div class="header header-main">
+        <div class="logo-div">
+            <div class="logo">
+                <a href="index.html"><span><i class="icon-home"></i>四季一时</span></a>
+            </div>
+
+            <div class="search-div">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="请输入搜索关键字">
 							<span class="input-group-btn">
 						        <a class="btn btn-default" type="button"><i class="icon-search icon-large"></i></a>
 						      </span>
-						</div>
+                </div>
 
-					</div>
-				</div>
-				<div class="nav-div">
-					<nav class="nav">
-						<ul class="ul-li-horizontal">
-							<li><a href=""><span>首页</span></a></li>
-							<li><a href=""><span>精油/植物油/纯露/浸泡油</span></a></li>
-							<li><a href=""><span>精油运用法及其他疗法</span></a></li>
-							<!--<li><a href="">疾病与病症</a></li>-->
-							<li><a href="#" class="show-top-header-sidebar-a" id=""><span>...</span></a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="name-div">
-					<div>
-						<a href="">
-							<img src="img/1.jpg" />
-							<span>用户名</span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="clear-both"></div>
-			<div class="spit-hr-1"></div>
-			<div class="login-div">
-				<div class="desc">
-					获取更多的精油资讯 &gt;
-				</div>
-				<div class="ul">
-					<ul class="ul-li-horizontal login-ul">
-						<li>
-							<a class="btn btn-default" href="login.html">
-								登&nbsp;录
-							</a>
-						</li>
-						<li>
-							<a class="btn btn-default" href="register.html">
-								注&nbsp;册
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="spit-hr-1 clear-both"></div>
+            </div>
+        </div>
+        <div class="nav-div">
+            <nav class="nav">
+                <ul class="ul-li-horizontal">
+                    <li><a href=""><span>首页</span></a></li>
+                    <li><a href=""><span>精油/植物油/纯露/浸泡油</span></a></li>
+                    <li><a href=""><span>精油运用法及其他疗法</span></a></li>
+                    <!--<li><a href="">疾病与病症</a></li>-->
+                    <li><a href="#" class="show-top-header-sidebar-a" id=""><span>...</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="name-div">
+            <div>
+                <a href="">
+                    <img src="img/1.jpg"/>
+                    <span>用户名</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="clear-both"></div>
+    <div class="spit-hr-1"></div>
+    <div class="login-div">
+        <div class="desc">
+            获取更多的精油资讯 &gt;
+        </div>
+        <div class="ul">
+            <ul class="ul-li-horizontal login-ul">
+                <li>
+                    <a class="btn btn-default" href="login.html">
+                        登&nbsp;录
+                    </a>
+                </li>
+                <li>
+                    <a class="btn btn-default" href="register.html">
+                        注&nbsp;册
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="spit-hr-1 clear-both"></div>
 
-			<div class="sidebar hid">
-				<div class="left-side"></div>
-				<div class="right-side">
-					<div class="side-close">
-						<a href="#" class="side-close-btn"> <i class="icon-remove"></i></a>
-					</div>
-					<div class="clear-both"></div>
-					<nav>
-						<ul class="list-group sidebar-ul">
-							<a href="">
-								<li class="list-group-item">精油/植物油/纯露/浸泡油</li>
-							</a>
-							<a href="">
-								<li class="list-group-item">精油的相关名词</li>
-							</a>
-							<a href="">
-								<li class="list-group-item">化学成分及激素</li>
-							</a>
+    <div class="sidebar hid">
+        <div class="left-side"></div>
+        <div class="right-side">
+            <div class="side-close">
+                <a href="#" class="side-close-btn"> <i class="icon-remove"></i></a>
+            </div>
+            <div class="clear-both"></div>
+            <nav>
+                <ul class="list-group sidebar-ul">
+                    <a href="">
+                        <li class="list-group-item">精油/植物油/纯露/浸泡油</li>
+                    </a>
+                    <a href="">
+                        <li class="list-group-item">精油的相关名词</li>
+                    </a>
+                    <a href="">
+                        <li class="list-group-item">化学成分及激素</li>
+                    </a>
 
-							<a href="">
-								<li class="list-group-item">精油运用法及其他疗法</li>
-							</a>
+                    <a href="">
+                        <li class="list-group-item">精油运用法及其他疗法</li>
+                    </a>
 
-							<a href="">
-								<li class="list-group-item">
-									<!--<span class="badge">新</span>-->
-									疾病与病症
-								</li>
-							</a>
-							<a href="">
-								<li class="list-group-item" onclick="">其他
-									<!--<span class="badge">新</span>-->
-								</li>
-							</a>
-						</ul>
+                    <a href="">
+                        <li class="list-group-item">
+                            <!--<span class="badge">新</span>-->
+                            疾病与病症
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="list-group-item" onclick="">其他
+                            <!--<span class="badge">新</span>-->
+                        </li>
+                    </a>
+                </ul>
 
-					</nav>
-				</div>
-			</div>
-		</header>
+            </nav>
+        </div>
+    </div>
+</header>
 
-		<div class="main-content-wrapper">
-			<div class="main-content-wrapper-split">
-				<section class="main-content">
-					<nav style="height: 40px;margin-top: 2px;">
-						<ol class="breadcrumb" style="background-color: rgba(255,255,255,1)">
-							<li><a href="#">首页</a></li>
-							<li><a href="#">视频</a></li>
-							<li class="active">霹雳布袋戏</li>
-						</ol>
-					</nav>
-					<div style="height: 800px;border: 1px solid blue;">
-						<div style="width: 95%;height:540px; border: 1px solid red;float: left;">
-							<div id="video-div" style="width: 100%;height: 540px;">
+<div class="main-content-wrapper">
+    <div class="main-content-wrapper-split">
+        <section class="main-content">
+            <nav class="video-nav">
+                <ol class="breadcrumb video-nav-ol">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">视频</a></li>
+                    <li class="active">霹雳布袋戏</li>
+                </ol>
+            </nav>
+            <div class="video-main-wrapper">
+                <header class="video-title">霹雳狼烟之万堺尘涛</header>
+                <div class="video-tool-wrapper">
+                    <div class="video-tool-main">
+                        <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls
+                               preload="auto" style="width: 100%;height: 100%;" poster="img/1.jpg" data-setup="{}">
+                            <source src="dida.mp4" type='video/mp4'>
+                            <!--<source src="fndxn_bd.webm" type='video/webm'>-->
+                            <p class="vjs-no-js">
+                                这里应该有一个视频，请启用浏览器JavaScript插件功能/升级浏览器
+                            </p>
+                            <!--<track kind="chapters" src="jQuery-video5.8/elephantsdream/captions.en.vtt" srclang="en" label="English"></track>-->
+                        </video>
+                        <script src="jQuery-video5.8/js/video.min.js"></script>
+                        <script>
+                            videojs.options.flash.swf = "jQuery-video5.8/video-js.swf";
+                        </script>
 
-								<video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" style="width: 100%;height: 100%;" poster="img/1.jpg" data-setup="{}">
-								    <source src="fndxn_bd.mp4" type='video/mp4'>
-								    <source src="fndxn_bd.webm" type='video/webm'>
-								    <p class="vjs-no-js">
-								      这里应该有一个视频，请启用浏览器JavaScript插件功能/升级浏览器
-								    </p>
-								    <!--<track kind="chapters" src="jQuery-video5.8/elephantsdream/captions.en.vtt" srclang="en" label="English"></track>-->
-								</video>
-								<script src="jQuery-video5.8/js/video.min.js"></script>
-								<script>
-									videojs.options.flash.swf = "jQuery-video5.8/video-js.swf";
-								</script>
+                    </div>
 
-							</div>
+                </div>
+                <div class="video-tool-bar-wrapper">
+                    <div class="btn-group btn-group-vertical video-tool-bar-main" role="group" aria-label="...">
+                        <a class="btn btn-default video-bar catalog" data-extra="catalog-extra">
+                            <i class="icon-th-list"></i><br/> <span>目录</span>
+                        </a>
+                        <a class="btn btn-default video-bar download" data-extra="download-extra">
+                            <i class="icon-download-alt"></i><br/> <span>下载</span>
+                        </a>
+                        <a class="btn btn-default video-bar collection" data-extra="collection-extra">
+                            <i class="icon-heart-empty"></i><br/> <span>收藏</span>
+                        </a>
+                        <a class="btn btn-default video-bar share" data-extra="share-extra">
+                            <i class="icon-share-alt"></i><br/>分享
+                        </a>
 
-						</div>
-						<div style="width: 5%;height:540px;border: 1px solid black;float: left;">
-							<div class="btn-group btn-group-vertical" role="group" aria-label="..." style="margin-top: 250px;">
-								<a class="btn btn-default video-bar" style="width: 50px;font-size: 6px;">
-									<i class="icon-heart-empty"></i><br /> 收藏
-								</a>
-								<a class="btn btn-default" style="width: 50px;font-size: 6px;"><i class="icon-share-alt"></i><br />分享</a>
-							</div>
-						</div>
-					</div>
+                        <a class="btn btn-default video-bar play-continuously" data-extra="play-continuously-extra">
+                            <i class="icon-forward"></i><br/> <span class="text-success">连播</span>
+                        </a>
+                        <a class="btn btn-default video-bar turn-off-the-light" data-extra="turn-off-the-light-extra">
+                            <i class="icon-lightbulb"></i><br/> <span class="text-success">关灯</span>
+                        </a>
+                    </div>
+                    <div class="video-bar-extra catalog-extra hid">
+                        目录
+                    </div>
+                    <div class="video-bar-extra download-extra hid">
+                        下载本视频
+                    </div>
+                    <div class="video-bar-extra collection-extra hid">
+                        收藏视频
+                    </div>
+                    <div class="video-bar-extra share-extra hid">
+                        分享
+                    </div>
+                    <div class="video-bar-extra play-continuously-extra hid">
+                        连播播放
+                    </div>
+                    <div class="video-bar-extra turn-off-the-light-extra hid">
+                        关灯模式
+                    </div>
+                </div>
+            </div>
 
-				</section>
+        </section>
 
-				<footer class="bottom-footer-wrapper">
-					Copyright&copy;2016 XX四季一时精油公司 All Rights Reserved. 沪ICP备XXXXXX-XXX
-				</footer>
+        <footer class="bottom-footer-wrapper">
+            Copyright&copy;2016 XX四季一时精油公司 All Rights Reserved. 沪ICP备XXXXXX-XXX
+        </footer>
 
-			</div>
-		</div>
-	</body>
+    </div>
+</div>
+</body>
+
+<script>
+    $(function () {
+        $('.video-tool-bar-main .catalog,.download,.collection,.share,.play-continuously,.turn-off-the-light').hover(function () {
+            $('.video-tool-bar-wrapper').find('.' + $(this).data('extra')).slideLeftShow();
+        }, function () {
+            $('.video-tool-bar-wrapper').find('.' + $(this).data('extra')).slideLeftHide();
+        });
+    });
+</script>
 
 </html>

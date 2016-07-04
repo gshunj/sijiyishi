@@ -2,6 +2,7 @@
  * Created by jiangguoshun on 16/7/3.
  */
 
+
 var SELF_ALERT_TYPES = {primary: 'primary', success: 'success', info: 'info', warning: 'warning', danger: 'danger'};
 
 $(function () {
@@ -49,7 +50,43 @@ function _ALERT_TIME_OUT_(options) {
 
 }
 
-
+/**
+ * 根据bootstrap提示框扩展的提示功能
+ * @param options {type:SELF_ALERT_TYPES.info,position:top:0,height:60px,width:100%,msg:'!请输入...',hasClose:true,time:3000}
+ */
 function selfAlert(options) {
     _ALERT_TIME_OUT_(options);
 }
+
+
+/**
+ * jQuery扩展插件 - 向右划出
+ * @param speed
+ * @param callback
+ */
+jQuery.fn.slideLeftHide = function (speed, callback) {
+    this.animate({
+        width: "hide",
+        paddingLeft: "hide",
+        paddingRight: "hide",
+        marginLeft: "hide",
+        marginRight: "hide"
+    }, speed, callback);
+};
+/**
+ * jQuery扩展插件 - 向左滑入
+ * @param speed
+ * @param callback
+ */
+jQuery.fn.slideLeftShow = function (speed, callback) {
+    this.animate({
+        width: "show",
+        paddingLeft: "show",
+        paddingRight: "show",
+        marginLeft: "show",
+        marginRight: "show"
+    }, speed, callback);
+};
+
+
+
