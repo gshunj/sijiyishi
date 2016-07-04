@@ -244,3 +244,8 @@ a:hover {
 	position: absolute;
 	width: 100%;
 }
+
+.main-content-wrapper .main-content-wrapper-split .main-content {
+	width: 1000px;
+	margin: 0 auto;
+}

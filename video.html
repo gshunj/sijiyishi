@@ -6,8 +6,7 @@
 		<title>四季一时</title>
 		<link href="bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
 		<link href="font/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet" />
-		<!--<link href="unslider/css/unslider.css" rel="stylesheet"/>-->
-		<!--<link href="unslider/css/unslider-dots.css" rel="stylesheet"/>-->
+		<link href="jQuery-video5.8/css/video-js.min.css" rel="stylesheet">
 
 		<link rel="stylesheet" href="css/app.css" />
 		<link rel="stylesheet" href="css/index.css" />
@@ -15,9 +14,10 @@
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+	      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	      <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	    <![endif]-->
 		<script src="js/jquery-2.1.4.min.js" type="text/javascript">
 		</script>
 		<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -25,6 +25,9 @@
 		<script src="js/app.js" type="text/javascript">
 		</script>
 		<script src="js/index.js" type="text/javascript">
+		</script>
+
+		<script type="text/javascript">
 		</script>
 	</head>
 
@@ -132,307 +135,44 @@
 
 		<div class="main-content-wrapper">
 			<div class="main-content-wrapper-split">
-				<section>
-					<div class="banner-div-wrapper">
-						<div id="myCarousel" class="carousel slide" data-ride="carousel">
-							<!-- 轮播（Carousel）指标 -->
-							<ol class="carousel-indicators">
-								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-								<li data-target="#myCarousel" data-slide-to="1"></li>
-								<li data-target="#myCarousel" data-slide-to="2"></li>
-							</ol>
-							<!-- 轮播（Carousel）项目 -->
-							<div class="carousel-inner">
-								<div class="item active">
-									<img class="carousel-img" src="img/banner.jpg" />
-									<div class="carousel-caption">标题 1</div>
-								</div>
-								<div class="item">
-									<img class="carousel-img" src="img/banner.jpg" />
-									<div class="carousel-caption">标题 2</div>
-								</div>
-								<div class="item">
-									<img class="carousel-img" src="img/banner.jpg" />
-									<div class="carousel-caption">标题 3</div>
-								</div>
+				<section class="main-content">
+					<nav style="height: 40px;margin-top: 2px;">
+						<ol class="breadcrumb" style="background-color: rgba(255,255,255,1)">
+							<li><a href="#">首页</a></li>
+							<li><a href="#">视频</a></li>
+							<li class="active">霹雳布袋戏</li>
+						</ol>
+					</nav>
+					<div style="height: 800px;border: 1px solid blue;">
+						<div style="width: 95%;height:540px; border: 1px solid red;float: left;">
+							<div id="video-div" style="width: 100%;height: 540px;">
+
+								<video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" style="width: 100%;height: 100%;" poster="img/1.jpg" data-setup="{}">
+								    <source src="fndxn_bd.mp4" type='video/mp4'>
+								    <source src="fndxn_bd.webm" type='video/webm'>
+								    <p class="vjs-no-js">
+								      这里应该有一个视频，请启用浏览器JavaScript插件功能/升级浏览器
+								    </p>
+								    <!--<track kind="chapters" src="jQuery-video5.8/elephantsdream/captions.en.vtt" srclang="en" label="English"></track>-->
+								</video>
+								<script src="jQuery-video5.8/js/video.min.js"></script>
+								<script>
+									videojs.options.flash.swf = "jQuery-video5.8/video-js.swf";
+								</script>
+
 							</div>
-							<!-- 轮播（Carousel）导航 -->
-							<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-							<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+
 						</div>
-
-					</div>
-					<div class="main-content-wrapper-module">
-						<article class="module">
-							<div class="module-li">
-								<a class="module-li-main" href="">
-									<span class="title">资讯</span>
+						<div style="width: 5%;height:540px;border: 1px solid black;float: left;">
+							<div class="btn-group btn-group-vertical" role="group" aria-label="..." style="margin-top: 250px;">
+								<a class="btn btn-default video-bar" style="width: 50px;font-size: 6px;">
+									<i class="icon-heart-empty"></i><br /> 收藏
 								</a>
-								<div class="module-li-desc">精油资讯信息</div>
-							</div>
-							<div class="module-li">
-								<a class="module-li-main" href="">
-									<span class="title">资讯</span>
-								</a>
-								<div class="module-li-desc">精油资讯信息</div>
-							</div>
-							<div class="module-li">
-								<a class="module-li-main" href="">
-									<span class="title">资讯</span>
-								</a>
-								<div class="module-li-desc">精油资讯信息</div>
-							</div>
-							<div class="module-li">
-								<a class="module-li-main" href="">
-									<span class="title">资讯</span>
-								</a>
-								<div class="module-li-desc">精油资讯信息</div>
-							</div>
-							<div class="module-li">
-								<a class="module-li-main" href="">
-									<span class="title">资讯</span>
-								</a>
-								<div class="module-li-desc">精油资讯信息</div>
-							</div>
-						</article>
-						<div class="live-video-wrapper">
-							<div class="live-video-header">
-								<div class="title">
-									<i class="icon-facetime-video icon-large"></i>
-									<span>视频</span>
-								</div>
-								<div class="live-more">
-									<a href=""><i class="fa fa-pull-right">查看更多&gt;&gt;</i></a>
-								</div>
-							</div>
-							<div class="clear-both"></div>
-							<div class="live-video-content">
-								<div class="live-video-items">
-									<div class="live-video-item">
-										<div class="img-div">
-											<a href="">
-												<img class="img" src="img/3.jpg" />
-											</a>
-										</div>
-										<div class="content-div">
-											<div class="content-div-title">
-												<a href="">
-													<h2 class="title">刀剑春秋</h2>
-												</a>
-											</div>
-
-											<div class="desc hid">
-												<div class="desc-split"></div>
-												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-											</div>
-											<div class="desc-time-split"></div>
-											<div class="time" style="background-color: white;">
-												<div>
-													<span>5课时 71分钟</span>
-												</div>
-												<div>
-													<span>22288人观看</span>
-												</div>
-											</div>
-											<div class="clear-both"></div>
-										</div>
-									</div>
-									<div class="live-video-item">
-										<div class="img-div">
-											<a href="">
-												<img class="img" src="img/3.jpg" />
-											</a>
-										</div>
-										<div class="content-div">
-											<a href="">
-												<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
-											</a>
-
-											<div class="desc hid">
-												<div class="desc-split"></div>
-												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-											</div>
-											<div class="desc-time-split"></div>
-											<div class="time" style="background-color: white;">
-												<div>
-													<span>5课时 71分钟</span>
-												</div>
-												<div>
-													<span>22288人观看</span>
-												</div>
-											</div>
-											<div class="clear-both"></div>
-										</div>
-									</div>
-									<div class="live-video-item">
-										<div class="img-div">
-											<a href="">
-												<img class="img" src="img/3.jpg" />
-											</a>
-										</div>
-										<div class="content-div">
-											<a href="">
-												<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
-											</a>
-
-											<div class="desc hid">
-												<div class="desc-split"></div>
-												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-											</div>
-											<div class="desc-time-split"></div>
-											<div class="time" style="background-color: white;">
-												<div>
-													<span>5课时 71分钟</span>
-												</div>
-												<div>
-													<span>22288人观看</span>
-												</div>
-											</div>
-											<div class="clear-both"></div>
-										</div>
-									</div>
-									<div class="live-video-item">
-										<div class="img-div">
-											<a href="">
-												<img class="img" src="img/3.jpg" />
-											</a>
-										</div>
-										<div class="content-div">
-											<a href="">
-												<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
-											</a>
-
-											<div class="desc hid">
-												<div class="desc-split"></div>
-												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-											</div>
-											<div class="desc-time-split"></div>
-											<div class="time" style="background-color: white;">
-												<div>
-													<span>5课时 71分钟</span>
-												</div>
-												<div>
-													<span>22288人观看</span>
-												</div>
-											</div>
-											<div class="clear-both"></div>
-										</div>
-									</div>
-								</div>
-								<div class="live-video-items">
-									<div class="live-video-item">
-										<div class="img-div">
-											<a href="">
-												<img class="img" src="img/3.jpg" />
-											</a>
-										</div>
-										<div class="content-div">
-											<a href="">
-												<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
-											</a>
-
-											<div class="desc hid">
-												<div class="desc-split"></div>
-												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-											</div>
-											<div class="desc-time-split"></div>
-											<div class="time" style="background-color: white;">
-												<div>
-													<span>5课时 71分钟</span>
-												</div>
-												<div>
-													<span>22288人观看</span>
-												</div>
-											</div>
-											<div class="clear-both"></div>
-										</div>
-									</div>
-									<div class="live-video-item">
-										<div class="img-div">
-											<a href="">
-												<img class="img" src="img/3.jpg" />
-											</a>
-										</div>
-										<div class="content-div">
-											<a href="">
-												<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
-											</a>
-
-											<div class="desc hid">
-												<div class="desc-split"></div>
-												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-											</div>
-											<div class="desc-time-split"></div>
-											<div class="time" style="background-color: white;">
-												<div>
-													<span>5课时 71分钟</span>
-												</div>
-												<div>
-													<span>22288人观看</span>
-												</div>
-											</div>
-											<div class="clear-both"></div>
-										</div>
-									</div>
-									<div class="live-video-item">
-										<div class="img-div">
-											<a href="">
-												<img class="img" src="img/3.jpg" />
-											</a>
-										</div>
-										<div class="content-div">
-											<a href="">
-												<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
-											</a>
-
-											<div class="desc hid">
-												<div class="desc-split"></div>
-												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-											</div>
-											<div class="desc-time-split"></div>
-											<div class="time" style="background-color: white;">
-												<div>
-													<span>5课时 71分钟</span>
-												</div>
-												<div>
-													<span>22288人观看</span>
-												</div>
-											</div>
-											<div class="clear-both"></div>
-										</div>
-									</div>
-									<div class="live-video-item">
-										<div class="img-div">
-											<a href="">
-												<img class="img" src="img/3.jpg" />
-											</a>
-										</div>
-										<div class="content-div">
-											<a href="">
-												<h2 class="title">一口道尽千古事，十指操弄百万兵。一口道尽千古事，十指操弄百万兵</h2>
-											</a>
-
-											<div class="desc hid">
-												<div class="desc-split"></div>
-												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-											</div>
-											<div class="desc-time-split"></div>
-											<div class="time" style="background-color: white;">
-												<div>
-													<span>5课时 71分钟</span>
-												</div>
-												<div>
-													<span>22288人观看</span>
-												</div>
-											</div>
-											<div class="clear-both"></div>
-										</div>
-									</div>
-								</div>
-
+								<a class="btn btn-default" style="width: 50px;font-size: 6px;"><i class="icon-share-alt"></i><br />分享</a>
 							</div>
 						</div>
 					</div>
+
 				</section>
 
 				<footer class="bottom-footer-wrapper">
@@ -441,7 +181,6 @@
 
 			</div>
 		</div>
-
 	</body>
 
 </html>
