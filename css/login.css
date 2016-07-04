@@ -13,18 +13,18 @@
 }
 
 .main-content-wrapper .main-content-wrapper-split .login-div .login-form-div {
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	/*border: 1px solid rgba(0, 0, 0, 0.1);*/
 	width: 600px;
 	height: 600px;
 	margin: 0 auto;
-	border-radius: 600px;
+	/*border-radius: 600px;*/
 }
 
 .main-content-wrapper .main-content-wrapper-split .login-div .login-form {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.1);
 	width: 400px;
 	height: 400px;
-	margin: 100px auto;
+	margin: 40px auto;
 }
 
 .main-content-wrapper .main-content-wrapper-split .login-div .form-legend {
