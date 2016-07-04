@@ -43,6 +43,14 @@
 	font-weight: 300;
 }
 
+.main-content-wrapper .main-content-wrapper-split .login-div .login-form .forget-password a:hover {
+	text-decoration: underline;
+}
+
+.main-content-wrapper .main-content-wrapper-split .login-div .login-form .register a:hover {
+	text-decoration: underline;
+}
+
 .main-content-wrapper .main-content-wrapper-split .login-div .login-form .register {
 	line-height: 33px;
 	font-size: 14px;

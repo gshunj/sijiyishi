@@ -32,9 +32,18 @@
 }
 
 .main-content-wrapper .main-content-wrapper-split .register-div .form-legend .login-entry {
-	color: black;
 	font-size: 14px;
 	margin-left: 200px;
+	color: rgb(0, 0, 0);
+}
+
+.main-content-wrapper .main-content-wrapper-split .register-div .form-legend .login-entry a {
+	color: RGB(51, 122, 183);
+	font-style: italic;
+}
+
+.main-content-wrapper .main-content-wrapper-split .register-div .form-legend .login-entry a:hover {
+	text-decoration: underline;
 }
 
 .main-content-wrapper .main-content-wrapper-split .register-div .register-form .validata-img {
