@@ -1,50 +1,51 @@
 /*当页面的主题数据比较少时,把页脚固定在浏览器底部*/
+
 .bottom-footer-wrapper {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 
 .main-content-wrapper .main-content-wrapper-split .login-div {
-    width: 900px;
-    height: 600px;
-    margin: 4px auto;
+	width: 900px;
+	height: 600px;
+	margin: 6px auto;
 }
 
 .main-content-wrapper .main-content-wrapper-split .login-div .login-form-div {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    width: 600px;
-    height: 600px;
-    margin: 0 auto;
-    border-radius: 600px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	width: 600px;
+	height: 600px;
+	margin: 0 auto;
+	border-radius: 600px;
 }
 
 .main-content-wrapper .main-content-wrapper-split .login-div .login-form {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    width: 400px;
-    height: 400px;
-    margin: 100px auto;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	width: 400px;
+	height: 400px;
+	margin: 100px auto;
 }
 
 .main-content-wrapper .main-content-wrapper-split .login-div .form-legend {
-    color: rgba(205, 129, 98, 1);
+	color: rgba(205, 129, 98, 1);
 }
 
 .main-content-wrapper .main-content-wrapper-split .login-div .login-form .validata-img {
-    width: 120px;
-    height: 35px;
+	width: 120px;
+	height: 35px;
 }
 
 .main-content-wrapper .main-content-wrapper-split .login-div .login-form .forget-password {
-    line-height: 33px;
-    font-size: 14px;
-    font-style: italic;
-    font-weight: 300;
+	line-height: 33px;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: 300;
 }
 
 .main-content-wrapper .main-content-wrapper-split .login-div .login-form .register {
-    line-height: 33px;
-    font-size: 14px;
-    font-style: italic;
-    font-weight: 300;
+	line-height: 33px;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: 300;
 }
