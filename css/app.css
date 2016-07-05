@@ -218,6 +218,30 @@ a:hover {
 	border-top: 1px solid #EFEFEF;
 }
 
+.vertical-spacing-10 {
+	height: 10px;
+}
+
+.vertical-spacing-20 {
+	height: 20px;
+}
+
+.vertical-spacing-30 {
+	height: 30px;
+}
+
+.vertical-spacing-40 {
+	height: 40px;
+}
+
+.vertical-spacing-50 {
+	height: 50px;
+}
+
+.vertical-spacing-100 {
+	height: 100px;
+}
+
 
 /*底部样式*/
 
