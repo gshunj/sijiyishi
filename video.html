@@ -1,824 +1,1110 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="utf-8" />
-		<title>四季一时</title>
-		<link href="bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
-		<link href="font/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet" />
-		<link href="jQuery-video5.8/css/video-js.min.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8"/>
+    <title>四季一时</title>
+    <link href="bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="font/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="jQuery-video5.8/css/video-js.min.css" rel="stylesheet">
 
-		<link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/app.css"/>
 
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
     <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
     <![endif]-->
-		<script src="js/jquery-2.1.4.min.js" type="text/javascript">
-		</script>
-		<script type="text/javascript" src="js/text_overflow.js"></script>
-		<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
-		<script src="js/app.js" type="text/javascript">
-		</script>
-		<script src="js/common.js" type="text/javascript">
-		</script>
+    <script src="js/jquery-2.1.4.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript" src="js/text_overflow.js"></script>
+    <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/app.js" type="text/javascript">
+    </script>
 
-		<script type="text/javascript">
-		</script>
-		<style>.main-content .video-nav {
-	height: 40px;
-	margin-top: 2px;
-	font-size: 13px;
-}
 
-.main-content .video-nav .video-nav-ol {
-	background-color: rgba(255, 255, 255, 1);
-}
+    <script type="text/javascript">
+    </script>
+    <style>.main-content .video-nav {
+        height: 40px;
+        margin-top: 2px;
+        font-size: 13px;
+    }
 
-.main-content .video-main-wrapper {
-	height: 600px;
-	/*border: 1px solid blue;*/
-}
+    .main-content .video-nav .video-nav-ol {
+        background-color: rgba(255, 255, 255, 1);
+    }
 
-.main-content .video-main-wrapper .video-title {
-	height: 40px;
-	line-height: 40px;
-}
+    .main-content .video-main-wrapper {
+        height: 600px;
+        /*border: 1px solid blue;*/
+    }
 
-.main-content .video-main-wrapper .video-tool-wrapper {
-	width: 95%;
-	height: 540px;
-	float: left;
-}
+    .main-content .video-main-wrapper .video-title {
+        height: 40px;
+        line-height: 40px;
+    }
 
-.main-content .video-main-wrapper .video-tool-wrapper .video-tool-main {
-	width: 100%;
-	height: 540px;
-}
+    .main-content .video-main-wrapper .video-tool-wrapper {
+        width: 95%;
+        height: 540px;
+        float: left;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper {
-	width: 5%;
-	height: 540px;
-	float: left;
-}
+    .main-content .video-main-wrapper .video-tool-wrapper .video-tool-main {
+        width: 100%;
+        height: 540px;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main {
-	position: absolute;
-	margin-top: 0;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper {
+        width: 5%;
+        height: 540px;
+        float: left;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .video-bar {
-	width: 50px;
-	height: 48px;
-	font-size: 10px;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main {
+        position: absolute;
+        margin-top: 0;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .catalog {
-	border-radius: 0;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .video-bar {
+        width: 50px;
+        height: 48px;
+        font-size: 10px;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .download {}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .catalog {
+        border-radius: 0;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .collection {}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .download {
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .share {}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .collection {
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .play-continuously {
-	width: 50px;
-	height: 48px;
-	font-size: 10px;
-	margin-top: 255px;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .share {
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .turn-off-the-light {
-	border-radius: 0;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .play-continuously {
+        width: 50px;
+        height: 48px;
+        font-size: 10px;
+        margin-top: 255px;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .video-bar-extra {
-	font-size: 13px;
-	background-color: rgba(255, 255, 255, 0.5);
-	text-align: center;
-	line-height: 48px;
-	position: absolute;
-	height: 48px;
-	width: 150px;
-	z-index: 1000;
-	margin-left: -150px;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .turn-off-the-light {
+        border-radius: 0;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra {
-	/*border: 1px solid yellow;*/
-	height: 540px;
-	width: 400px;
-	z-index: 1000;
-	margin-left: -400px;
-	line-height: normal;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .video-bar-extra {
+        font-size: 13px;
+        background-color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        line-height: 48px;
+        position: absolute;
+        height: 48px;
+        width: 150px;
+        z-index: 1000;
+        margin-left: -150px;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .download-extra {
-	margin-top: 48px;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra {
+        /*border: 1px solid yellow;*/
+        height: 540px;
+        width: 400px;
+        z-index: 1000;
+        margin-left: -400px;
+        line-height: normal;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .collection-extra {
-	margin-top: 96px;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .download-extra {
+        margin-top: 48px;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .share-extra {
-	margin-top: 144px;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .collection-extra {
+        margin-top: 96px;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .share-extra .share-adjustment {
-	margin-top: 10px;
-	margin-left: 10px;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .share-extra {
+        margin-top: 144px;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .play-continuously-extra {
-	margin-top: 442px;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .share-extra .share-adjustment {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .turn-off-the-light-extra {
-	margin-top: 490px;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .play-continuously-extra {
+        margin-top: 442px;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content {
-	width: 95%;
-	height: 540px;
-	margin-left: 10px;
-	overflow: scroll;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .turn-off-the-light-extra {
+        margin-top: 490px;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .title {
-	height: 48px;
-	width: 100%;
-	line-height: 48px;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content {
+        width: 95%;
+        height: 540px;
+        margin-left: 10px;
+        overflow: scroll;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .title .title-left {
-	float: left;
-	width: 30%;
-	height: 48px;
-	text-align: left;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .title {
+        height: 48px;
+        width: 100%;
+        line-height: 48px;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .title .title-right {
-	float: right;
-	width: 30%;
-	height: 48px;
-	text-align: right;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .title .title-left {
+        float: left;
+        width: 30%;
+        height: 48px;
+        text-align: left;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .desc {
-	height: 120px;
-	width: 100%;
-	line-height: 17px;
-	letter-spacing: 2px;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .title .title-right {
+        float: right;
+        width: 30%;
+        height: 48px;
+        text-align: right;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items {
-	width: 100%;
-	height: 500px;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .desc {
+        height: 120px;
+        width: 100%;
+        line-height: 17px;
+        letter-spacing: 2px;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item {}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items {
+        width: 100%;
+        height: 500px;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-title {
-	width: 100%;
-	height: 30px;
-	text-align: left;
-	border: 1px solid #EFEFEF;
-	border-right-width: 0;
-	border-left-width: 0;
-	line-height: 30px;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item {
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-title .item-title-left {
-	width: 80%;
-	float: left;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-title {
+        width: 100%;
+        height: 30px;
+        text-align: left;
+        border: 1px solid #EFEFEF;
+        border-right-width: 0;
+        border-left-width: 0;
+        line-height: 30px;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-title .item-title-right {
-	width: 20%;
-	float: left;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-title .item-title-left {
+        width: 80%;
+        float: left;
+    }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-desc {
-	width: 85%;
-	height: 120px;
-	margin-left: 55px;
-	line-height: 17px;
-	letter-spacing: 2px;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-title .item-title-right {
+        width: 20%;
+        float: left;
+    }
 
-.video-main-info-wrapper {
-	width: 100%;
-	height: 700px;
-	border: 1px solid red;
-}
+    .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-desc {
+        width: 85%;
+        height: 120px;
+        margin-left: 55px;
+        line-height: 17px;
+        letter-spacing: 2px;
+    }
 
-.video-main-info-wrapper .video-info-wrapper {
-	width: 30%;
-	float: left;
-	background-color: RGBA(243, 243, 243, 0.2);
-}
+    .video-main-info-wrapper {
+        width: 100%;
+        /*height: 700px;*/
+        border: 1px solid greenyellow;
+        overflow: visible;
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info {
-	width: 95%;
-	margin: 25px auto;
-}
+    .video-main-info-wrapper .video-info-wrapper {
+        width: 30%;
+        float: left;
+        background-color: RGBA(243, 243, 243, 0.2);
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .tags-wrapper {
-	width: 105%;
-	margin-left: -6px;
-	margin-bottom: -10px;
-	background-color: white;
-}
+    .video-main-info-wrapper .video-info-wrapper .video-info {
+        width: 95%;
+        margin: 25px auto;
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .tags-wrapper .tags {
-	padding: 5px;
-}
+    .video-main-info-wrapper .video-info-wrapper .video-info .tags-wrapper {
+        width: 105%;
+        margin-left: -6px;
+        margin-bottom: -10px;
+        background-color: white;
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .tags-wrapper .tags .tag {
-	background-color: RGBA(243, 243, 243, 0.9);
-	color: rgba(0, 0, 0, 0.5);
-	border-radius: 0;
-}
+    .video-main-info-wrapper .video-info-wrapper .video-info .tags-wrapper .tags {
+        padding: 5px;
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .bar {}
+    .video-main-info-wrapper .video-info-wrapper .video-info .tags-wrapper .tags .tag {
+        background-color: RGBA(243, 243, 243, 0.9);
+        color: rgba(0, 0, 0, 0.5);
+        border-radius: 0;
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .bar a {
-	width: 280px;
-	border-radius: 0;
-}
+    .video-main-info-wrapper .video-info-wrapper .video-info .bar {
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .title {
-	width: 100%;
-	font-size: 16px;
-	text-align: center;
-	font-weight: 600;
-	color: rgba(0, 0, 0, 0.5);
-}
+    .video-main-info-wrapper .video-info-wrapper .video-info .bar a {
+        width: 280px;
+        border-radius: 0;
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .titme {
-	width: 100%;
-	font-size: 13px;
-	font-weight: 600;
-	color: rgba(0, 0, 0, 0.4);
-}
+    .video-main-info-wrapper .video-info-wrapper .video-info .title {
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .titme .left {
-	float: left;
-}
+    .video-main-info-wrapper .video-info-wrapper .video-info .titme {
+        width: 100%;
+        font-size: 13px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.4);
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .titme .right {
-	float: right;
-}
+    .video-main-info-wrapper .video-info-wrapper .video-info .titme .left {
+        float: left;
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .user {
-	height: 80px;
-	padding-top: 10px;
-}
+    .video-main-info-wrapper .video-info-wrapper .video-info .titme .right {
+        float: right;
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .user .user-img-div {
-	height: 60px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
+    .video-main-info-wrapper .video-info-wrapper .video-info .user {
+        height: 80px;
+        padding-top: 10px;
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .user .user-img-div .user-img {
-	height: 60px;
-	width: 60px;
-	border-radius: 60px;
-}
+    .video-main-info-wrapper .video-info-wrapper .video-info .user .user-img-div {
+        height: 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .user .user-img-div span {
-	font-size: 15px;
-	font-weight: 600;
-	color: rgba(0, 0, 0, 0.4);
-}
+    .video-main-info-wrapper .video-info-wrapper .video-info .user .user-img-div .user-img {
+        height: 60px;
+        width: 60px;
+        border-radius: 60px;
+    }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .desc {
-	font-size: 13px;
-	font-weight: 600;
-	color: rgba(0, 0, 0, 0.3);
-}
+    .video-main-info-wrapper .video-info-wrapper .video-info .user .user-img-div span {
+        font-size: 15px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.4);
+    }
 
-.video-others-wrapper {
-	border: 1px solid yellow;
-	width: 70%;
-	float: left;
-	padding: 10px;
-}
+    .video-main-info-wrapper .video-info-wrapper .video-info .desc {
+        font-size: 13px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+    }
 
-.video-others-wrapper .tabs {
-	height: 40px;
-	border-bottom: 1px solid #EFEFEF;
-}
+    .video-others-wrapper {
+        /*border: 1px solid yellow;*/
+        width: 70%;
+        float: left;
+        padding: 10px;
+    }
 
-.video-others-wrapper .tabs .tab {
-	float: left;
-	width: 110px;
-	height: 40px;
-	text-align: center;
-	line-height: 40px;
-	font-size: 16px;
-	font-weight: 600;
-	color: rgba(0, 0, 0, 0.4);
-}
+    .video-others-wrapper .tabs {
+        height: 40px;
+        border-bottom: 1px solid #EFEFEF;
+    }
 
-.video-others-wrapper .tabs .tab-cur {
-	border-bottom: 1px solid rgba(92, 184, 92, 0.4);
-}
+    .video-others-wrapper .tabs .tab {
+        float: left;
+        width: 110px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.4);
+    }
 
-.video-others-wrapper .video-items {}
+    .video-others-wrapper .tabs .tab-cur {
+        border-bottom: 1px solid rgba(92, 184, 92, 0.4);
+        color: rgba(0, 0, 0, 0.3);
+    }
 
-.video-others-wrapper .video-items .video-item {}
+    .video-others-wrapper .video-items {
+    }
 
-.video-others-wrapper .video-items .video-item .video-item-title {}
+    .video-others-wrapper .video-items .video-item {
+    }
 
-.video-others-wrapper .video-items .video-item .video-item-title .span-title {
-	font-size: 13px;
-	font-weight: 600;
-	color: rgba(0, 0, 0, 0.5);
-}
+    .video-others-wrapper .video-items .video-item .video-item-title {
+    }
 
-.video-others-wrapper .video-items .video-item .video-item-title .span-title-cur {
-	font-size: 13px;
-	font-weight: 600;
-}
+    .video-others-wrapper .video-items .video-item .video-item-title .time {
+        display: block;
+        float: right;
+        margin-right: 60px;
+    }
 
-.video-others-wrapper .video-items .video-item .video-item-desc {
-	width: 90%;
-	margin-left: 20px;
-	font-size: 13px;
-	font-weight: 600px;
-	color: rgba(0, 0, 0, 0.3);
-	letter-spacing: 1px;
-	line-height: 16px;
-}</style>
-	</head>
+    .video-others-wrapper .video-items .video-item .video-item-title .span-title {
+        font-size: 13px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+    }
 
-	<body>
-		<header class="top-header-wrapper">
-			<div class="header header-main">
-				<div class="logo-div">
-					<div class="logo">
-						<a href="index.html"><span><i class="icon-home"></i>四季一时</span></a>
-					</div>
+    .video-others-wrapper .video-items .video-item .video-item-title .span-title-cur {
+        font-size: 13px;
+        font-weight: 600;
+    }
 
-					<div class="search-div">
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="请输入搜索关键字">
+    .video-others-wrapper .video-items .video-item .video-item-desc {
+        width: 90%;
+        margin-left: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+        letter-spacing: 1px;
+        line-height: 16px;
+    }</style>
+</head>
+
+<body>
+<header class="top-header-wrapper">
+    <div class="header header-main">
+        <div class="logo-div">
+            <div class="logo">
+                <a href="index.html"><span><i class="icon-home"></i>四季一时</span></a>
+            </div>
+
+            <div class="search-div">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="请输入搜索关键字">
 							<span class="input-group-btn">
 						        <a class="btn btn-default" type="button"><i class="icon-search icon-large"></i></a>
 						      </span>
-						</div>
+                </div>
 
-					</div>
-				</div>
-				<div class="nav-div">
-					<nav class="nav">
-						<ul class="ul-li-horizontal">
-							<li><a href=""><span>首页</span></a></li>
-							<li><a href=""><span>精油/植物油/纯露/浸泡油</span></a></li>
-							<li><a href=""><span>精油运用法及其他疗法</span></a></li>
-							<!--<li><a href="">疾病与病症</a></li>-->
-							<li><a href="#" class="show-top-header-sidebar-a" id=""><span>...</span></a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="name-div">
-					<div>
-						<a href="">
-							<img src="img/1.jpg" />
-							<span>用户名</span>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="clear-both"></div>
-			<div class="spit-hr-1"></div>
-			<div class="login-div">
-				<div class="desc">
-					获取更多的精油资讯 &gt;
-				</div>
-				<div class="ul">
-					<ul class="ul-li-horizontal login-ul">
-						<li>
-							<a class="btn btn-default" href="login.html">
+            </div>
+        </div>
+        <div class="nav-div">
+            <nav class="nav">
+                <ul class="ul-li-horizontal">
+                    <li><a href=""><span>首页</span></a></li>
+                    <li><a href=""><span>精油/植物油/纯露/浸泡油</span></a></li>
+                    <li><a href=""><span>精油运用法及其他疗法</span></a></li>
+                    <!--<li><a href="">疾病与病症</a></li>-->
+                    <li><a href="#" class="show-top-header-sidebar-a" id=""><span>...</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="name-div">
+            <div>
+                <a href="">
+                    <img src="img/1.jpg"/>
+                    <span>用户名</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="clear-both"></div>
+    <div class="spit-hr-1"></div>
+    <div class="login-div">
+        <div class="desc">
+            获取更多的精油资讯 &gt;
+        </div>
+        <div class="ul">
+            <ul class="ul-li-horizontal login-ul">
+                <li>
+                    <a class="btn btn-default" href="login.html">
                         登&nbsp;录
                     </a>
-						</li>
-						<li>
-							<a class="btn btn-default" href="register.html">
+                </li>
+                <li>
+                    <a class="btn btn-default" href="register.html">
                         注&nbsp;册
                     </a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="spit-hr-1 clear-both"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="spit-hr-1 clear-both"></div>
 
-			<div class="sidebar hid">
-				<div class="left-side"></div>
-				<div class="right-side">
-					<div class="side-close">
-						<a href="#" class="side-close-btn"> <i class="icon-remove"></i></a>
-					</div>
-					<div class="clear-both"></div>
-					<nav>
-						<ul class="list-group sidebar-ul">
-							<a href="">
-								<li class="list-group-item">精油/植物油/纯露/浸泡油</li>
-							</a>
-							<a href="">
-								<li class="list-group-item">精油的相关名词</li>
-							</a>
-							<a href="">
-								<li class="list-group-item">化学成分及激素</li>
-							</a>
+    <div class="sidebar hid">
+        <div class="left-side"></div>
+        <div class="right-side">
+            <div class="side-close">
+                <a href="#" class="side-close-btn"> <i class="icon-remove"></i></a>
+            </div>
+            <div class="clear-both"></div>
+            <nav>
+                <ul class="list-group sidebar-ul">
+                    <a href="">
+                        <li class="list-group-item">精油/植物油/纯露/浸泡油</li>
+                    </a>
+                    <a href="">
+                        <li class="list-group-item">精油的相关名词</li>
+                    </a>
+                    <a href="">
+                        <li class="list-group-item">化学成分及激素</li>
+                    </a>
 
-							<a href="">
-								<li class="list-group-item">精油运用法及其他疗法</li>
-							</a>
+                    <a href="">
+                        <li class="list-group-item">精油运用法及其他疗法</li>
+                    </a>
 
-							<a href="">
-								<li class="list-group-item">
-									<!--<span class="badge">新</span>-->
-									疾病与病症
-								</li>
-							</a>
-							<a href="">
-								<li class="list-group-item" onclick="">其他
-									<!--<span class="badge">新</span>-->
-								</li>
-							</a>
-						</ul>
+                    <a href="">
+                        <li class="list-group-item">
+                            <!--<span class="badge">新</span>-->
+                            疾病与病症
+                        </li>
+                    </a>
+                    <a href="">
+                        <li class="list-group-item" onclick="">其他
+                            <!--<span class="badge">新</span>-->
+                        </li>
+                    </a>
+                </ul>
 
-					</nav>
-				</div>
-			</div>
-		</header>
+            </nav>
+        </div>
+    </div>
+</header>
 
-		<div class="main-content-wrapper">
-			<div class="main-content-wrapper-split">
-				<section class="main-content">
-					<nav class="video-nav" id="video-nav">
-						<ol class="breadcrumb video-nav-ol">
-							<li><a href="#">首页</a></li>
-							<li><a href="#">视频</a></li>
-							<li><a href="#">霹雳布袋戏</a></li>
-							<li class="active">第一集</li>
-						</ol>
-					</nav>
-					<div class="video-main-wrapper">
-						<header class="video-title">霹雳狼烟之万堺尘涛</header>
-						<div class="video-tool-wrapper">
-							<div class="video-tool-main">
-								<video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" style="width: 100%;height: 100%;" poster="img/1.jpg" data-setup="{}">
-                            <source src="xiaji.mp4" type='video/mp4'>
+<div class="main-content-wrapper">
+    <div class="main-content-wrapper-split">
+        <section class="main-content">
+            <nav class="video-nav" id="video-nav">
+                <ol class="breadcrumb video-nav-ol">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">视频</a></li>
+                    <li><a href="#">霹雳布袋戏</a></li>
+                    <li class="active">第一集</li>
+                </ol>
+            </nav>
+            <div class="video-main-wrapper">
+                <header class="video-title">霹雳狼烟之万堺尘涛</header>
+                <div class="video-tool-wrapper">
+                    <div class="video-tool-main">
+                        <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls="controls"
+                               preload="auto" style="width: 100%;height: 100%;" poster="img/1.jpg" data-setup="{}">
+                            <source src="sszj.mp4" type='video/mp4'>
+                            <!--<source src="sszj.mp4" type='video/webm'>-->
                             <!--<source src="fndxn_bd.webm" type='video/webm'>-->
                             <p class="vjs-no-js">
                                 这里应该有一个视频，请启用浏览器JavaScript插件功能/升级浏览器
                             </p>
                             <!--<track kind="chapters" src="jQuery-video5.8/elephantsdream/captions.en.vtt" srclang="en" label="English"></track>-->
                         </video>
-								<script src="jQuery-video5.8/js/video.min.js"></script>
-								<script>videojs.options.flash.swf = "jQuery-video5.8/video-js.swf";</script>
+                        <script src="jQuery-video5.8/js/video.min.js"></script>
+                        <script>videojs.options.flash.swf = "jQuery-video5.8/video-js.swf";</script>
 
-							</div>
+                    </div>
 
-						</div>
-						<div class="video-tool-bar-wrapper">
-							<div class="btn-group btn-group-vertical video-tool-bar-main" role="group" aria-label="...">
-								<a class="btn btn-default video-bar catalog" data-extra="catalog-extra">
-									<i class="icon-th-list"></i><br/> <span>目录</span>
-								</a>
-								<a class="btn btn-default video-bar download" data-extra="download-extra">
-									<i class="icon-download-alt"></i><br/> <span>下载</span>
-								</a>
-								<a class="btn btn-default video-bar collection" data-extra="collection-extra">
-									<i class="icon-heart-empty"></i><br/> <span>收藏</span>
-								</a>
-								<a class="btn btn-default video-bar share" data-extra="share-extra">
-									<i class="icon-share-alt"></i><br/>分享
-								</a>
+                </div>
+                <div class="video-tool-bar-wrapper">
+                    <div class="btn-group btn-group-vertical video-tool-bar-main" role="group" aria-label="...">
+                        <a class="btn btn-default video-bar catalog" data-extra="catalog-extra">
+                            <i class="icon-th-list"></i><br/> <span>目录</span>
+                        </a>
+                        <a class="btn btn-default video-bar download" data-extra="download-extra">
+                            <i class="icon-download-alt"></i><br/> <span>下载</span>
+                        </a>
+                        <a class="btn btn-default video-bar collection" data-extra="collection-extra">
+                            <i class="icon-heart-empty"></i><br/> <span>收藏</span>
+                        </a>
+                        <a class="btn btn-default video-bar share" data-extra="share-extra">
+                            <i class="icon-share-alt"></i><br/>分享
+                        </a>
 
-								<a class="btn btn-default video-bar play-continuously" data-extra="play-continuously-extra">
-									<i class="icon-forward"></i><br/> <span>连播</span>
-								</a>
-								<a class="btn btn-default video-bar turn-off-the-light" data-extra="turn-off-the-light-extra">
-									<i class="icon-lightbulb"></i><br/> <span>关灯</span>
-								</a>
-							</div>
-							<div class="video-bar-extra catalog-extra hid">
-								<div class="content">
-									<div class="title">
-										<div class="title-left">
-											目录
-										</div>
-										<div class="title-right">
-											<a href="javascript:;">
-												收起&gt;
-											</a>
-										</div>
-									</div>
-									<div class="clear-both spit-hr-1"></div>
-									<div class="desc">
-										<p>霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。</p>
-									</div>
-									<div class="items">
-										<div class="item">
-											<div class="item-title">
-												<a href="">
-													<div class="item-title-left text-success">
-														1 第1集
-													</div>
-												</a>
-												<div class="item-title-right">
-													01:30:30
-												</div>
-											</div>
-											<div class="item-desc">
-												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-											</div>
-										</div>
-										<div class="item">
-											<div class="item-title">
-												<div class="item-title-left text-success">
-													2 第2集
-												</div>
-												<div class="item-title-right">
-													01:30:30
-												</div>
-											</div>
-											<div class="item-desc hid">
-												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-											</div>
-										</div>
-										<div class="item">
-											<div class="item-title">
-												<div class="item-title-left text-success">
-													3 第3集
-												</div>
-												<div class="item-title-right">
-													01:30:30
-												</div>
-											</div>
-											<div class="item-desc hid">
-												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-											</div>
-										</div>
-										<div class="item">
-											<div class="item-title">
-												<div class="item-title-left text-success">
-													4 第4集
-												</div>
-												<div class="item-title-right">
-													01:30:30
-												</div>
-											</div>
-											<div class="item-desc hid">
-												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-											</div>
-										</div>
-									</div>
-								</div>
+                        <a class="btn btn-default video-bar play-continuously" data-extra="play-continuously-extra">
+                            <i class="icon-forward"></i><br/> <span>连播</span>
+                        </a>
+                        <a class="btn btn-default video-bar turn-off-the-light" data-extra="turn-off-the-light-extra">
+                            <i class="icon-lightbulb"></i><br/> <span>关灯</span>
+                        </a>
+                    </div>
+                    <div class="video-bar-extra catalog-extra hid">
+                        <div class="content">
+                            <div class="title">
+                                <div class="title-left">
+                                    目录
+                                </div>
+                                <div class="title-right">
+                                    <a href="javascript:;">
+                                        收起&gt;
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="clear-both spit-hr-1"></div>
+                            <div class="desc">
+                                <p>霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
+                                    以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
+                                    剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
+                                    剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
+                                    已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。</p>
+                            </div>
+                            <div class="items">
+                                <div class="item">
+                                    <div class="item-title">
+                                        <a href="">
+                                            <div class="item-title-left text-success">
+                                                1 第1集
+                                            </div>
+                                        </a>
+                                        <div class="item-title-right">
+                                            01:30:30
+                                        </div>
+                                    </div>
+                                    <div class="item-desc">
+                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
+                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
+                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
+                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
+                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-title">
+                                        <div class="item-title-left text-success">
+                                            2 第2集
+                                        </div>
+                                        <div class="item-title-right">
+                                            01:30:30
+                                        </div>
+                                    </div>
+                                    <div class="item-desc hid">
+                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
+                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
+                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
+                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
+                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-title">
+                                        <div class="item-title-left text-success">
+                                            3 第3集
+                                        </div>
+                                        <div class="item-title-right">
+                                            01:30:30
+                                        </div>
+                                    </div>
+                                    <div class="item-desc hid">
+                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
+                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
+                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
+                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
+                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-title">
+                                        <div class="item-title-left text-success">
+                                            4 第4集
+                                        </div>
+                                        <div class="item-title-right">
+                                            01:30:30
+                                        </div>
+                                    </div>
+                                    <div class="item-desc hid">
+                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
+                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
+                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
+                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
+                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-							</div>
-							<div class="video-bar-extra download-extra hid">
-								下载本视频
-							</div>
-							<div class="video-bar-extra collection-extra hid">
-								收藏视频
-							</div>
-							<div class="video-bar-extra share-extra hid">
-								<div class="bdsharebuttonbox share-adjustment">
-									<a class="bds_weixin" data-cmd="weixin"></a>
-									<a class="bds_tsina" data-cmd="tsina" href="#"></a>
-									<a class="bds_sqq" data-cmd="sqq"></a>
-									<a class="bds_qzone" data-cmd="qzone"></a>
-									<a class="bds_douban" data-cmd="douban"></a>
+                    </div>
+                    <div class="video-bar-extra download-extra hid">
+                        下载本视频
+                    </div>
+                    <div class="video-bar-extra collection-extra hid">
+                        收藏视频
+                    </div>
+                    <div class="video-bar-extra share-extra hid">
+                        <div class="bdsharebuttonbox share-adjustment">
+                            <a class="bds_weixin" data-cmd="weixin"></a>
+                            <a class="bds_tsina" data-cmd="tsina" href="#"></a>
+                            <a class="bds_sqq" data-cmd="sqq"></a>
+                            <a class="bds_qzone" data-cmd="qzone"></a>
+                            <a class="bds_douban" data-cmd="douban"></a>
 
-									<!--<a class="bds_more" data-cmd="more">更多</a>-->
-									<!--<a class="bds_count" data-cmd="count"></a>-->
-								</div>
-							</div>
-							<div class="video-bar-extra play-continuously-extra hid">
-								连播播放
-							</div>
-							<div class="video-bar-extra turn-off-the-light-extra hid">
-								关灯模式
-							</div>
-						</div>
-					</div>
-					<div class="video-main-info-wrapper">
-						<div class="video-info-wrapper">
-							<div class="video-info">
-								<div style="">
-									<div class="title">霹雳布袋戏</div>
-									<div class="clear-both"></div>
-									<div class="titme">
-										<div class="left">4集，35分钟</div>
-										<div class="right">2016-06-14</div>
-									</div>
-									<div class="clear-both"></div>
-									<div class="user">
-										<div class="user-img-div">
-											<img src="img/1.jpg" class="user-img" />
-											<span>&nbsp;用户名</span>
-										</div>
-									</div>
-									<div class="desc">
-										课程背景： Gulp 是当下流行的自动化构建工具，通过代码优于配置的策略，Gulp 让任务变得简单，让复杂的任务变得可管理。Sass 是对 CSS 的扩展，让 CSS 语言更强大、优雅。 它允许你使用变量、嵌套规则、 mixins、导入等众多功能， 并且完全兼容 CSS 语法。Bootstrap 是目前很受欢迎的前端框架，它简洁灵活，使得 Web 开发更加快捷。这三者结合起来将会使网站开发变得更加简洁有效。 核心内容： 1.使用 yo 搭建一个 Gulp + Sass + Bootstrap 工程
-										2.Gulp 的优点以及使用 3.Sass 的优点以及使用 4.Bootstrap 的优点以及使用 软件环境：Mac OS X 是否提供资料：是 课程等级：中级 适合人群： 具有一定前端基础的学习者
-									</div>
-									<div class="vertical-spacing-20"></div>
-									<div class="bar btn-group-vertical">
-										<a class="btn btn-default"><i class=" icon-heart-empty"></i>&nbsp;收&nbsp;&nbsp;藏</a>
-										<div class="vertical-spacing-10"></div>
-										<a class="btn btn-default"><i class="icon-download-alt"></i>&nbsp;资料下载</a>
-									</div>
-									<div class="vertical-spacing-10"></div>
-								</div>
+                            <!--<a class="bds_more" data-cmd="more">更多</a>-->
+                            <!--<a class="bds_count" data-cmd="count"></a>-->
+                        </div>
+                    </div>
+                    <div class="video-bar-extra play-continuously-extra hid">
+                        连播播放
+                    </div>
+                    <div class="video-bar-extra turn-off-the-light-extra hid">
+                        关灯模式
+                    </div>
+                </div>
+            </div>
+            <div class="video-main-info-wrapper">
+                <div class="video-info-wrapper">
+                    <div class="video-info">
+                        <div style="">
+                            <div class="title">霹雳布袋戏</div>
+                            <div class="clear-both"></div>
+                            <div class="titme">
+                                <div class="left">4集，35分钟</div>
+                                <div class="right">2016-06-14</div>
+                            </div>
+                            <div class="clear-both"></div>
+                            <div class="user">
+                                <div class="user-img-div">
+                                    <img src="img/1.jpg" class="user-img"/>
+                                    <span>&nbsp;用户名</span>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                课程背景： Gulp 是当下流行的自动化构建工具，通过代码优于配置的策略，Gulp 让任务变得简单，让复杂的任务变得可管理。Sass 是对 CSS 的扩展，让 CSS
+                                语言更强大、优雅。 它允许你使用变量、嵌套规则、 mixins、导入等众多功能， 并且完全兼容 CSS 语法。Bootstrap 是目前很受欢迎的前端框架，它简洁灵活，使得
+                                Web 开发更加快捷。这三者结合起来将会使网站开发变得更加简洁有效。 核心内容： 1.使用 yo 搭建一个 Gulp + Sass + Bootstrap 工程
+                                2.Gulp 的优点以及使用 3.Sass 的优点以及使用 4.Bootstrap 的优点以及使用 软件环境：Mac OS X 是否提供资料：是 课程等级：中级 适合人群：
+                                具有一定前端基础的学习者
+                            </div>
+                            <div class="vertical-spacing-20"></div>
+                            <div class="bar btn-group-vertical">
+                                <a class="btn btn-default"><i class=" icon-heart-empty"></i>&nbsp;收&nbsp;&nbsp;藏</a>
+                                <div class="vertical-spacing-10"></div>
+                                <a class="btn btn-default"><i class="icon-download-alt"></i>&nbsp;资料下载</a>
+                            </div>
+                            <div class="vertical-spacing-10"></div>
+                        </div>
 
-								<div class="tags-wrapper">
-									<div class="vertical-spacing-20"></div>
-									<div class="tags">
-										<span class="label label-default tag">布袋戏</span>
-										<span class="label label-default tag">霹雳狼烟之万堺尘涛</span>
-										<span class="label label-default tag">霹雳</span>
-										<span class="label label-default tag">作者jgshun</span>
-										<span class="label label-default tag">华语</span>
-										<span class="label label-default tag">2016年最新</span>
-										<span class="label label-default tag">2016年做多点击</span>
-										<span class="label label-default tag">布袋戏</span>
-										<span class="label label-default tag">霹雳狼烟之万堺尘涛</span>
-										<span class="label label-default tag">霹雳</span>
-										<span class="label label-default tag">作者jgshun</span>
-										<span class="label label-default tag">华语</span>
-										<span class="label label-default tag">2016年最新</span>
-										<span class="label label-default tag">2016年做多点击</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="video-others-wrapper">
-							<div class="tabs">
-								<div class="tab tab-cur">
-									视频列表
-								</div>
-								<div class="tab">
-									评论列表
-								</div>
-							</div>
-							<div class="vertical-spacing-10"></div>
-							<div class="video-items">
-								<div class="video-item">
-									<div class="video-item-title">
-										<a href="" class="text-success">
-											<i class="icon-play-circle"></i><span class="span-title-cur">&nbsp;第一集</span>
-										</a>
-									</div>
-									<div class="vertical-spacing-10"></div>
-									<div class="video-item-desc">
-										霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-										霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-									</div>
-								</div>
-								<div class="vertical-spacing-10"></div>
-								<div class="spit-hr-1"></div>
-								<div class="vertical-spacing-10"></div>
-								<div class="video-item">
-									<div class="video-item-title">
-										<a href="">
-											<span class="badge">2</span>
-											<span class="span-title">第二集</span>
-										</a>
-									</div>
-									<div class="vertical-spacing-10"></div>
-									<div class="video-item-desc" >
-										霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-									</div>
-								</div>
-								<div class="vertical-spacing-10"></div>
-								<div class="spit-hr-1"></div>
-								<div class="vertical-spacing-10"></div>
-								<div class="video-item">
-									<div class="video-item-title">
-										<a href="">
-											<span class="badge">300</span>
-											<span class="span-title">第三百集</span>
-										</a>
-									</div>
-									<div class="vertical-spacing-10"></div>
-									<div class="video-item-desc">
-										霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-									</div>
-								</div>
-							</div>
-							<div class="video-comments hid">
-								这里是评论列表
-							</div>
-						</div>
-					</div>
-				</section>
+                        <div class="tags-wrapper">
+                            <div class="vertical-spacing-20"></div>
+                            <div class="tags">
+                                <span class="label label-default tag">布袋戏</span>
+                                <span class="label label-default tag">霹雳狼烟之万堺尘涛</span>
+                                <span class="label label-default tag">霹雳</span>
+                                <span class="label label-default tag">作者jgshun</span>
+                                <span class="label label-default tag">华语</span>
+                                <span class="label label-default tag">2016年最新</span>
+                                <span class="label label-default tag">2016年做多点击</span>
+                                <span class="label label-default tag">布袋戏</span>
+                                <span class="label label-default tag">霹雳狼烟之万堺尘涛</span>
+                                <span class="label label-default tag">霹雳</span>
+                                <span class="label label-default tag">作者jgshun</span>
+                                <span class="label label-default tag">华语</span>
+                                <span class="label label-default tag">2016年最新</span>
+                                <span class="label label-default tag">2016年做多点击</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="video-others-wrapper">
+                    <div class="tabs">
+                        <div class="tab" data-tab="video-items">
+                            视频列表
+                        </div>
+                        <div class="tab tab-cur" data-tab="video-comments">
+                            评论列表
+                        </div>
+                        <div class="clear-both"></div>
+                    </div>
+                    <div class="vertical-spacing-10"></div>
 
-				<footer class="bottom-footer-wrapper">
-					Copyright&copy;2016 XX四季一时精油公司 All Rights Reserved. 沪ICP备XXXXXX-XXX
-				</footer>
+                    <div class="video-items hid">
+                        <div class="video-item">
+                            <div class="video-item-title">
+                                <a href="" class="text-success">
+                                    <i class="icon-play-circle"></i><span class="span-title-cur">&nbsp;第一集</span>
+                                </a>
+                                <span class="time">1:30:30</span>
+                                <div class="clear-both"></div>
+                            </div>
+                            <div class="vertical-spacing-10"></div>
+                            <div class="video-item-desc">
+                                霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
+                                以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
+                                剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
+                                剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
+                                已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+                                霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
+                                以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
+                                剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
+                                剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
+                                已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+                            </div>
+                        </div>
+                        <div class="vertical-spacing-10"></div>
+                        <div class="spit-hr-1"></div>
+                        <div class="vertical-spacing-10"></div>
+                        <div class="video-item">
+                            <div class="video-item-title">
+                                <a href="">
+                                    <span class="badge">300</span>
+                                    <span class="span-title">第三百集</span>
+                                    <span class="time">1:30:30</span>
+                                    <div class="clear-both"></div>
+                                </a>
+                            </div>
+                            <div class="vertical-spacing-10"></div>
+                            <div class="video-item-desc">
+                                霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
+                                以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
+                                剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
+                                剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
+                                已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+                                霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
+                                以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
+                                剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
+                                剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
+                                已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+                            </div>
+                        </div>
+                        <div class="vertical-spacing-10"></div>
+                        <div class="spit-hr-1"></div>
+                        <div class="vertical-spacing-10"></div>
+                        <div class="video-item">
+                            <div class="video-item-title">
+                                <a href="">
+                                    <span class="badge">300</span>
+                                    <span class="span-title">第三百集</span>
+                                    <span class="time">1:30:30</span>
+                                    <div class="clear-both"></div>
+                                </a>
+                            </div>
+                            <div class="vertical-spacing-10"></div>
+                            <div class="video-item-desc">
+                                霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
+                                以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
+                                剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
+                                剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
+                                已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-comments">
+                        <div>
+                            <div class="form-group">
+                                <textarea class="form-control textarea-auto-height clear-radius" rows="1"></textarea>
+                            </div>
+                            <div style="float: right;">
+                                <a href="javascript:;" class="btn btn-default btn-sm clear-radius">评&nbsp;论</a>
+                            </div>
+                            <div class="clear-both vertical-spacing-10"></div>
+                        </div>
+                        <div class="spit-hr-1"></div>
+                        <div class="mods-wrapper" style="margin-top: 10px;">
+                            <ul class="ul-li-horizontal mods"
+                                style="height: 25px;margin-left: -60px;">
+                                <li class="mod"
+                                    style="border-bottom: 1px solid #EFEFEF; ">
+                                    <a href="javascript:;">
+                                        <span class="mod-span mod-span-cur"
+                                              style="font-size: 13px;color: rgba(0,0,0,0.4);">全部</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-split-line-1"
+                                    style="background-color:#EFEFEF;width: 1px;height: 100%;">
+                                </li>
+                                <li style="">
+                                    <a href="javascript:;">
+                                        <span class="mod-span" style="font-size: 13px;">热门</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-split-line-1"
+                                    style="background-color:#EFEFEF;width: 1px;height: 100%;">
+                                </li>
+                                <li style="">
+                                    <a href="javascript:;">
+                                        <span class="mod-span" style="font-size: 13px;">认证用户</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-split-line-1"
+                                    style="background-color:#EFEFEF;width: 1px;height: 100%;">
+                                </li>
+                                <li style="">
+                                    <a href="javascript:;">
+                                        <span class="mod-span" style="font-size: 13px;">关注的人</span>
+                                    </a>
+                                </li>
+                                <li class="vertical-split-line-1"
+                                    style="background-color:#EFEFEF;width: 1px;height: 100%;">
+                                </li>
+                                <li style="">
+                                    <a href="javascript:;">
+                                        <span class="mod-span" style="font-size: 13px;">陌生人</span>
+                                    </a>
+                                </li>
+                                <div class="clear-both"></div>
+                            </ul>
+                            <div class="clear-both"></div>
+                            <div class="mod-content-wrapper">
+                                <div class="mod-content-item"
+                                     style="margin-top: 10px;">
+                                    <div class="user-img"
+                                         style="height:60px;width: 40px;float: left;">
+                                        <img src="img/1.jpg"
+                                             style="height: 40px;width: 40px;border-radius: 40px;margin-top: 10px;">
+                                    </div>
+                                    <div class="comment-info" style="margin-left:10px;float: left; width: 625px;">
+                                        <div class="user-comment">
+                                            <span class="user-name"
+                                                  style="font-size: 13px;font-weight: 600;color: rgba(0,0,0,0.6);">用户名用户名用户名: </span>
+                                            <span class="to-user-name-div"
+                                                  style="font-size: 13px;color: rgba(0,0,0,0.9);">回复<span
+                                                    class="to-user-name"
+                                                    style="font-size: 13px;font-weight: 600;color: rgba(0,0,0,0.6);">@被回复用户被回复用户被恢复用户</span>:</span>
+                                            <span class="comment" style="font-size: 13px;color: rgba(0,0,0,0.9);">惊鸿掠影复尘嚣，一瞥恩仇血路迢。刀剑齐锋征世乱，春秋竞逐睨天骄。</span>
+                                        </div>
+                                        <div class="comment-bars"
+                                             style="height:20px;  margin-top: 5px;font-size: 13px;color: rgba(0,0,0,0.9);">
+                                            <div class="time" style="float: left">
+                                                今天 20:40
+                                            </div>
+                                            <div class="bars" style="float: right;">
+                                                <ul class="ul-li-horizontal" style="height: 20px;">
+                                                    <li><a href="javascript:;"
+                                                           style="font-size: 13px;color: rgba(0,0,0,0.9);">举报</a></li>
+                                                    <li class="vertical-split-line-1"
+                                                        style="background-color:#EFEFEF;width: 1px;height: 100%;">
+                                                    </li>
+                                                    <li><a href="javascript:;"
+                                                           style="font-size: 13px;color: rgba(0,0,0,0.9);">查看对话</a></li>
+                                                    <li class="vertical-split-line-1"
+                                                        style="background-color:#EFEFEF;width: 1px;height: 100%;">
+                                                    </li>
+                                                    <li><a href="javascript:;"
+                                                           style="font-size: 13px;color: rgba(0,0,0,0.9);">回复</a></li>
+                                                    <li class="vertical-split-line-1"
+                                                        style="background-color:#EFEFEF;width: 1px;height: 100%;">
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;"
+                                                           style="font-size: 13px;">
+                                                            <i class="icon-thumbs-up not-like"
+                                                               style="color: rgba(0,0,0,0.2);"></i>
+                                                        </a>
+                                                    </li>
+                                                    <div class="clear-both"></div>
+                                                </ul>
+                                                <i class="icon-caret-up arrow icon-large"
+                                                   style="display: block;margin-left: 200px;margin-top: -10px;color: rgba(0,0,0,0.2)"></i>
+                                            </div>
+                                            <div class="clear-both"></div>
+                                        </div>
+                                        <div class="reply">
+                                            <div class="form-group">
+                                                    <textarea class="form-control textarea-auto-height clear-radius"
+                                                              rows="1"></textarea>
+                                            </div>
+                                            <div style="float: right;">
+                                                <a href="javascript:;"
+                                                   class="btn btn-default btn-sm clear-radius">评&nbsp;论</a>
+                                            </div>
+                                            <div class="clear-both"></div>
+                                            <div class="vertical-spacing-10"></div>
+                                        </div>
+                                    </div>
+                                    <div class="clear-both"></div>
 
-			</div>
-		</div>
-	</body>
+                                </div>
+                                <div class="spit-hr-1"></div>
+                                <div class="mod-content-item"
+                                     style="margin-top: 10px;">
+                                    <div class="user-img"
+                                         style="height:60px;width: 40px;float: left;">
+                                        <img src="img/1.jpg"
+                                             style="height: 40px;width: 40px;border-radius: 40px;margin-top: 10px;">
+                                    </div>
+                                    <div class="comment-info" style="margin-left:10px;float: left; width: 625px;">
+                                        <div class="user-comment">
+                                            <span class="user-name"
+                                                  style="font-size: 13px;font-weight: 600;color: rgba(0,0,0,0.6);">用户名用户名用户名: </span>
+                                            <span class="to-user-name-div"
+                                                  style="font-size: 13px;color: rgba(0,0,0,0.9);">回复<span
+                                                    class="to-user-name"
+                                                    style="font-size: 13px;font-weight: 600;color: rgba(0,0,0,0.6);">@被回复用户被回复用户被恢复用户</span>:</span>
+                                            <span class="comment" style="font-size: 13px;color: rgba(0,0,0,0.9);">惊鸿掠影复尘嚣，一瞥恩仇血路迢。刀剑齐锋征世乱，春秋竞逐睨天骄。</span>
+                                        </div>
+                                        <div class="comment-bars"
+                                             style="height:20px;  margin-top: 5px;font-size: 13px;color: rgba(0,0,0,0.9);">
+                                            <div class="time" style="float: left">
+                                                今天 20:40
+                                            </div>
+                                            <div class="bars" style="float: right;">
+                                                <ul class="ul-li-horizontal" style="height: 20px;">
+                                                    <li><a href="javascript:;"
+                                                           style="font-size: 13px;color: rgba(0,0,0,0.9);">举报</a></li>
+                                                    <li class="vertical-split-line-1"
+                                                        style="background-color:#EFEFEF;width: 1px;height: 100%;">
+                                                    </li>
+                                                    <li><a href="javascript:;"
+                                                           style="font-size: 13px;color: rgba(0,0,0,0.9);">查看对话</a></li>
+                                                    <li class="vertical-split-line-1"
+                                                        style="background-color:#EFEFEF;width: 1px;height: 100%;">
+                                                    </li>
+                                                    <li><a href="javascript:;"
+                                                           style="font-size: 13px;color: rgba(0,0,0,0.9);">回复</a></li>
+                                                    <li class="vertical-split-line-1"
+                                                        style="background-color:#EFEFEF;width: 1px;height: 100%;">
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;"
+                                                           style="font-size: 13px;">
+                                                            <i class="icon-thumbs-up not-like"
+                                                               style="color: rgba(0,0,0,0.2);"></i>
+                                                        </a>
+                                                    </li>
+                                                    <div class="clear-both"></div>
+                                                </ul>
+                                                <i class="icon-caret-up arrow icon-large hid"
+                                                   style="display: block;margin-left: 200px;margin-top: -10px;color: rgba(0,0,0,0.2);visibility: hidden;"></i>
+                                            </div>
+                                            <div class="clear-both"></div>
+                                        </div>
+                                        <div class="reply hid">
+                                            <div class="form-group">
+                                                    <textarea class="form-control textarea-auto-height clear-radius"
+                                                              rows="1"></textarea>
+                                            </div>
+                                            <div style="float: right;">
+                                                <a href="javascript:;"
+                                                   class="btn btn-default btn-sm clear-radius">评&nbsp;论</a>
+                                            </div>
+                                            <div class="clear-both"></div>
+                                            <div class="vertical-spacing-10"></div>
+                                        </div>
+                                    </div>
+                                    <div class="clear-both"></div>
 
-	<script>$(function() {
-	//通过目录按钮打开关闭目录侧边栏
-	$('.video-tool-bar-main .catalog').click(function() {
-		var catalogExtra = $('.video-tool-bar-wrapper').find('.' + $(this).data('extra'));
-		if (catalogExtra.is(":hidden")) {
-			catalogExtra.slideLeftShow();
-		} else {
-			catalogExtra.slideLeftHide();
-		}
-	});
-	//收起目录侧边栏
-	$('.video-tool-bar-wrapper .catalog-extra .content .title .title-right').click(function() {
-		$('.video-tool-bar-main .catalog').trigger('click');
-	});
+                                </div>
+                            </div>
 
-	//监控视频侧边栏的鼠标悬停事件
-	$('.video-tool-bar-main .download,.collection,.share,.play-continuously,.turn-off-the-light').hover(function() {
-		$('.video-tool-bar-wrapper').find('.' + $(this).data('extra')).slideLeftShow();
-	}, function() {
-		$('.video-tool-bar-wrapper').find('.' + $(this).data('extra')).slideLeftHide();
-	});
+                        </div>
+                    </div>
+                </div>
+                <div class="clear-both"></div>
+            </div>
+        </section>
+        <div class="clear-both"></div>
+        <footer class="bottom-footer-wrapper">
+            Copyright&copy;2016 XX四季一时精油公司 All Rights Reserved. 沪ICP备XXXXXX-XXX
+        </footer>
 
-	//分享侧边栏有动画效果 特殊处理
-	$('.video-tool-bar-wrapper .share-extra').hover(function() {
-		$(this).stop().show();
-	}, function() {
-		$(this).slideLeftHide();
-	});
+    </div>
+</div>
+</body>
 
-	//收藏侧边栏 有已收藏和为收藏两种状态 状态切换
-	$('.video-tool-bar-main .collection').click(function() {
-		var _this_i = $(this).find('i');
-		var _this_span = $(this).find('span');
-		if (_this_i.hasClass('icon-heart-empty')) {
-			_this_i.removeClass('icon-heart-empty');
-			_this_i.addClass('icon-heart');
-			_this_span.addClass('text-success');
-		} else {
-			_this_i.removeClass('icon-heart');
-			_this_span.removeClass('text-success');
-			_this_i.addClass('icon-heart-empty');
-		}
-	});
+<script>
+    $(function () {
+        //通过目录按钮打开关闭目录侧边栏
+        $('.video-tool-bar-main .catalog').click(function () {
+            var catalogExtra = $('.video-tool-bar-wrapper').find('.' + $(this).data('extra'));
+            if (catalogExtra.is(":hidden")) {
+                catalogExtra.slideLeftShow();
+            } else {
+                catalogExtra.slideLeftHide();
+            }
+        });
+        //收起目录侧边栏
+        $('.video-tool-bar-wrapper .catalog-extra .content .title .title-right').click(function () {
+            $('.video-tool-bar-main .catalog').trigger('click');
+        });
 
-	//状态切换时改变文字颜色
-	$('.video-tool-bar-main .play-continuously,.turn-off-the-light').click(function() {
-		var _this_span = $(this).find('span');
-		if (_this_span.hasClass('text-success')) {
-			_this_span.removeClass('text-success');
-		} else {
-			_this_span.addClass('text-success');
-		}
-	});
-});</script>
+        //监控视频侧边栏的鼠标悬停事件
+        $('.video-tool-bar-main .download,.collection,.share,.play-continuously,.turn-off-the-light').hover(function () {
+            $('.video-tool-bar-wrapper').find('.' + $(this).data('extra')).slideLeftShow();
+        }, function () {
+            $('.video-tool-bar-wrapper').find('.' + $(this).data('extra')).slideLeftHide();
+        });
 
-	<script type="text/javascript">//分享配置
+        //分享侧边栏有动画效果 特殊处理
+        $('.video-tool-bar-wrapper .share-extra').hover(function () {
+            $(this).stop().show();
+        }, function () {
+            $(this).slideLeftHide();
+        });
+
+        //收藏侧边栏 有已收藏和为收藏两种状态 状态切换
+        $('.video-tool-bar-main .collection').click(function () {
+            var _this_i = $(this).find('i');
+            var _this_span = $(this).find('span');
+            if (_this_i.hasClass('icon-heart-empty')) {
+                _this_i.removeClass('icon-heart-empty');
+                _this_i.addClass('icon-heart');
+                _this_span.addClass('text-success');
+            } else {
+                _this_i.removeClass('icon-heart');
+                _this_span.removeClass('text-success');
+                _this_i.addClass('icon-heart-empty');
+            }
+        });
+
+        //状态切换时改变文字颜色
+        $('.video-tool-bar-main .play-continuously,.turn-off-the-light').click(function () {
+            var _this_span = $(this).find('span');
+            if (_this_span.hasClass('text-success')) {
+                _this_span.removeClass('text-success');
+            } else {
+                _this_span.addClass('text-success');
+            }
+        });
+
+        //tab标签切换
+        $('.video-others-wrapper .tabs .tab').click(function () {
+            var _this = $(this);
+            if (!_this.hasClass('tab-cur')) {
+                $('.video-others-wrapper .tabs').find('.tab').each(function (inx, val) {
+                    $('.video-others-wrapper .' + $(val).data('tab')).hide();
+                    $(val).removeClass('tab-cur');
+
+                });
+                _this.addClass('tab-cur');
+                $('.video-others-wrapper .' + _this.data('tab')).show();
+
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">//分享配置
 var _BD_TEXT_ = '霹雳狼烟之万堺尘涛';
 var _BD_DESC = '霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。';
 var _BD_URL = 'http://127.0.0.1:8020/sijiyishi/video.html';
 var _BD_PIC = 'http://127.0.0.1:8020/sijiyishi/img/1.jpg';
 
 _BD_SHARE_COMMON_ = {
-	bdText: _BD_TEXT_,
-	bdDesc: _BD_DESC,
-	bdUrl: _BD_URL,
-	bdPic: _BD_PIC
+    bdText: _BD_TEXT_,
+    bdDesc: _BD_DESC,
+    bdUrl: _BD_URL,
+    bdPic: _BD_PIC
 };</script>
 
-	<script>$(function() {
-	//处理文字溢出
-	var this_video_desc = $('.video-tool-bar-wrapper .catalog-extra .content>.desc');
-	//1 设置所需的长度 字节
-	this_video_desc.attr("displayLength", "350");
-	//2 调用该插件
-	//方式一 溢出与还原切换
-	//this_video_desc.un_displayPart();
-	//方式二 溢出不还原
-	this_video_desc.text_overflow();
+<script>$(function () {
+    //处理文字溢出
+    var this_video_desc = $('.video-tool-bar-wrapper .catalog-extra .content>.desc');
+    //1 设置所需的长度 字节
+    this_video_desc.attr("displayLength", "350");
+    //2 调用该插件
+    //方式一 溢出与还原切换
+    //this_video_desc.un_displayPart();
+    //方式二 溢出不还原
+    this_video_desc.text_overflow();
 
-	//处理文字溢出
-	var this_item_desc = $('.video-tool-bar-wrapper .catalog-extra .content .items .item .item-desc');
-	this_item_desc.attr("displayLength", "300");
-	this_item_desc.text_overflow();
+    //处理文字溢出
+    var this_item_desc = $('.video-tool-bar-wrapper .catalog-extra .content .items .item .item-desc');
+    this_item_desc.attr("displayLength", "300");
+    this_item_desc.text_overflow();
 
 });</script>
+<script src="js/common.js" type="text/javascript">
+</script>
 
 </html>
