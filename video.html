@@ -7,6 +7,7 @@
     <link href="bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link href="font/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="video-js-5.10.4/video-js.min.css" rel="stylesheet">
+    <link href="layer-v2.4/skin/layer.css" rel="stylesheet"/>
 
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="css/video.css"/>
@@ -16,12 +17,13 @@
     <!--[if lt IE 9]>
     <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script src="video-js-5.10.4/ie8/videojs-ie8.min.js"></script>
     <![endif]-->
     <script src="js/jquery-2.1.4.min.js" type="text/javascript">
     </script>
     <script type="text/javascript" src="js/text_overflow.js"></script>
     <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+    <script src="layer-v2.4/layer.js"></script>
     <script src="js/app.js" type="text/javascript">
     </script>
     <script src="js/video.js" type="text/javascript">
@@ -151,6 +153,10 @@
                         <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls="controls"
                                preload="auto" style="width: 100%;height: 100%;" poster="img/sszj.jpg" data-setup="{}">
                             <source src="sszj_bd.mp4" type='video/mp4'>
+                            <source src="http://video.guokaodashi.com/@/video/source/_2016-05-19_/m3u8/1000K/20160519094908175507.m3u8?pm3u8/0&e=1467898691&token=dooOsJvappR1KFcGtqc_xzVwDAN_t1z208_qIZ4h:F313-Q0priuFei77pqSb99rbUns="
+                                    type='application/x-mpegURL'>
+
+
                             <!--<source src="sszj.mp4" type='video/webm'>-->
                             <!--<source src="fndxn_bd.webm" type='video/webm'>-->
                             <p class="vjs-no-js">
@@ -874,6 +880,7 @@
                 </div>
                 <div class="clear-both"></div>
             </div>
+
         </section>
         <div class="clear-both"></div>
         <footer class="bottom-footer-wrapper">
@@ -881,6 +888,96 @@
         </footer>
 
     </div>
+</div>
+
+<div id="reportModelDiv" style="width: 100%;height: 100%;border: 1px solid rgba(0,0,0,0);">
+    <div class="report-wrapper" style="width: 90%; margin: 10px auto;">
+        <div class="title" style="font-size: 13px;">
+        <span>
+            我要举报的是"<span class="be-reported-name" style="font-size: 13px;font-weight: 600;color: rgba(0, 0, 0, 0.6);">@张三</span>"<span>发表的评论:</span>
+        </span>
+        </div>
+        <div class="vertical-spacing-10"></div>
+        <div class="be-reported-content" style="background-color: #EFEFEF;">
+            <div class="user-img-div" style="width:10%;;float: left;">
+                <img src="img/1.jpg" style="height: 40px;width: 40px;border-radius: 40px;"/>
+            </div>
+            <div class="content" style="width:90%; float: left;">
+                <span class="be-reported-name"
+                      style="font-size: 13px;font-weight: 600;color: rgba(0, 0, 0, 0.6);">@张三:</span>
+                <span class="text" style="font-size: 13px;">请选择举报类型：请选择举报类型：请选择举报类型：请选择举报类型：请选择举报类型：
+                请选择举报类型：请选择举报类型：请选择举报类型：请选择举报类型：择举报类型：请选择举报类型：请选择择举报类型：请选择举报类型：请选择择举报类型：请选择举报类型：请选择
+                </span>
+            </div>
+            <div class="clear-both"></div>
+        </div>
+        <div class="report-type-wrapper">
+            <div class="report-type-contetn" style="width: 85%;margin:10px auto;font-size: 13px;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="reportType" id="junkMarketing" value="1000" checked>
+                                垃圾营销
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="reportType" id="obscene" value="1001">
+                                淫秽色情
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="reportType" id="harmfulInformation" value="1003">
+                                有害信息
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="reportType" id="personalAttackMe" value="1004">
+                                人身攻击我
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="reportType" id="illegalInformation" value="1005">
+                                违法信息
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="vertical-spacing-10"></div>
+                <div class="spit-hr-1"></div>
+                <div class="vertical-spacing-20"></div>
+                <a class="btn btn-default btn-sm">提交</a>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--我要举报的是“@羋冖”发的评论：-->
+
+    <!--@羋冖：终于修成正果[赞]那些说他们分手的就问你们脸疼不疼？？？[doge]-->
+    <!--请选择举报类型：-->
+    <!--垃圾营销-->
+    <!--有害信息-->
+    <!--违法信息-->
+    <!--淫秽色情-->
+    <!--人身攻击我-->
 </div>
 </body>
 

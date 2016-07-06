@@ -170,4 +170,25 @@ $(function () {
         _this.find('.report-bar-split').css('visibility', 'hidden');
     });
 
+
+    layer.config({
+        extend: ['../layer-v2.4/skin/moon/style.css'], //加载新皮肤
+        skin: 'layer-ext-moon'
+    });
+
+    //举报按钮点击事件
+    $('.mod-content-wrapper .mod-content-item .comment-info .comment-bars .bars .report-bar').click(function () {
+        layer.open({
+            type: 1,
+            title: ["举报", 'background-color:rgb(255,255,255);text-align:center;'],
+            closeBtn: 0,
+            shadeClose: true,
+            skin: 'layer-ext-moon',
+            content: $('#reportModelDiv'),
+            area: ['550px', 'auto'],
+            shift: 4
+        });
+
+    });
+
 });

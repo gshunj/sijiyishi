@@ -220,6 +220,10 @@ a:hover {
     border-top: 1px solid #EFEFEF;
 }
 
+.vertical-spacing-5 {
+    height: 5px;
+}
+
 .vertical-spacing-10 {
     height: 10px;
 }
