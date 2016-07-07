@@ -21,7 +21,8 @@
 }
 
 .main-content-wrapper .main-content-wrapper-split .register-div .register-form {
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	/*border-top: 1px solid rgba(0, 0, 0, 0.1);*/
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	width: 400px;
 	height: 400px;
 	margin: 40px auto;

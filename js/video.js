@@ -63,6 +63,7 @@ $(function() {
 			_this_span.html(1000);
 		} else {
 			_this_i.removeClass('thick').addClass('undertone');
+			_this_span.html(999);
 		}
 	});
 
