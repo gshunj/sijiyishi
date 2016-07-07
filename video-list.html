@@ -6,15 +6,11 @@
     <title>四季一时</title>
     <link href="bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link href="font/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet"/>
-    <!--<link href="unslider/css/unslider.css" rel="stylesheet"/>-->
-    <!--<link href="unslider/css/unslider-dots.css" rel="stylesheet"/>-->
 
     <link rel="stylesheet" href="css/app.css"/>
     <link rel="stylesheet" href="css/video_list.css"/>
     <link rel="stylesheet" href="css/common_video_layout.css"/>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -148,7 +144,7 @@
                             <div class="title">频道:</div>
                             <div class="content">
                                 <div class="btn-group" role="group" aria-label="...">
-                                    <button type="button" class="btn btn-default  tag btn-success">
+                                    <button type="button" class="btn btn-default  tag cur-active">
                                         电视剧
                                     </button>
                                     <button type="button" class="btn btn-default tag">
@@ -266,7 +262,7 @@
                             <div class="title" style="float: left;width: 99px;text-align: center">地区:</div>
                             <div class="content" style="float: left;">
                                 <div class="btn-group" role="group" aria-label="...">
-                                    <button type="button" class="btn btn-default  tag btn-success"
+                                    <button type="button" class="btn btn-default  tag cur-active"
                                             style="width: 91px;border: 0;border-radius: 0;">
                                         全部
                                     </button>
@@ -308,7 +304,7 @@
                             <div class="title" style="float: left;width: 99px;text-align: center">类型:</div>
                             <div class="content" style="float: left;">
                                 <div class="btn-group" role="group" aria-label="...">
-                                    <button type="button" class="btn btn-default  tag btn-success"
+                                    <button type="button" class="btn btn-default  tag cur-active"
                                             style="width: 91px;border: 0;border-radius: 0;">
                                         全部
                                     </button>
@@ -377,13 +373,13 @@
                                         <button type="button" class="btn btn-default tag">
                                             青春剧
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
-                                            家庭剧
-                                        </button>
                                         <div class="clear-both"></div>
                                     </div>
                                     <div class="clear-both"></div>
                                     <div class="btn-group" role="group" aria-label="...">
+                                        <button type="button" class="btn btn-default tag">
+                                            家庭剧
+                                        </button>
                                         <button type="button" class="btn btn-default  tag"
                                                 style="width: 91px;border: 0;border-radius: 0;">
                                             军旅剧
@@ -418,7 +414,7 @@
                     <div class="cur-videos-header">
                         <div class="sort-wrapper">
                             <span>排序:</span>
-                            <a href="javascript:;" class="sort sort-hot-update">
+                            <a href="javascript:;" class="sort sort-hot">
                                 <i class="icon-circle undertone"></i>
                                 <span>热门</span>
                             </a>
@@ -439,17 +435,6 @@
                             </a>
                         </div>
                         <div class="clear-both"></div>
-
-                        <!--<div class="sort-wrapper">-->
-                        <!--<div class="title" style="float: left;"><span>排序:</span></div>-->
-                        <!--<div class="sorts" style="float:left;margin-left: 5px;">-->
-                        <!--<i class="icon-circle undertone"></i>-->
-                        <!--<span>热门</span>-->
-                        <!--<i class="icon-circle undertone"></i>-->
-                        <!--<span>热门</span>-->
-                        <!--</div>-->
-                        <!--<div class="clear-both"></div>-->
-                        <!--</div>-->
                     </div>
                     <div class="vertical-spacing-10"></div>
                     <div class="videos-wrapper">
@@ -1233,6 +1218,26 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="video-pagination-wrapper">
+                        <div class="content" style="width: 522px; margin: 0 auto;padding: 0;">
+                            <ul class="pagination pagination-lg page-ul" style="margin: 0;padding: 0;">
+                                <li class="forbid"><a href="#">&laquo;</a></li>
+                                <li class="cur-page"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+
+
                     </div>
                 </div>
             </div>
