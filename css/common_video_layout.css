@@ -1,0 +1,72 @@
+.videos-wrapper {}
+
+.videos-wrapper .videos {
+	height: auto;
+	position: absolute;
+}
+
+.videos-wrapper .videos .video {
+	float: left;
+	width: 235px;
+	background-color: rgba(255, 255, 255, 1);
+	border: 1px solid #EFEFEF;
+	margin-left: 20px;
+}
+.videos-wrapper .videos .video:nth-of-type(1){
+	margin-left: 0;
+}
+
+.videos-wrapper .videos .video .img-div {
+	height: 155px;
+}
+
+.videos-wrapper .videos .video .img-div img {
+	height: 155px;
+	width: 100%;
+}
+
+.videos-wrapper .videos .video .content-div {}
+
+.videos-wrapper .videos .video .content-div .content-div-title {
+	text-align: center;
+}
+
+.videos-wrapper .videos .video .content-div .content-div-title .title {
+	height: 16px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-top: 10px;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.videos-wrapper .videos .video .content-div .desc {
+	height: 71px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-top: 0;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 12px;
+	font-style: italic;
+	background-color: rgb(255, 255, 255);
+}
+
+.videos-wrapper .videos .video .content-div .desc-time-split {
+	border-top: 10px solid rgb(255, 255, 255);
+}
+
+.videos-wrapper .videos .video .content-div .time {
+	line-height: 30px;
+	color: rgba(0, 0, 0, 0.5);
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.videos-wrapper .videos .video .content-div .time div:nth-of-type(1) {
+	float: left;
+}
+
+.videos-wrapper .videos .video .content-div .time div:nth-of-type(2) {
+	float: right;
+}
