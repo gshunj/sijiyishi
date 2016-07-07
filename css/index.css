@@ -76,23 +76,30 @@
 	height: 30px;
 	line-height: 30px;
 	background-color: RGBA(242, 244, 234, 0.5);
-	color: rgba(205, 129, 98, 1);
+	/*color: rgba(205, 129, 98, 1);*/
+	font-size: 16px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.6);
+	width: 990px;
 }
 
 .live-video-wrapper .live-video-header i {
-	color: rgba(205, 129, 98, 1);
+	/*color: rgba(205, 129, 98, 1);*/
+	color: rgba(0, 0, 0, 0.6);
 }
 
 .live-video-wrapper .live-video-header span {
 	font-size: 17px;
 	font-weight: 800;
-	color: rgba(205, 129, 98, 1);
+	/*color: rgba(205, 129, 98, 1);*/
+	color: rgba(0, 0, 0, 0.6);
 }
 
 .live-video-wrapper .live-video-header .title {
 	margin-left: 0;
 	display: inline;
-	color: rgba(205, 129, 98, 1);
+	/*color: rgba(205, 129, 98, 1);*/
+	color: rgba(0, 0, 0, 0.6);
 }
 
 .live-video-wrapper .live-video-header .live-more {
@@ -101,6 +108,8 @@
 	float: right;
 	line-height: 30px;
 	font-style: italic;
+	font-size: 14px;
+	font-weight: 500;
 }
 
 .live-video-wrapper .live-video-content {
