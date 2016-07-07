@@ -1,506 +1,502 @@
-
 .main-content .video-nav {
-    height: 40px;
-    margin-top: 2px;
-    font-size: 13px;
+	height: 40px;
+	margin-top: 2px;
+	font-size: 13px;
 }
 
 .main-content .video-nav .video-nav-ol {
-    background-color: rgba(255, 255, 255, 1);
+	background-color: rgba(255, 255, 255, 1);
 }
 
 .main-content .video-main-wrapper {
-    height: 600px;
-    /*border: 1px solid blue;*/
+	height: 600px;
+	/*border: 1px solid blue;*/
 }
 
 .main-content .video-main-wrapper .video-title {
-    height: 40px;
-    line-height: 40px;
+	height: 40px;
+	line-height: 40px;
 }
 
 .main-content .video-main-wrapper .video-tool-wrapper {
-    width: 95%;
-    height: 540px;
-    float: left;
+	width: 95%;
+	height: 540px;
+	float: left;
 }
 
 .main-content .video-main-wrapper .video-tool-wrapper .video-tool-main {
-    width: 100%;
-    height: 540px;
+	width: 100%;
+	height: 540px;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper {
-    width: 5%;
-    height: 540px;
-    float: left;
+	width: 5%;
+	height: 540px;
+	float: left;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main {
-    position: absolute;
-    margin-top: 0;
+	position: absolute;
+	margin-top: 0;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .video-bar {
-    width: 50px;
-    height: 48px;
-    font-size: 10px;
+	width: 50px;
+	height: 48px;
+	font-size: 10px;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .catalog {
-    border-radius: 0;
+	border-radius: 0;
 }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .download {
-}
+.main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .download {}
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .collection {
-}
+.main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .collection {}
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .share {
-}
+.main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .share {}
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .play-continuously {
-    width: 50px;
-    height: 48px;
-    font-size: 10px;
-    margin-top: 255px;
+	width: 50px;
+	height: 48px;
+	font-size: 10px;
+	/*    margin-top: 255px;*/
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .video-tool-bar-main .turn-off-the-light {
-    border-radius: 0;
+	border-radius: 0;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .video-bar-extra {
-    font-size: 13px;
-    background-color: rgba(255, 255, 255, 0.5);
-    text-align: center;
-    line-height: 48px;
-    position: absolute;
-    height: 48px;
-    width: 150px;
-    z-index: 1000;
-    margin-left: -150px;
+	font-size: 13px;
+	background-color: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	line-height: 48px;
+	position: absolute;
+	height: 48px;
+	width: 150px;
+	z-index: 1000;
+	margin-left: -150px;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra {
-    /*border: 1px solid yellow;*/
-    height: 540px;
-    width: 400px;
-    z-index: 1000;
-    margin-left: -400px;
-    line-height: normal;
+	/*border: 1px solid yellow;*/
+	height: 540px;
+	width: 400px;
+	z-index: 1000;
+	margin-left: -400px;
+	line-height: normal;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .download-extra {
-    margin-top: 48px;
+	margin-top: 48px;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .collection-extra {
-    margin-top: 96px;
+	margin-top: 94px;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .share-extra {
-    margin-top: 144px;
+	margin-top: 142px;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .share-extra .share-adjustment {
-    margin-top: 10px;
-    margin-left: 10px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.main-content .video-main-wrapper .video-tool-bar-wrapper .comment-extra {
+	margin-top: 190px;
+}
+
+.main-content .video-main-wrapper .video-tool-bar-wrapper .like-extra {
+	margin-top: 235px;
+}
+
+.main-content .video-main-wrapper .video-tool-bar-wrapper .barrage-extra {
+	margin-top: 398px;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .play-continuously-extra {
-    margin-top: 442px;
+	margin-top: 444px;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .turn-off-the-light-extra {
-    margin-top: 490px;
+	margin-top: 492px;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content {
-    width: 95%;
-    height: 540px;
-    margin-left: 10px;
-    overflow: scroll;
+	width: 95%;
+	height: 540px;
+	margin-left: 10px;
+	overflow: scroll;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .title {
-    height: 48px;
-    width: 100%;
-    line-height: 48px;
+	height: 48px;
+	width: 100%;
+	line-height: 48px;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .title .title-left {
-    float: left;
-    width: 30%;
-    height: 48px;
-    text-align: left;
+	float: left;
+	width: 30%;
+	height: 48px;
+	text-align: left;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .title .title-right {
-    float: right;
-    width: 30%;
-    height: 48px;
-    text-align: right;
+	float: right;
+	width: 30%;
+	height: 48px;
+	text-align: right;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .desc {
-    height: 120px;
-    width: 100%;
-    line-height: 17px;
-    letter-spacing: 2px;
+	height: 120px;
+	width: 100%;
+	line-height: 17px;
+	letter-spacing: 2px;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items {
-    width: 100%;
-    height: 500px;
+	width: 100%;
+	height: 500px;
 }
 
-.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item {
-}
+.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item {}
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-title {
-    width: 100%;
-    height: 30px;
-    text-align: left;
-    border: 1px solid #EFEFEF;
-    border-right-width: 0;
-    border-left-width: 0;
-    line-height: 30px;
+	width: 100%;
+	height: 30px;
+	text-align: left;
+	border: 1px solid #EFEFEF;
+	border-right-width: 0;
+	border-left-width: 0;
+	line-height: 30px;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-title .item-title-left {
-    width: 80%;
-    float: left;
+	width: 80%;
+	float: left;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-title .item-title-right {
-    width: 20%;
-    float: left;
+	width: 20%;
+	float: left;
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-desc {
-    width: 85%;
-    height: 120px;
-    margin-left: 55px;
-    line-height: 17px;
-    letter-spacing: 2px;
+	width: 85%;
+	height: 120px;
+	margin-left: 55px;
+	line-height: 17px;
+	letter-spacing: 2px;
 }
 
 .video-main-info-wrapper {
-    width: 100%;
-    /*height: 700px;*/
-    border: 1px solid greenyellow;
-    overflow: visible;
+	width: 100%;
+	/*height: 700px;*/
+	border: 1px solid greenyellow;
+	overflow: visible;
 }
 
 .video-main-info-wrapper .video-info-wrapper {
-    width: 30%;
-    float: left;
-    background-color: RGBA(243, 243, 243, 0.2);
+	width: 30%;
+	float: left;
+	background-color: RGBA(243, 243, 243, 0.2);
 }
 
 .video-main-info-wrapper .video-info-wrapper .video-info {
-    width: 95%;
-    margin: 25px auto;
+	width: 95%;
+	margin: 25px auto;
 }
 
 .video-main-info-wrapper .video-info-wrapper .video-info .tags-wrapper {
-    width: 105%;
-    margin-left: -6px;
-    margin-bottom: -10px;
-    background-color: white;
+	width: 105%;
+	margin-left: -6px;
+	margin-bottom: -10px;
+	background-color: white;
 }
 
 .video-main-info-wrapper .video-info-wrapper .video-info .tags-wrapper .tags {
-    padding: 5px;
+	padding: 5px;
 }
 
 .video-main-info-wrapper .video-info-wrapper .video-info .tags-wrapper .tags .tag {
-    background-color: RGBA(243, 243, 243, 0.9);
-    color: rgba(0, 0, 0, 0.5);
-    border-radius: 0;
+	background-color: RGBA(243, 243, 243, 0.9);
+	color: rgba(0, 0, 0, 0.5);
+	border-radius: 0;
 }
 
-.video-main-info-wrapper .video-info-wrapper .video-info .bar {
-}
+.video-main-info-wrapper .video-info-wrapper .video-info .bar {}
 
 .video-main-info-wrapper .video-info-wrapper .video-info .bar a {
-    width: 280px;
-    border-radius: 0;
+	width: 280px;
+	border-radius: 0;
 }
 
 .video-main-info-wrapper .video-info-wrapper .video-info .title {
-    width: 100%;
-    font-size: 16px;
-    text-align: center;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	font-size: 16px;
+	text-align: center;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.5);
 }
 
 .video-main-info-wrapper .video-info-wrapper .video-info .titme {
-    width: 100%;
-    font-size: 13px;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.4);
+	width: 100%;
+	font-size: 13px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.4);
 }
 
 .video-main-info-wrapper .video-info-wrapper .video-info .titme .left {
-    float: left;
+	float: left;
 }
 
 .video-main-info-wrapper .video-info-wrapper .video-info .titme .right {
-    float: right;
+	float: right;
 }
 
 .video-main-info-wrapper .video-info-wrapper .video-info .user {
-    height: 80px;
-    padding-top: 10px;
+	height: 80px;
+	padding-top: 10px;
 }
 
 .video-main-info-wrapper .video-info-wrapper .video-info .user .user-img-div {
-    height: 60px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+	height: 60px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .video-main-info-wrapper .video-info-wrapper .video-info .user .user-img-div .user-img {
-    height: 60px;
-    width: 60px;
-    border-radius: 60px;
+	height: 60px;
+	width: 60px;
+	border-radius: 60px;
 }
 
 .video-main-info-wrapper .video-info-wrapper .video-info .user .user-img-div span {
-    font-size: 15px;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.4);
+	font-size: 15px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.4);
 }
 
 .video-main-info-wrapper .video-info-wrapper .video-info .desc {
-    font-size: 13px;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.5);
+	font-size: 13px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.5);
 }
 
 .video-others-wrapper {
-    /*border: 1px solid yellow;*/
-    width: 70%;
-    float: left;
-    padding: 10px;
+	/*border: 1px solid yellow;*/
+	width: 70%;
+	float: left;
+	padding: 10px;
 }
 
 .video-others-wrapper .tabs {
-    height: 40px;
-    border-bottom: 1px solid #EFEFEF;
+	height: 40px;
+	border-bottom: 1px solid #EFEFEF;
 }
 
 .video-others-wrapper .tabs .tab {
-    float: left;
-    width: 110px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    font-size: 16px;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.4);
+	float: left;
+	width: 110px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.4);
 }
 
 .video-others-wrapper .tabs .tab-cur {
-    border-bottom: 1px solid rgba(92, 184, 92, 0.4);
-    color: rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid rgba(92, 184, 92, 0.4);
+	color: rgba(0, 0, 0, 0.3);
 }
 
-.video-others-wrapper .video-items {
-}
+.video-others-wrapper .video-items {}
 
-.video-others-wrapper .video-items .video-item {
-}
+.video-others-wrapper .video-items .video-item {}
 
-.video-others-wrapper .video-items .video-item .video-item-title {
-}
+.video-others-wrapper .video-items .video-item .video-item-title {}
 
 .video-others-wrapper .video-items .video-item .video-item-title .time {
-    display: block;
-    float: right;
-    margin-right: 60px;
+	display: block;
+	float: right;
+	margin-right: 60px;
 }
 
 .video-others-wrapper .video-items .video-item .video-item-title .span-title {
-    font-size: 13px;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.5);
+	font-size: 13px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.5);
 }
 
 .video-others-wrapper .video-items .video-item .video-item-title .span-title-cur {
-    font-size: 13px;
-    font-weight: 600;
+	font-size: 13px;
+	font-weight: 600;
 }
 
 .video-others-wrapper .video-items .video-item .video-item-desc {
-    width: 90%;
-    margin-left: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.5);
-    letter-spacing: 1px;
-    line-height: 16px;
+	width: 90%;
+	margin-left: 20px;
+	font-size: 13px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.5);
+	letter-spacing: 1px;
+	line-height: 16px;
 }
 
-.video-others-wrapper .video-comments {
-}
+.video-others-wrapper .video-comments {}
 
 .video-others-wrapper .video-comments .comment-btn-div {
-    float: right;
+	float: right;
 }
 
 .video-others-wrapper .video-comments .mods-wrapper {
-    margin-top: 10px;
+	margin-top: 10px;
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mods {
-    height: 25px;
-    margin-left: -60px;
+	height: 25px;
+	margin-left: -60px;
 }
 
-.video-others-wrapper .video-comments .mods-wrapper .mods .mod {
-}
+.video-others-wrapper .video-comments .mods-wrapper .mods .mod {}
 
 .video-others-wrapper .video-comments .mods-wrapper .mods .mod-cur {
-    border-bottom: 1px solid #EFEFEF;
+	border-bottom: 1px solid #EFEFEF;
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mods .mod .mod-span {
-    font-size: 13px;
+	font-size: 13px;
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mods .mod .mod-span-cur {
-    color: rgba(0, 0, 0, 0.4);
+	color: rgba(0, 0, 0, 0.4);
 }
 
-.video-others-wrapper .video-comments .mods-wrapper .mod-content-wrapper {
-}
+.video-others-wrapper .video-comments .mods-wrapper .mod-content-wrapper {}
 
-.video-others-wrapper .video-comments .mods-wrapper .mod-content-items {
+.video-others-wrapper .video-comments .mods-wrapper .mod-content-items {}
+
+.video-others-wrapper .video-comments .mods-wrapper .mod-content-items .hot-split-div {
+	height: 20px;
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .hot-split-div {
-    height: 20px;
-}
-
-.video-others-wrapper .video-comments .mods-wrapper .mod-content-items .hot-split-div {
-    height: 20px;
+	height: 20px;
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item {
-    margin-top: 10px;
+	margin-top: 10px;
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .user-img {
-    height: 60px;
-    width: 40px;
-    float: left;
+	height: 60px;
+	width: 40px;
+	float: left;
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .user-img img {
-    height: 40px;
-    width: 40px;
-    border-radius: 40px;
-    margin-top: 10px;
+	height: 40px;
+	width: 40px;
+	border-radius: 40px;
+	margin-top: 10px;
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info {
-    margin-left: 10px;
-    float: left;
-    width: 625px;
+	margin-left: 10px;
+	float: left;
+	width: 625px;
 }
 
-.video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .user-comment {
-}
+.video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .user-comment {}
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .user-comment .user-name {
-    font-size: 13px;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.6);
+	font-size: 13px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.6);
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .user-comment .to-user-name-div {
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.9);
+	font-size: 13px;
+	color: rgba(0, 0, 0, 0.9);
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .user-comment .to-user-name-div .to-user-name {
-    font-size: 13px;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.6);
+	font-size: 13px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.6);
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .user-comment .comment {
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.9);
+	font-size: 13px;
+	color: rgba(0, 0, 0, 0.9);
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars {
-    /*height: 40px;*/
-    margin-top: 5px;
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.9);
+	/*height: 40px;*/
+	margin-top: 5px;
+	font-size: 13px;
+	color: rgba(0, 0, 0, 0.9);
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars .time {
-    float: left
+	float: left
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars .bars {
-    float: right;
-    /*width: 290px;*/
-    /*padding: 0;*/
+	float: right;
+	/*width: 290px;*/
+	/*padding: 0;*/
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars .bars ul {
-    margin: 0;
-    padding: 0;
-    margin: 0;
-    width: auto;
-    height: 20px;
+	margin: 0;
+	padding: 0;
+	margin: 0;
+	width: auto;
+	height: 20px;
 }
 
-.video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars .bars.bar {
-}
+.video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars .bars.bar {}
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars .bars ul li {
-    float: right;
+	float: right;
 }
 
-.video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars .bars .dialog-bar {
-}
+.video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars .bars .dialog-bar {}
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars .bars ul li a {
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.9);
+	font-size: 13px;
+	color: rgba(0, 0, 0, 0.9);
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars .bars ul li .not-like {
-    color: rgba(0, 0, 0, 0.2);
+	color: rgba(0, 0, 0, 0.2);
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars .bars .report-bar {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars .bars .report-bar-split {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars .bars .arrow {
-    /*display: block;*/
-    color: rgba(0, 0, 0, 0.2);
+	/*display: block;*/
+	color: rgba(0, 0, 0, 0.2);
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .comment-bars .bars .arrow-hid {
-    display: none;
+	display: none;
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .mod-content-items .mod-content-item .comment-info .reply .reply-btn-div {
-    float: right;
+	float: right;
 }
