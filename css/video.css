@@ -181,6 +181,11 @@
 	float: left;
 }
 
+.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-title .cur-item {
+	font-size: 15px;
+	font-weight: 600;
+}
+
 .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-title .item-title-right {
 	width: 20%;
 	float: left;
