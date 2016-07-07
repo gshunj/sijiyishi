@@ -4,7 +4,8 @@
 }
 
 .main-content-wrapper .main-content-wrapper-split .main-content-wrapper-module a:active {
-    color: rgba(255, 48, 48, 1);
+    /*color: rgba(255, 48, 48, 1);*/
+    color: rgba(0, 0, 0, 1);
 }
 
 .main-content-wrapper .main-content-wrapper-split .banner-div-wrapper {

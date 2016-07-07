@@ -12,7 +12,8 @@ a {
 }
 
 a:active {
-    color: rgba(255, 48, 48, 1);
+    /*color: rgba(255, 48, 48, 1);*/
+    color: rgba(0, 0, 0, 1);
 }
 
 a:hover {
@@ -117,7 +118,8 @@ a:hover {
 }
 
 .ul-li-horizontal li a:active {
-    color: rgba(255, 48, 48, 1);
+    /*color: rgba(255, 48, 48, 1);*/
+    color: rgba(0, 0, 0, 1);
 }
 
 .top-header-wrapper .login-div {
@@ -203,7 +205,8 @@ a:hover {
 }
 
 .top-header-wrapper .sidebar .sidebar-ul a:active {
-    color: rgba(255, 48, 48, 1);
+    /*color: rgba(255, 48, 48, 1);*/
+    color: rgba(0, 0, 0, 1);
 }
 
 .clear-both {
