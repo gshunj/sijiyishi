@@ -1,0 +1,65 @@
+.report-model-wrapper {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.report-model-wrapper .report-wrapper {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.report-model-wrapper .report-wrapper .title {
+    font-size: 13px;
+}
+
+.report-model-wrapper .report-wrapper .title .be-reported-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.report-model-wrapper .report-wrapper .title .be-reported-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.report-model-wrapper .report-wrapper .be-reported-content {
+    background-color: #EFEFEF;
+}
+
+.report-model-wrapper .report-wrapper .be-reported-content .user-img-div {
+    width: 10%;;
+    float: left;
+}
+
+.report-model-wrapper .report-wrapper .be-reported-content .user-img-div img {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+}
+
+.report-model-wrapper .report-wrapper .be-reported-content .content {
+    width: 90%;
+    float: left;
+}
+
+.report-model-wrapper .report-wrapper .be-reported-content .content .be-reported-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.report-model-wrapper .report-wrapper .be-reported-content .content .text {
+    font-size: 13px;
+}
+
+.report-model-wrapper .report-wrapper .report-type-wrapper {
+}
+
+.report-model-wrapper .report-wrapper .report-type-contetn {
+    width: 85%;
+    margin: 10px auto;
+    font-size: 13px;
+}
