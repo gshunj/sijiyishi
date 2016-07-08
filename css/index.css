@@ -1,113 +1,114 @@
 .main-content-wrapper .main-content-wrapper-split .main-content-wrapper-module {
-    width: 1000px;
-    margin: 0 auto;
+	width: 1000px;
+	margin: 0 auto;
 }
 
 .main-content-wrapper .main-content-wrapper-split .main-content-wrapper-module a:active {
-    /*color: rgba(255, 48, 48, 1);*/
-    color: rgba(0, 0, 0, 1);
+	/*color: rgba(255, 48, 48, 1);*/
+	color: rgba(0, 0, 0, 1);
 }
 
 .main-content-wrapper .main-content-wrapper-split .banner-div-wrapper {
-    height: 200px;
-    margin-top: 5px;
-    /*background-color: blanchedalmond;*/
+	height: 200px;
+	margin-top: 5px;
+	/*background-color: blanchedalmond;*/
 }
 
 .main-content-wrapper .main-content-wrapper-split .banner-div-wrapper .carousel-inner .item {
-    height: 200px;
-    width: 100%;
+	height: 200px;
+	width: 100%;
 }
 
 .main-content-wrapper .main-content-wrapper-split .banner-div-wrapper .carousel-inner .item .carousel-caption {
-    font-size: 17px;
-    color: rgba(0, 0, 0, 0.7);
+	font-size: 17px;
+	color: rgba(0, 0, 0, 0.7);
 }
 
 .main-content-wrapper .main-content-wrapper-split .banner-div-wrapper .carousel-inner .item .carousel-img {
-    height: 200px;
-    width: 100%;
+	height: 200px;
+	width: 100%;
 }
 
 .main-content-wrapper .main-content-wrapper-split .module {
-    width: 1000px;
-    height: 184px;
+	width: 1000px;
+	height: 184px;
 }
 
 .main-content-wrapper .main-content-wrapper-split .module .module-li {
-    border: 1px solid #EFEFEF;
-    float: left;
-    width: 182px;
-    height: 182px;
-    margin-left: 22px;
+	border: 1px solid #EFEFEF;
+	float: left;
+	width: 182px;
+	height: 182px;
+	margin-left: 22px;
 }
 
 .main-content-wrapper .main-content-wrapper-split .module .module-li .module-li-desc {
-    text-align: center;
-    font-style: italic;
+	text-align: center;
+	font-style: italic;
 }
 
 .main-content-wrapper .main-content-wrapper-split .module .module-li .module-li-main {
-    display: block;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    border-radius: 50px;
-    width: 100px;
-    height: 100px;
-    margin: 20px auto;
-    text-align: center;
-    line-height: 100px;
+	display: block;
+	/*圆框注释掉*/
+	/*border: 1px solid rgba(0, 0, 0, 0.4);*/
+	/*border-radius: 50px;*/
+	width: 100px;
+	height: 100px;
+	margin: 20px auto;
+	text-align: center;
+	line-height: 100px;
 }
 
 .main-content-wrapper .main-content-wrapper-split .module .module-li .module-li-main .title {
-    font-size: 30px;
-    font-weight: 100;
-    /*color: rgba(0, 0, 0, 0.6);*/
+	font-size: 20px;
+	font-weight: 100;
+	/*color: rgba(0, 0, 0, 0.6);*/
 }
 
 .main-content-wrapper .main-content-wrapper-split .module .module-li:nth-of-type(1) {
-    margin-left: 1px;
+	margin-left: 1px;
 }
 
 .live-video-wrapper {
-    height: 510px;
-    margin-top: 5px;
+	height: 510px;
+	margin-top: 5px;
 }
 
 .live-video-wrapper .live-video-header {
-    height: 30px;
-    line-height: 30px;
-    background-color: RGBA(242, 244, 234, 0.3);
-    /*color: rgba(205, 129, 98, 1);*/
-    font-size: 16px;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.6);
+	height: 30px;
+	line-height: 30px;
+	background-color: RGBA(242, 244, 234, 0.3);
+	/*color: rgba(205, 129, 98, 1);*/
+	font-size: 16px;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.6);
 }
 
 .live-video-wrapper .live-video-header i {
-    /*color: rgba(205, 129, 98, 1);*/
-    color: rgba(0, 0, 0, 0.6);
+	/*color: rgba(205, 129, 98, 1);*/
+	color: rgba(0, 0, 0, 0.6);
 }
 
 .live-video-wrapper .live-video-header span {
-    font-size: 17px;
-    font-weight: 800;
-    /*color: rgba(205, 129, 98, 1);*/
-    color: rgba(0, 0, 0, 0.6);
+	font-size: 17px;
+	font-weight: 500;
+	/*color: rgba(205, 129, 98, 1);*/
+	color: rgba(0, 0, 0, 0.6);
 }
 
 .live-video-wrapper .live-video-header .title {
-    margin-left: 0;
-    display: inline;
-    /*color: rgba(205, 129, 98, 1);*/
-    color: rgba(0, 0, 0, 0.6);
+	margin-left: 0;
+	display: inline;
+	/*color: rgba(205, 129, 98, 1);*/
+	color: rgba(0, 0, 0, 0.6);
 }
 
 .live-video-wrapper .live-video-header .live-more {
-    margin-top: 5px;
-    display: block;
-    float: right;
-    line-height: 30px;
-    font-style: italic;
-    font-size: 14px;
-    font-weight: 500;
+	margin-top: 5px;
+	display: block;
+	float: right;
+	line-height: 30px;
+	font-style: italic;
+	font-size: 14px;
+	font-weight: 500;
 }

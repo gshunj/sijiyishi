@@ -1,1258 +1,1139 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8"/>
-    <title>四季一时</title>
-    <link href="bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link href="font/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet"/>
+	<head>
+		<meta charset="utf-8" />
+		<title>四季一时</title>
+		<link href="bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<link href="font/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="css/app.css"/>
-    <link rel="stylesheet" href="css/video_list.css"/>
-    <link rel="stylesheet" href="css/common_video_layout.css"/>
+		<link rel="stylesheet" href="css/app.css" />
+		<link rel="stylesheet" href="css/video_list.css" />
+		<link rel="stylesheet" href="css/common_video_layout.css" />
 
-    <!--[if lt IE 9]>
+		<!--[if lt IE 9]>
     <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="js/jquery-3.0.0.min.js" type="text/javascript">
-    </script>
-    <script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+		<script src="js/jquery-3.0.0.min.js" type="text/javascript">
+		</script>
+		<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
 
-    <script src="js/app.js" type="text/javascript">
-    </script>
-    <script src="js/video_list.js" type="text/javascript">
-    </script>
-</head>
+		<script src="js/app.js" type="text/javascript">
+		</script>
+		<script src="js/video_list.js" type="text/javascript">
+		</script>
+	</head>
 
-<body>
-<header class="top-header-wrapper">
-    <div class="header header-main">
-        <div class="logo-div">
-            <div class="logo">
-                <a href="index.html"><span><i class="icon-home"></i>四季一时</span></a>
-            </div>
+	<body>
+		<header class="top-header-wrapper">
+			<div class="header header-main">
+				<div class="logo-div">
+					<div class="logo">
+						<a href="index.html"><span><i class="icon-home"></i>四季一时</span></a>
+					</div>
 
-            <div class="search-div">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="请输入搜索关键字">
+					<div class="search-div">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="请输入搜索关键字">
 							<span class="input-group-btn">
 						        <a class="btn btn-default" type="button"><i class="icon-search icon-large"></i></a>
 						      </span>
-                </div>
+						</div>
 
-            </div>
-        </div>
-        <div class="nav-div">
-            <nav class="nav">
-                <ul class="ul-li-horizontal">
-                    <li><a href=""><span>首页</span></a></li>
-                    <li><a href=""><span>精油/植物油/纯露/浸泡油</span></a></li>
-                    <li><a href=""><span>精油运用法及其他疗法</span></a></li>
-                    <!--<li><a href="">疾病与病症</a></li>-->
-                    <li><a href="#" class="show-top-header-sidebar-a" id=""><span>...</span></a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="name-div">
-            <div>
-                <a href="">
-                    <img src="img/1.jpg"/>
-                    <span>用户名</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="clear-both"></div>
-    <div class="spit-hr-1"></div>
-    <div class="login-div">
-        <div class="desc">
-            获取更多的精油资讯 &gt;
-        </div>
-        <div class="ul">
-            <ul class="ul-li-horizontal login-ul">
-                <li>
-                    <a class="btn btn-default" href="login.html">
+					</div>
+				</div>
+				<div class="nav-div">
+					<nav class="nav">
+						<ul class="ul-li-horizontal">
+							<li><a href=""><span>首页</span></a></li>
+							<li><a href=""><span>精油/植物油/纯露/浸泡油</span></a></li>
+							<li><a href=""><span>精油运用法及其他疗法</span></a></li>
+							<!--<li><a href="">疾病与病症</a></li>-->
+							<li><a href="#" class="show-top-header-sidebar-a" id=""><span>...</span></a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="name-div">
+					<div>
+						<a href="">
+							<img src="img/1.jpg" />
+							<span>用户名</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="clear-both"></div>
+			<div class="spit-hr-1"></div>
+			<div class="login-div">
+				<div class="desc">
+					获取更多的精油资讯 &gt;
+				</div>
+				<div class="ul">
+					<ul class="ul-li-horizontal login-ul">
+						<li>
+							<a class="btn btn-default" href="login.html">
                         登&nbsp;录
                     </a>
-                </li>
-                <li>
-                    <a class="btn btn-default" href="register.html">
+						</li>
+						<li>
+							<a class="btn btn-default" href="register.html">
                         注&nbsp;册
                     </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="spit-hr-1 clear-both"></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="spit-hr-1 clear-both"></div>
 
-    <div class="sidebar hid">
-        <div class="left-side"></div>
-        <div class="right-side">
-            <div class="side-close">
-                <a href="#" class="side-close-btn"> <i class="icon-remove"></i></a>
-            </div>
-            <div class="clear-both"></div>
-            <nav>
-                <ul class="list-group sidebar-ul">
-                    <a href="">
-                        <li class="list-group-item">精油/植物油/纯露/浸泡油</li>
-                    </a>
-                    <a href="">
-                        <li class="list-group-item">精油的相关名词</li>
-                    </a>
-                    <a href="">
-                        <li class="list-group-item">化学成分及激素</li>
-                    </a>
+			<div class="sidebar hid">
+				<div class="left-side"></div>
+				<div class="right-side">
+					<div class="side-close">
+						<a href="#" class="side-close-btn"> <i class="icon-remove"></i></a>
+					</div>
+					<div class="clear-both"></div>
+					<nav>
+						<ul class="list-group sidebar-ul">
+							<a href="">
+								<li class="list-group-item">精油/植物油/纯露/浸泡油</li>
+							</a>
+							<a href="">
+								<li class="list-group-item">精油的相关名词</li>
+							</a>
+							<a href="">
+								<li class="list-group-item">化学成分及激素</li>
+							</a>
 
-                    <a href="">
-                        <li class="list-group-item">精油运用法及其他疗法</li>
-                    </a>
+							<a href="">
+								<li class="list-group-item">精油运用法及其他疗法</li>
+							</a>
 
-                    <a href="">
-                        <li class="list-group-item">
-                            <!--<span class="badge">新</span>-->
-                            疾病与病症
-                        </li>
-                    </a>
-                    <a href="">
-                        <li class="list-group-item" onclick="">其他
-                            <!--<span class="badge">新</span>-->
-                        </li>
-                    </a>
-                </ul>
+							<a href="">
+								<li class="list-group-item">
+									<!--<span class="badge">新</span>-->
+									疾病与病症
+								</li>
+							</a>
+							<a href="">
+								<li class="list-group-item" onclick="">其他
+									<!--<span class="badge">新</span>-->
+								</li>
+							</a>
+						</ul>
 
-            </nav>
-        </div>
-    </div>
-</header>
+					</nav>
+				</div>
+			</div>
+		</header>
 
-<div class="main-content-wrapper">
-    <div class="main-content-wrapper-split">
-        <section class="main-content">
-            <nav class="breadcrumbs-nav">
-                <ol class="breadcrumb breadcrumbs-nav-ol">
-                    <li><a href="#">首页</a></li>
-                    <li class="active">视频</li>
-                </ol>
-            </nav>
-            <div class="content-wrapper">
-                <div class="category-type-tags-wrapper">
-                    <div class="spit-hr-1"></div>
-                    <div class="type-tags">
-                        <div class="type-tag">
-                            <div class="title">频道:</div>
-                            <div class="content">
-                                <div class="btn-group" role="group" aria-label="...">
-                                    <button type="button" class="btn btn-default  tag cur-active">
+		<div class="main-content-wrapper">
+			<div class="main-content-wrapper-split">
+				<section class="main-content">
+					<nav class="breadcrumbs-nav">
+						<ol class="breadcrumb breadcrumbs-nav-ol">
+							<li><a href="index.html">首页</a></li>
+							<li class="active">视频</li>
+						</ol>
+					</nav>
+					<div class="content-wrapper">
+						<div class="category-type-tags-wrapper">
+							<div class="spit-hr-1"></div>
+							<div class="type-tags">
+								<div class="type-tag">
+									<div class="title">频道:</div>
+									<div class="content">
+										<div class="btn-group" role="group" aria-label="...">
+											<button type="button" class="btn btn-default  tag cur-active">
                                         电视剧
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         电影
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         动漫
                                     </button>
-                                    <button type="button" class="btn btn-default  tag"
-                                            style="width: 91px;border: 0;border-radius: 0;">
+											<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                         纪录片
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         资讯
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         娱乐
                                     </button>
-                                    <button type="button" class="btn btn-default  tag"
-                                            style="width: 91px;border: 0;border-radius: 0;">
+											<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                         财经
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         微电影
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         片花
                                     </button>
-                                    <button type="button" class="btn btn-default tag more-btn"
-                                    >
+											<button type="button" class="btn btn-default tag more-btn">
                                         更多<i class="icon-angle-down"></i>
                                     </button>
-                                    <div class="clear-both"></div>
-                                </div>
-                                <div class="clear-both"></div>
-                                <div class="more hid">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default  tag"
-                                                style="width: 91px;border: 0;border-radius: 0;">
+											<div class="clear-both"></div>
+										</div>
+										<div class="clear-both"></div>
+										<div class="more hid">
+											<div class="btn-group" role="group" aria-label="...">
+												<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                             电视剧
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             电影
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             动漫
                                         </button>
-                                        <button type="button" class="btn btn-default  tag"
-                                                style="width: 91px;border: 0;border-radius: 0;">
+												<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                             纪录片
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             资讯
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             娱乐
                                         </button>
-                                        <button type="button" class="btn btn-default  tag"
-                                                style="width: 91px;border: 0;border-radius: 0;">
+												<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                             财经
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             微电影
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             片花
                                         </button>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                    <div class="clear-both"></div>
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default  tag"
-                                                style="width: 91px;border: 0;border-radius: 0;">
+												<div class="clear-both"></div>
+											</div>
+											<div class="clear-both"></div>
+											<div class="btn-group" role="group" aria-label="...">
+												<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                             电视剧
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             电影
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             动漫
                                         </button>
-                                        <button type="button" class="btn btn-default  tag"
-                                                style="width: 91px;border: 0;border-radius: 0;">
+												<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                             纪录片
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             资讯
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             娱乐
                                         </button>
-                                        <button type="button" class="btn btn-default  tag">
+												<button type="button" class="btn btn-default  tag">
                                             财经
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             微电影
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             片花
                                         </button>
-                                        <button type="button" class="btn btn-default tag put-away-btn"
-                                        >
+												<button type="button" class="btn btn-default tag put-away-btn">
                                             收起<i class="icon-angle-up"></i>
                                         </button>
-                                        <div class="clear-both"></div>
-                                    </div>
+												<div class="clear-both"></div>
+											</div>
 
-                                </div>
+										</div>
 
-                            </div>
-                            <div class="clear-both"></div>
-                        </div>
-                        <div class="spit-hr-1"></div>
-                        <div class="type-tag">
-                            <div class="title" style="float: left;width: 99px;text-align: center">地区:</div>
-                            <div class="content" style="float: left;">
-                                <div class="btn-group" role="group" aria-label="...">
-                                    <button type="button" class="btn btn-default  tag cur-active"
-                                            style="width: 91px;border: 0;border-radius: 0;">
+									</div>
+									<div class="clear-both"></div>
+								</div>
+								<div class="spit-hr-1"></div>
+								<div class="type-tag">
+									<div class="title" style="float: left;width: 99px;text-align: center">地区:</div>
+									<div class="content" style="float: left;">
+										<div class="btn-group" role="group" aria-label="...">
+											<button type="button" class="btn btn-default  tag cur-active" style="width: 91px;border: 0;border-radius: 0;">
                                         全部
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         香港
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         动漫
                                     </button>
-                                    <button type="button" class="btn btn-default  tag"
-                                            style="width: 91px;border: 0;border-radius: 0;">
+											<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                         韩国
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         美剧
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         日本
                                     </button>
-                                    <button type="button" class="btn btn-default  tag"
-                                            style="width: 91px;border: 0;border-radius: 0;">
+											<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                         泰国
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         台湾
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         其他
                                     </button>
-                                    <div class="clear-both"></div>
-                                </div>
-                                <div class="clear-both"></div>
+											<div class="clear-both"></div>
+										</div>
+										<div class="clear-both"></div>
 
-                            </div>
-                            <div class="clear-both"></div>
-                        </div>
-                        <div class="spit-hr-1"></div>
-                        <div class="type-tag">
-                            <div class="title" style="float: left;width: 99px;text-align: center">类型:</div>
-                            <div class="content" style="float: left;">
-                                <div class="btn-group" role="group" aria-label="...">
-                                    <button type="button" class="btn btn-default  tag cur-active"
-                                            style="width: 91px;border: 0;border-radius: 0;">
+									</div>
+									<div class="clear-both"></div>
+								</div>
+								<div class="spit-hr-1"></div>
+								<div class="type-tag">
+									<div class="title" style="float: left;width: 99px;text-align: center">类型:</div>
+									<div class="content" style="float: left;">
+										<div class="btn-group" role="group" aria-label="...">
+											<button type="button" class="btn btn-default  tag cur-active" style="width: 91px;border: 0;border-radius: 0;">
                                         全部
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         言情剧
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         历史剧
                                     </button>
-                                    <button type="button" class="btn btn-default  tag"
-                                            style="width: 91px;border: 0;border-radius: 0;">
+											<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                         武侠剧
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         古装剧
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         年代剧
                                     </button>
-                                    <button type="button" class="btn btn-default  tag"
-                                            style="width: 91px;border: 0;border-radius: 0;">
+											<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                         农村剧
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         偶像剧
                                     </button>
-                                    <button type="button" class="btn btn-default tag">
+											<button type="button" class="btn btn-default tag">
                                         悬疑剧
                                     </button>
-                                    <button type="button" class="btn btn-default tag more-btn"
-                                    >
+											<button type="button" class="btn btn-default tag more-btn">
                                         更多<i class="icon-angle-down"></i>
                                     </button>
-                                    <div class="clear-both"></div>
-                                </div>
-                                <div class="clear-both"></div>
-                                <div class="more hid">
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default  tag"
-                                                style="width: 91px;border: 0;border-radius: 0;">
+											<div class="clear-both"></div>
+										</div>
+										<div class="clear-both"></div>
+										<div class="more hid">
+											<div class="btn-group" role="group" aria-label="...">
+												<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                             科幻剧
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             喜剧
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             宫廷剧
                                         </button>
-                                        <button type="button" class="btn btn-default  tag"
-                                                style="width: 91px;border: 0;border-radius: 0;">
+												<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                             商战剧
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             神话剧
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             穿越剧
                                         </button>
-                                        <button type="button" class="btn btn-default  tag"
-                                                style="width: 91px;border: 0;border-radius: 0;">
+												<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                             罪案剧
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             谍战剧
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             青春剧
                                         </button>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                    <div class="clear-both"></div>
-                                    <div class="btn-group" role="group" aria-label="...">
-                                        <button type="button" class="btn btn-default tag">
+												<div class="clear-both"></div>
+											</div>
+											<div class="clear-both"></div>
+											<div class="btn-group" role="group" aria-label="...">
+												<button type="button" class="btn btn-default tag">
                                             家庭剧
                                         </button>
-                                        <button type="button" class="btn btn-default  tag"
-                                                style="width: 91px;border: 0;border-radius: 0;">
+												<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                             军旅剧
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             剧情
                                         </button>
-                                        <button type="button" class="btn btn-default tag">
+												<button type="button" class="btn btn-default tag">
                                             都市
                                         </button>
-                                        <button type="button" class="btn btn-default  tag"
-                                                style="width: 91px;border: 0;border-radius: 0;">
+												<button type="button" class="btn btn-default  tag" style="width: 91px;border: 0;border-radius: 0;">
                                             网络剧
                                         </button>
-                                        <button type="button" class="btn btn-default tag put-away-btn"
-                                        >
+												<button type="button" class="btn btn-default tag put-away-btn">
                                             收起<i class="icon-angle-up"></i>
                                         </button>
-                                        <div class="clear-both"></div>
-                                    </div>
+												<div class="clear-both"></div>
+											</div>
 
-                                </div>
+										</div>
 
-                            </div>
-                            <div class="clear-both"></div>
-                        </div>
-                    </div>
-                    <div class="spit-hr-1"></div>
-                </div>
-                <div class="vertical-spacing-20"></div>
-                <div class="cur-videos-wrapper">
-                    <div class="cur-videos-header">
-                        <div class="sort-wrapper">
-                            <span>排序:</span>
-                            <a href="javascript:;" class="sort sort-hot">
-                                <i class="icon-circle undertone"></i>
-                                <span>热门</span>
-                            </a>
-                            <a href="javascript:;" class="sort sort-last-update">
-                                <i class="icon-circle undertone"></i>
-                                <span>最近更新</span>
-                            </a>
-                        </div>
+									</div>
+									<div class="clear-both"></div>
+								</div>
+							</div>
+							<div class="spit-hr-1"></div>
+						</div>
+						<div class="vertical-spacing-20"></div>
+						<div class="cur-videos-wrapper">
+							<div class="cur-videos-header">
+								<div class="sort-wrapper">
+									<span>排序:</span>
+									<a href="javascript:;" class="sort sort-hot">
+										<i class="icon-circle undertone"></i>
+										<span>热门</span>
+									</a>
+									<a href="javascript:;" class="sort sort-last-update">
+										<i class="icon-circle undertone"></i>
+										<span>最近更新</span>
+									</a>
+								</div>
 
-                        <div class="from-type-wrapper">
-                            <a href="javascript:;" class="from-type from-sijiyishi-type">
-                                <i class="icon-circle undertone"></i>
-                                <span>四季一时</span>
-                            </a>
-                            <a href="javascript:;" class="from-type from-others-type">
-                                <i class="icon-circle undertone"></i>
-                                <span>全网</span>
-                            </a>
-                        </div>
-                        <div class="clear-both"></div>
-                    </div>
-                    <div class="vertical-spacing-10"></div>
-                    <div class="videos-wrapper">
-                        <div class="videos">
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+								<div class="from-type-wrapper">
+									<a href="javascript:;" class="from-type from-sijiyishi-type">
+										<i class="icon-circle undertone"></i>
+										<span>四季一时</span>
+									</a>
+									<a href="javascript:;" class="from-type from-others-type">
+										<i class="icon-circle undertone"></i>
+										<span>全网</span>
+									</a>
+								</div>
+								<div class="clear-both"></div>
+							</div>
+							<div class="vertical-spacing-10"></div>
+							<div class="videos-wrapper">
+								<div class="videos">
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="videos">
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="videos">
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="videos">
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="videos">
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="videos">
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="videos">
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="videos">
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="videos">
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="videos">
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="videos">
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="video">
-                                <div class="img-div">
-                                    <a href="video.html">
-                                        <img class="img" src="img/3.jpg"/>
-                                    </a>
-                                </div>
-                                <div class="content-div">
-                                    <div class="content-div-title">
-                                        <a href="video.html">
-                                            <h2 class="title">刀剑春秋</h2>
-                                        </a>
-                                    </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+									<div class="video">
+										<div class="img-div">
+											<a href="video.html">
+												<img class="img" src="img/3.jpg" />
+											</a>
+										</div>
+										<div class="content-div">
+											<div class="content-div-title">
+												<a href="video.html">
+													<h2 class="title">刀剑春秋</h2>
+												</a>
+											</div>
 
-                                    <div class="desc hid">
-                                        霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ，
-                                        以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》，
-                                        剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主，
-                                        剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》
-                                        已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
-                                    </div>
-                                    <div class="desc-time-split"></div>
-                                    <div class="time">
-                                        <div>
-                                            <span>5课时 71分钟</span>
-                                        </div>
-                                        <div>
-                                            <span>22288人观看</span>
-                                        </div>
-                                        <div class="clear-both"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="video-pagination-wrapper">
-                        <div class="content" style="width: 522px; margin: 0 auto;padding: 0;">
-                            <ul class="pagination pagination-lg page-ul" style="margin: 0;padding: 0;">
-                                <li class="forbid"><a href="#">&laquo;</a></li>
-                                <li class="cur-page"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                                <li><a href="#">6</a></li>
-                                <li><a href="#">7</a></li>
-                                <li><a href="#">8</a></li>
-                                <li><a href="#">9</a></li>
-                                <li><a href="#">10</a></li>
-                                <li><a href="#">&raquo;</a></li>
-                            </ul>
-                        </div>
+											<div class="desc hid">
+												霹雳布袋戏，因每出剧名皆有“霹雳”二字得名，由“十车书”黄强华职司编剧、由“八音才子”黄文择统筹口白[1] ， 以1984年《霹雳城》为创始，不过大家所熟悉的霹雳布袋戏，是指1988年开始播出的《霹雳金光》， 剧情以霹雳三大主角清香白莲素还真、百世经纶一页书、刀狂剑痴叶小钗作为主线而衍生发展的天下武林故事，剧情以魔幻为主， 剧集之间既环环相扣又可独立成章。霹雳系列从《霹雳金光》、《霹雳眼》、《霹雳至尊》三部作品开始，到2015年上档的《霹雳狼烟之九轮燎原》 已播出超过两千余集，为霹雳国际多媒体的主干布袋戏。
+											</div>
+											<div class="desc-time-split"></div>
+											<div class="time">
+												<div>
+													<span>5课时 71分钟</span>
+												</div>
+												<div>
+													<span>22288人观看</span>
+												</div>
+												<div class="clear-both"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="video-pagination-wrapper">
+								<div class="content" style="width: 522px; margin: 0 auto;padding: 0;">
+									<ul class="pagination pagination-lg page-ul" style="margin: 0;padding: 0;">
+										<li class="page-item forbid"><a href="#">&laquo;</a></li>
+										<li class="page-item cur-page"><a href="#">1</a></li>
+										<li class="page-item"><a href="#">2</a></li>
+										<li class="page-item"><a href="#">3</a></li>
+										<li class="page-item"><a href="#">4</a></li>
+										<li class="page-item"><a href="#">5</a></li>
+										<li class="page-item"><a href="#">6</a></li>
+										<li class="page-item"><a href="#">7</a></li>
+										<li class="page-item"><a href="#">8</a></li>
+										<li class="page-item"><a href="#">9</a></li>
+										<li class="page-item"><a href="#">10</a></li>
+										<li class="page-item"><a href="#">&raquo;</a></li>
+									</ul>
+								</div>
 
+							</div>
+						</div>
+					</div>
 
-                    </div>
-                </div>
-            </div>
+				</section>
 
-        </section>
+				<footer class="bottom-footer-wrapper">
+					Copyright&copy;2016 XX四季一时精油公司 All Rights Reserved. 沪ICP备XXXXXX-XXX
+				</footer>
 
-        <footer class="bottom-footer-wrapper">
-            Copyright&copy;2016 XX四季一时精油公司 All Rights Reserved. 沪ICP备XXXXXX-XXX
-        </footer>
+			</div>
+		</div>
 
-    </div>
-</div>
-
-</body>
-<script src="js/common_video_layout.js" type="text/javascript">
-</script>
+	</body>
+	<script src="js/common_video_layout.js" type="text/javascript">
+	</script>
 
 </html>
