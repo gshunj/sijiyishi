@@ -177,7 +177,7 @@
 }
 
 .main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item .item-title .cur-item {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -197,7 +197,7 @@
 .video-main-info-wrapper {
     width: 100%;
     /*height: 700px;*/
-    border: 1px solid greenyellow;
+    /*border: 1px solid greenyellow;*/
     overflow: visible;
 }
 

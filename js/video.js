@@ -3,8 +3,30 @@
  */
 
 $(function () {
+    //目录中集数的鼠标悬浮事件
+    $('.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item').hover(
+        function () {
+            var _this = $(this);
+            _this.closest('.items').find('.item .item-desc').hide();
+            _this.find('.item-desc').show();
+        }, function () {
+
+        }
+    );
+
     //通过目录按钮打开关闭目录侧边栏
     $('.video-tool-bar-main .catalog').click(function () {
+        //还原展开当前的集数介绍
+        $('.main-content .video-main-wrapper .video-tool-bar-wrapper .catalog-extra .content .items .item').each(function (inx, val) {
+            var _this_val = $(val);
+            if (_this_val.find('.item-title .item-title-left').hasClass('cur-item')) {
+                _this_val.find('.item-desc').show();
+            } else {
+                _this_val.find('.item-desc').hide();
+            }
+        });
+
+
         var catalogExtra = $('.video-tool-bar-wrapper').find('.' + $(this).data('extra'));
         if (catalogExtra.is(":hidden")) {
             catalogExtra.slideLeftShow();
