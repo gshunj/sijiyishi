@@ -1,0 +1,142 @@
+.show-dialog-module-wrapper {
+    /*background-color: rgba(0, 0, 0, 0.2);*/
+    width: 500px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin: 0 auto;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper {
+    width: 95%;
+    margin: 10px auto;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-time-wrapper {
+    width: 100px;
+    float: left;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-time-wrapper .time-background {
+    background-color: rgba(0, 0, 0, 1);
+    position: absolute;
+    margin-left: 50px;
+    z-index: -1;
+    width: 1px;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-time-wrapper .time-items {
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+    width: 100px;
+    text-align: center;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-time-wrapper .time-items .time-item {
+    margin-top: 10px;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-time-wrapper .time-items .time-item .text {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper {
+    width: 375px;
+    /*background-color: yellow;*/
+    float: right;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items {
+
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item {
+
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .user-img-div {
+    height: 60px;
+    width: 40px;
+    float: left;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .user-img-div img {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin-top: 5px;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .content {
+    width: 315px;
+    /*background-color: aliceblue;*/
+    float: right;
+    font-size: 14px;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .content .user-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .content .to-user-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .content .text {
+    font-size: 13px;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .comment-bars {
+    margin-top: 5px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .comment-bars .bars {
+    float: right;
+    padding: 0;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .comment-bars .bars ul {
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .comment-bars .bars ul li {
+    float: right;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .comment-bars .bars ul .bar {
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .comment-bars .bars ul .reply-bar {
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .comment-bars .bars ul .like-bar {
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .comment-bars .bars ul .report-bar {
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .comment-bars .bars ul li a {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .reply {
+    width: 315px;
+    float: right;
+}
+
+.show-dialog-module-wrapper .show-dialog-wrapper .dialog-items-wrapper .dialog-items .dialog-item .reply .reply-btn-div {
+    margin-top: -5px;
+    float: right;
+}
+
+
+
