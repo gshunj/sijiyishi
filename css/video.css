@@ -512,6 +512,57 @@
     float: right;
 }
 
+.video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper {
+}
+
+.video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .content {
+    width: 532px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .page-ul {
+    margin: 0;
+    padding: 0;
+}
+
+.video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .page-ul .page-item {
+    border-radius: 0;
+}
+
+.video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .page-ul .page-item .has-more {
+}
+
+.video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .page-ul .has-more a {
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .page-ul .has-more a:hover, a:active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .page-ul a {
+    color: rgba(0, 0, 0, 1);
+    border-radius: 0;
+}
+
+.video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .page-ul .forbid {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .page-ul .forbid a {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .page-ul .cur-page {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .page-ul .cur-page a {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 .relevant-videos-wrapper {
     margin-top: 50px;
 }
