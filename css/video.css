@@ -530,12 +530,13 @@
     border-radius: 0;
 }
 
-.video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .page-ul .page-item .has-more {
+.video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .page-ul .has-more {
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .page-ul .has-more a {
     border-top: 0;
     border-bottom: 0;
+    cursor: default;
 }
 
 .video-others-wrapper .video-comments .mods-wrapper .video-pagination-wrapper .page-ul .has-more a:hover, a:active {

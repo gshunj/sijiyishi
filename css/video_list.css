@@ -82,12 +82,13 @@
 .cur-videos-wrapper .video-pagination-wrapper .page-ul {
 }
 
-.cur-videos-wrapper .video-pagination-wrapper .page-ul .page-item .has-more {
+.cur-videos-wrapper .video-pagination-wrapper .page-ul .has-more {
 }
 
 .cur-videos-wrapper .video-pagination-wrapper .page-ul .has-more a {
     border-top: 0;
     border-bottom: 0;
+    cursor: default;
 }
 
 .cur-videos-wrapper .video-pagination-wrapper .page-ul .has-more a:hover, a:active {
