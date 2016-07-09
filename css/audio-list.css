@@ -1,3 +1,89 @@
+.top-wrapper {
+
+}
+
+.top-wrapper .hello-wrapper {
+    height: 30px;
+}
+
+.top-wrapper .hello-wrapper .hello {
+    float: left;
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.top-wrapper .hello-wrapper .type-items {
+    float: right;
+    padding: 0;
+    height: 30px;
+    text-align: center;
+}
+
+.top-wrapper .hello-wrapper .type-items > ul {
+    padding: 0;
+    margin: 0;
+    height: 30px;
+}
+
+.top-wrapper .hello-wrapper .type-items > ul > li {
+    float: right;
+    height: 30px;
+}
+
+.top-wrapper .hello-wrapper .type-items ul li a {
+    height: 30px;
+    line-height: 20px;
+    border: 0;
+    font-size: 14px;
+}
+
+#typeItemsDropdown ul {
+    z-index: 99999;
+}
+
+.top-wrapper .breadcrumbs-wrapper {
+    height: 30px;
+}
+
+.top-wrapper .breadcrumbs-wrapper .breadcrumbs-nav {
+    margin-left: 200px;
+}
+
+.content-wrapper {
+
+}
+
+.content-wrapper .nav-wrapper {
+    float: left;
+}
+
+.content-wrapper .nav-wrapper .content {
+
+}
+
+.content-wrapper .nav-wrapper .content .btns {
+    width: 200px;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.content-wrapper .nav-wrapper .content .btns .btn {
+    border: 0;
+}
+
+.content-wrapper .nav-wrapper .content .btns button:nth-of-type(even) {
+    background-color: rgba(235, 235, 235, 0.3);
+}
+
+.content-wrapper .nav-wrapper .content .btns .btn + .cur-active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.content-wrapper .cur-audios-wrapper {
+    float: right;
+    width: 790px;
+}
 
 .cur-audios-wrapper .audio-pagination-wrapper {
 }

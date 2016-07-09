@@ -29,37 +29,6 @@
     <script src="js/index.js" type="text/javascript">
     </script>
 
-    <style>
-        .content-wrapper {
-
-        }
-
-        .content-wrapper .nav-wrapper {
-            float: left;
-        }
-
-        .content-wrapper .nav-wrapper .content {
-
-        }
-
-        .content-wrapper .nav-wrapper .content .btns {
-            width: 200px;
-            border-right: 1px solid rgba(0, 0, 0, 0.5);
-        }
-
-        .content-wrapper .nav-wrapper .content .btns .btn {
-            border: 0;
-        }
-
-        .content-wrapper .nav-wrapper .content .btns button:nth-of-type(even) {
-            background-color: rgba(235, 235, 235, 0.3);
-        }
-
-        .content-wrapper .nav-wrapper .content .btns .btn + .cur-active {
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-
-    </style>
 </head>
 
 <body>
@@ -169,33 +138,55 @@
         <section class="main-content">
             <div class="vertical-spacing-10"></div>
             <div class="top-wrapper">
-                <div class="hello-wrapper" style="height: 30px;">
-                    <div class="hello"
-                         style="float: left;height: 30px;width: 250px; text-align: center;line-height: 30px;">
+                <div class="hello-wrapper">
+                    <div class="hello">
                         hello,来发现好声音吧!
                     </div>
-                    <div class="type-items"
-                         style="float: right;padding: 0;height: 30px;text-align: center;">
-                        <ul class="ul-li-horizontal" style="padding: 0;margin: 0;height: 30px;">
-                            <li style="float: right;height: 30px;">
-                                <a class="btn btn-default btn-sm clear-radius"
-                                   style="height: 30px;line-height: 20px;border: 0;font-size: 14px;">经典</a>
+                    <div class="type-items">
+                        <ul class="ul-li-horizontal">
+                            <li>
+                                <div class="dropdown" id="typeItemsDropdown">
+                                    <a class="btn btn-default dropdown-toggle clear-radius" type="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                                    >
+                                        全部
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu clear-radius" aria-labelledby="typeItemsDropdown">
+                                        <li style=""><a class="clear-radius" href="#"
+                                        >全部</a>
+                                        </li>
+                                        <li style=""><a class="clear-radius" href="#"
+                                        >连载中</a>
+                                        </li>
+                                        <li style=""><a class="clear-radius" href="#"
+                                        >已完结</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
                             </li>
-                            <li style="float: right;height: 30px;">
+                            <li class="vertical-split-line-1"></li>
+                            <li>
                                 <a class="btn btn-default btn-sm clear-radius"
-                                   style="height: 30px;line-height: 20px;border: 0;font-size: 14px;">最近更新</a>
+                                >经典</a>
                             </li>
-                            <li style="float: right;height: 30px;">
+                            <li>
+                                <a class="btn btn-default btn-sm clear-radius"
+                                >最近更新</a>
+                            </li>
+                            <li>
                                 <a class="btn btn-default btn-sm clear-radius cur-active"
-                                   style="height: 30px;line-height: 20px;border: 0;font-size: 14px;">最火</a>
+                                >最火</a>
                             </li>
                             <div class="clear-both"></div>
                         </ul>
                     </div>
                     <div class="clear-both"></div>
                 </div>
-                <div class="breadcrumbs-wrapper" style="height: 30px;">
-                    <nav class="breadcrumbs-nav" style="margin-left: 200px;">
+                <div class="breadcrumbs-wrapper">
+                    <nav class="breadcrumbs-nav">
                         <ol class="breadcrumb breadcrumbs-nav-ol">
                             <li><a href="">有声书</a></li>
                             <li class="active">悬疑</li>
@@ -240,8 +231,8 @@
                         </div>
                     </nav>
                 </div>
-                <div class="cur-audios-wrapper"
-                     style="float: right;width: 790px;">
+                <div class="cur-audios-wrapper">
+                    <!--宽度是790 每行有4列-->
                     <div class="audios-wrapper" data-width="790" data-item="4">
                         <div class="audios">
                             <div class="audio">
