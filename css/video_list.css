@@ -79,6 +79,12 @@
 .cur-videos-wrapper .video-pagination-wrapper {
 }
 
+.cur-videos-wrapper .video-pagination-wrapper .content {
+    width: 522px;
+    margin: 0 auto;
+    padding: 0;
+}
+
 .cur-videos-wrapper .video-pagination-wrapper .page-ul {
 }
 
