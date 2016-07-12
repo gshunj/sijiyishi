@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="font/Font-Awesome-3.2.1/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="bootstrap-slider-7.1.1/css/bootstrap-slider.min.css" rel="stylesheet"/>
+    <link href="css/app.css" rel="stylesheet"/>
+
+    <script src="js/jquery-3.0.0.min.js" type="text/javascript">
+    </script>
+
+    <style>
+        #play-progress-slider-id .slider-selection {
+            background: #BABABA;
+            /*height: 3px;*/
+        }
+
+        #play-progress-slider-id .slider-track {
+            height: 3px;
+        }
+
+        #play-progress-slider-id .slider-handle {
+            width: 13px;
+            height: 13px;
+        }
+
+        #play-progress-slider-id .slider-track-high {
+            /*height: 3px;*/
+        }
+
+        #volume-progress-bar-slider-id {
+            height: 100px;
+        }
+
+        #volume-progress-bar-slider-id .slider-track {
+            width: 3px;
+        }
+
+        #volume-progress-bar-slider-id .slider-handle {
+            width: 13px;
+            height: 13px;
+        }
+
+        #volume-progress-bar-slider-id .slider-track-high {
+            background: #BABABA;
+        }
+    </style>
+</head>
+
+<body>
+<div class="audio-control-wrapper"
+     style="height: 70px;width: 700px; border: 1px solid rgba(0,0,0,0.1); margin-top: 200px;margin-left: 100px;">
+    <div class="top-wrapper"
+         style="font-size: 13px;color: rgba(0,0,0,0.3); position: absolute;width:680px;margin-top: 10px;margin-left: 10px;">
+        <div class="title" style="float: left;color: rgba(0,0,0,0.7);">旧年华67 《大鱼海棠》 赴你十二年之约</div>
+        <div class="time-and-play-wrapper" style="float: right;"><span class="cur-time">00:00</span>/<span
+                class="time-total"></span><span class="play-total"><i class="icon-play">3333</i></span></div>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="audio-control-bars"
+         style=" width:680px;  margin-top: 40px; margin-left: 10px; height: 25px;position: absolute;">
+        <div class="play-bar" style="float: left;width: 20px;margin-top: -3px;">
+            <a href="javascript:;"><i class="icon-play-circle icon-large"></i></a>
+        </div>
+
+        <div style="float: left;width: 620px;margin-left: 10px;">
+            <input style="width: 100%;height: 3px;" id="play-progress" data-slider-id='play-progress-slider-id'
+                   type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"
+                   data-slider-tooltip="hide"/>
+        </div>
+
+        <div class="volume-bar" style="float: right;margin-right:10;width: 20px;margin-top: -3px;">
+            <a href="javascript:;"><i class="icon-volume-up icon-large"></i></a>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+
+    <div class="volume-progress-bar hid" style="height: 100px;position: absolute;margin-top: -62px;margin-left: 670px;">
+        <input style="" id="volume-progress-bar" data-slider-id='volume-progress-bar-slider-id' type="text"
+               data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="10"
+               data-slider-tooltip="hide" data-slider-orientation="vertical"/>
+    </div>
+
+</div>
+
+<div style="display: none;" id="sound"></div>
+</body>
+
+<!--//空间js-->
+<script>
+    var _PLAY_PROGRESS_SLIDER_;
+    var _VOLUME_PROGRESS_BAR_;
+
+    function initAudioControl() {
+        _PLAY_PROGRESS_SLIDER_ = $('#play-progress').slider({
+            formatter: function (value) {
+                console.info("value1===" + value)
+                return 'Current value: ' + value;
+            }
+        });
+        _VOLUME_PROGRESS_BAR_ = $('#volume-progress-bar').slider({
+            formatter: function (value) {
+                console.info("value2===" + value)
+                return 'Current value: ' + value;
+            },
+            reversed: true
+        });
+//			_PLAY_PROGRESS_SLIDER_
+        console.info($(_PLAY_PROGRESS_SLIDER_))
+    }
+
+
+    var _AUDIO_CONTROL_WRAPPER_ = $('.audio-control-wrapper');
+
+    //控制台工具
+    var _AUDIO_CONTROL_BARS_ = _AUDIO_CONTROL_WRAPPER_.find('.audio-control-bars');
+
+    //声音控制台鼠标移上、移开事件
+    _AUDIO_CONTROL_BARS_.find('.volume-bar').hover(function () {
+        _AUDIO_CONTROL_WRAPPER_.find('.volume-progress-bar').show();
+    }, function () {
+        _AUDIO_CONTROL_WRAPPER_.find('.volume-progress-bar').hide();
+    }).click(function () {
+        var _this_i = $(this).find('i');
+        if (_this_i.hasClass('icon-volume-up') || _this_i.hasClass('icon-volume-down')) {
+            sound.mute(); //静音
+            _this_i.removeClass('icon-volume-up').removeClass('icon-volume-down').addClass('icon-volume-off');
+        } else {
+            sound.unmute(); //取消静音
+            _this_i.removeClass('icon-volume-off').removeClass('icon-volume-down').addClass('icon-volume-up');
+
+        }
+
+    });
+
+    //声音控制条鼠标移上、移开事件
+    _AUDIO_CONTROL_WRAPPER_.find('.volume-progress-bar').hover(function () {
+        $(this).show();
+    }, function () {
+        $(this).hide();
+    });
+
+    _AUDIO_CONTROL_BARS_.find('.play-bar').click(function () {
+        var _this = $(this);
+        var _this_i = _this.find('i');
+
+        //开始播放
+        if (_this_i.hasClass('icon-play-circle')) {
+            _this_i.removeClass('icon-play-circle').removeClass('icon-large').addClass('icon-pause');
+            sound.play();
+            console.info(sound)
+        } else { //暂停播放
+            _this_i.removeClass('icon-pause').addClass('icon-play-circle').addClass('icon-large');
+            sound.pause();
+        }
+    });
+</script>
+
+<script src="soundmanagerv297a-20150601/script/soundmanager2.js"></script>
+<script>
+    var sound;
+    //控制台事件
+    soundManager.setup({
+        url: 'soundmanagerv297a-20150601/swf/',
+        flashVersion: 9, // optional: shiny features (default = 8)
+        //			pan:80,
+        // optional: ignore Flash where possible, use 100% HTML5 mode
+        // preferFlash: false,
+        onready: function () {
+            sound = soundManager.createSound({
+                id: 'sound',
+                url: 'sszj_bd.mp4',
+                autoPlay: false, //same as default
+                autoLoad: true,
+                volume: 10,
+                onplay: function () {
+                    console.info("==================================" + sound.duration);
+                },
+                whileplaying: function () {
+                    console.info('sound ' + this.id + ' playing, ' + this.position + ' of ' + this.duration);
+                },
+                onload: function () {
+                    $('#play-progress').data('sliderMax', 2000);
+
+                    initAudioControl();
+                    //						console.info('_PLAY_PROGRESS_SLIDER_:'+_PLAY_PROGRESS_SLIDER_)
+                    //						console.info(_PLAY_PROGRESS_SLIDER_);
+                    //						_PLAY_PROGRESS_SLIDER_.max = 22222;
+                    //						slider.data('slider-max', sound.duration);
+                    //console.info("play-progress======" + $('#play-progress').data('slider-max'))
+
+                    var timeTotalCount_h = parseInt((sound.duration / 1000 / 60 / 60) + "");
+                    if (timeTotalCount_h) {
+                        if (timeTotalCount_h < 10) {
+                            timeTotalCount_h = '0' + timeTotalCount_h + ":"
+                        }
+                    } else {
+                        timeTotalCount_h = '';
+                    }
+                    var timeTotalCount_m = parseInt((sound.duration / 1000 / 60) + "");
+                    if (timeTotalCount_m) {
+                        console.info(timeTotalCount_m);
+                        if (timeTotalCount_m < 10) {
+                            timeTotalCount_m = '0' + timeTotalCount_m + ":"
+                        }
+                    } else {
+                        timeTotalCount_m = '00:';
+                    }
+                    var timeTotalCount_s = parseInt((sound.duration / 1000 % 60) + '');
+                    if (timeTotalCount_s) {
+                        if (timeTotalCount_s < 10) {
+                            timeTotalCount_s = '0' + timeTotalCount_s;
+                        }
+                    } else {
+                        timeTotalCount_s = '00';
+                    }
+                    var timeTotalCount = timeTotalCount_h + timeTotalCount_m + timeTotalCount_s;
+
+                    _AUDIO_CONTROL_WRAPPER_.find('.top-wrapper .time-and-play-wrapper .time-total').html(timeTotalCount);
+                    //						audio-control-wrapper top-wrapper time-and-play-wrapper  cur-time time-total
+
+                }
+            });
+
+        },
+        ontimeout: function (status) {
+            if (!status.success) {
+                alert('The status is ' + status.success + ', the error type is ' + status.error.type);
+            }
+        }
+    });
+</script>
+<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="bootstrap-slider-7.1.1/js/bootstrap-slider.min.js"></script>
+
+</html>
