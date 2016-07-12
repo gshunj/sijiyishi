@@ -13,10 +13,7 @@
     </script>
 
     <style>
-        #play-progress-slider-id .slider-selection {
-            background: #BABABA;
-            /*height: 3px;*/
-        }
+
 
         #play-progress-slider-id .slider-track {
             height: 3px;
@@ -28,6 +25,11 @@
         }
 
         #play-progress-slider-id .slider-track-high {
+            /*height: 3px;*/
+        }
+
+        #play-progress-slider-id .slider-selection {
+            background: #BABABA;
             /*height: 3px;*/
         }
 
@@ -54,11 +56,18 @@
 <div class="audio-control-wrapper"
      style="height: 70px;width: 700px; border: 1px solid rgba(0,0,0,0.1); margin-top: 200px;margin-left: 100px;">
     <div class="top-wrapper"
-         style="font-size: 13px;color: rgba(0,0,0,0.3); position: absolute;width:680px;margin-top: 10px;margin-left: 10px;">
+         style="font-size: 13px;color: rgba(0,0,0,0.3); position: absolute;width:680px; margin-top: 10px;margin-left: 10px;">
         <div class="title" style="float: left;color: rgba(0,0,0,0.7);">旧年华67 《大鱼海棠》 赴你十二年之约</div>
         <div class="time-and-play-wrapper" style="float: right;"><span class="cur-time">00:00</span>/<span
-                class="time-total"></span><span class="play-total"><i class="icon-play">3333</i></span></div>
+                class="time-total"></span><span class="play-total"> <i class="icon-play">3333</i></span></div>
         <div style="clear: both;"></div>
+    </div>
+    <div class="load-progress-wrapper"
+         style="width: 620px;height:1px;position: absolute;margin-top: 33px;margin-left: 40px;">
+        <div class="no-load-progress"
+             style="width: 620px;height:1px;background-color: rgba(0,0,0,0.1) ;position: absolute;"></div>
+        <div class="loaded-progress"
+             style="height:1px;background-color: rgba(0,0,0,0.3) ;position: absolute;"></div>
     </div>
     <div class="audio-control-bars"
          style=" width:680px;  margin-top: 40px; margin-left: 10px; height: 25px;position: absolute;">
@@ -68,20 +77,17 @@
 
         <div style="float: left;width: 620px;margin-left: 10px;">
             <input style="width: 100%;height: 3px;" id="play-progress" data-slider-id='play-progress-slider-id'
-                   type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="0"
-                   data-slider-tooltip="hide"/>
+                   type="text"/>
         </div>
 
-        <div class="volume-bar" style="float: right;margin-right:10;width: 20px;margin-top: -3px;">
+        <div class="volume-bar" style="float: right;margin-right:0px;width: 20px;margin-top: -3px;">
             <a href="javascript:;"><i class="icon-volume-up icon-large"></i></a>
         </div>
         <div style="clear: both;"></div>
     </div>
 
     <div class="volume-progress-bar hid" style="height: 100px;position: absolute;margin-top: -62px;margin-left: 670px;">
-        <input style="" id="volume-progress-bar" data-slider-id='volume-progress-bar-slider-id' type="text"
-               data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="10"
-               data-slider-tooltip="hide" data-slider-orientation="vertical"/>
+        <input style="" id="volume-progress-bar" data-slider-id='volume-progress-bar-slider-id' type="text"/>
     </div>
 
 </div>
@@ -89,31 +95,42 @@
 <div style="display: none;" id="sound"></div>
 </body>
 
+<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="bootstrap-slider-7.1.1/js/bootstrap-slider.js"></script>
 <!--//空间js-->
 <script>
     var _PLAY_PROGRESS_SLIDER_;
     var _VOLUME_PROGRESS_BAR_;
 
-    function initAudioControl() {
-        _PLAY_PROGRESS_SLIDER_ = $('#play-progress').slider({
-            formatter: function (value) {
-                console.info("value1===" + value)
-                return 'Current value: ' + value;
-            }
-        });
+
+    function initAudioControl(options) {
+        _PLAY_PROGRESS_SLIDER_ = $('#play-progress').slider(options);
         _VOLUME_PROGRESS_BAR_ = $('#volume-progress-bar').slider({
-            formatter: function (value) {
-                console.info("value2===" + value)
-                return 'Current value: ' + value;
-            },
-            reversed: true
+            max: 100, min: 0, step: 1, value: 100, tooltip: 'hide', orientation: "vertical", reversed: true
         });
-//			_PLAY_PROGRESS_SLIDER_
-        console.info($(_PLAY_PROGRESS_SLIDER_))
+
+        _PLAY_PROGRESS_SLIDER_.on('slideStop', function (slideEvt) {
+            sound.setPosition(slideEvt.value)
+        });
+
+        _VOLUME_PROGRESS_BAR_.on('slideStop', function (slideEvt) {
+            var _this_i = _AUDIO_CONTROL_BARS_.find('.volume-bar').find('i');
+
+            if (slideEvt.value == 0) {
+                _this_i.removeClass('icon-volume-up').removeClass('icon-volume-down').addClass('icon-volume-off');
+            } else if (slideEvt.value <= 50) {
+                _this_i.removeClass('icon-volume-up').removeClass('icon-volume-off').addClass('icon-volume-down');
+            } else {
+                _this_i.removeClass('icon-volume-down').removeClass('icon-volume-off').addClass('icon-volume-up');
+            }
+            sound.setVolume(slideEvt.value);
+        });
     }
 
 
     var _AUDIO_CONTROL_WRAPPER_ = $('.audio-control-wrapper');
+    var _NO_LOAD_PROGRESS_ = _AUDIO_CONTROL_WRAPPER_.find('.load-progress-wrapper .no-load-progress');
+    var _LOADED_PROGRESS_ = _AUDIO_CONTROL_WRAPPER_.find('.load-progress-wrapper .loaded-progress');
 
     //控制台工具
     var _AUDIO_CONTROL_BARS_ = _AUDIO_CONTROL_WRAPPER_.find('.audio-control-bars');
@@ -160,6 +177,7 @@
 </script>
 
 <script src="soundmanagerv297a-20150601/script/soundmanager2.js"></script>
+
 <script>
     var sound;
     //控制台事件
@@ -172,56 +190,34 @@
         onready: function () {
             sound = soundManager.createSound({
                 id: 'sound',
-                url: 'sszj_bd.mp4',
+                url: 'http://221.178.241.210:8666/file/4e1b3bf0d51221a6cc2309b2740f9201?sdk_id=258&task_id=2060078246298452178&business_id=4097&bkt=p-f08e9a4d9f4b31a18fa1fd7cf18bc20f&xcode=e9555fbd7690f19705235ec6a8c3d4d6290918f5ce09cd9e0b2977702d3e6764&fid=3660849965-250528-610208476667898&time=1468336484&sign=FDTAXGERLBH-DCb740ccc5511e5e8fedcff06b081203-XzadmHMm41OSTuaTm8LnX%2Bqkzi0%3D&to=sd&fm=Nan,B,M,mn&sta_dx=23&sta_cs=352&sta_ft=mp3&sta_ct=7&fm2=Nanjing,B,M,mn&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=14004e1b3bf0d51221a6cc2309b2740f920158fe1c2c00000172fa6c&sl=76480590&expires=8h&rt=pr&r=967964140&mlogid=4498678687768408918&vuk=3660849965&vbdid=3719825844&fin=%E6%B2%B3%E5%8D%97%E5%9D%A0%E5%AD%90%E5%A4%A7%E6%98%8E%E5%A5%87%E5%86%A4%E5%AE%89%E6%99%AF%E9%BE%99%E9%99%8D%E9%A6%99%E5%8C%85%E5%85%AC%E9%99%8D%E5%A6%96%E7%AD%8960%E9%A6%96MP3%E6%89%93%E5%8C%85%E4%B8%8B%E8%BD%BD%E8%81%94%E7%B3%BBQ%20Q%202398873325.mp3&fn=%E6%B2%B3%E5%8D%97%E5%9D%A0%E5%AD%90%E5%A4%A7%E6%98%8E%E5%A5%87%E5%86%A4%E5%AE%89%E6%99%AF%E9%BE%99%E9%99%8D%E9%A6%99%E5%8C%85%E5%85%AC%E9%99%8D%E5%A6%96%E7%AD%8960%E9%A6%96MP3%E6%89%93%E5%8C%85%E4%B8%8B%E8%BD%BD%E8%81%94%E7%B3%BBQ%20Q%202398873325.mp3&slt=pm&uta=0&rtype=1&iv=0&isw=0&dp-logid=4498678687768408918&dp-callid=0.1.1&sdk_id=258',
                 autoPlay: false, //same as default
                 autoLoad: true,
-                volume: 10,
+                volume: 100,
                 onplay: function () {
-                    console.info("==================================" + sound.duration);
                 },
                 whileplaying: function () {
-                    console.info('sound ' + this.id + ' playing, ' + this.position + ' of ' + this.duration);
+                    _PLAY_PROGRESS_SLIDER_.slider('setValue', this.position);
+                    _AUDIO_CONTROL_WRAPPER_.find('.top-wrapper .time-and-play-wrapper .cur-time').html(getShowTime(this.position));
                 },
                 onload: function () {
-                    $('#play-progress').data('sliderMax', 2000);
+                    var options = {max: sound.duration, min: 0, step: 1, value: 0, tooltip: 'hide'};
 
-                    initAudioControl();
-                    //						console.info('_PLAY_PROGRESS_SLIDER_:'+_PLAY_PROGRESS_SLIDER_)
-                    //						console.info(_PLAY_PROGRESS_SLIDER_);
-                    //						_PLAY_PROGRESS_SLIDER_.max = 22222;
-                    //						slider.data('slider-max', sound.duration);
-                    //console.info("play-progress======" + $('#play-progress').data('slider-max'))
+                    initAudioControl(options);
 
-                    var timeTotalCount_h = parseInt((sound.duration / 1000 / 60 / 60) + "");
-                    if (timeTotalCount_h) {
-                        if (timeTotalCount_h < 10) {
-                            timeTotalCount_h = '0' + timeTotalCount_h + ":"
-                        }
-                    } else {
-                        timeTotalCount_h = '';
-                    }
-                    var timeTotalCount_m = parseInt((sound.duration / 1000 / 60) + "");
-                    if (timeTotalCount_m) {
-                        console.info(timeTotalCount_m);
-                        if (timeTotalCount_m < 10) {
-                            timeTotalCount_m = '0' + timeTotalCount_m + ":"
-                        }
-                    } else {
-                        timeTotalCount_m = '00:';
-                    }
-                    var timeTotalCount_s = parseInt((sound.duration / 1000 % 60) + '');
-                    if (timeTotalCount_s) {
-                        if (timeTotalCount_s < 10) {
-                            timeTotalCount_s = '0' + timeTotalCount_s;
-                        }
-                    } else {
-                        timeTotalCount_s = '00';
-                    }
-                    var timeTotalCount = timeTotalCount_h + timeTotalCount_m + timeTotalCount_s;
 
-                    _AUDIO_CONTROL_WRAPPER_.find('.top-wrapper .time-and-play-wrapper .time-total').html(timeTotalCount);
-                    //						audio-control-wrapper top-wrapper time-and-play-wrapper  cur-time time-total
+                    _AUDIO_CONTROL_WRAPPER_.find('.top-wrapper .time-and-play-wrapper .time-total').html(getShowTime(sound.duration));
 
+                }, onfinish: function () {
+                    alert('播放结束')
+                }, whileloading: function () {
+//                    var loadPercent = this.bytesLoaded * this.duration;
+
+                    console.info(_NO_LOAD_PROGRESS_.width() * this.bytesLoaded)
+                    _LOADED_PROGRESS_.width(parseInt(_NO_LOAD_PROGRESS_.width() * this.bytesLoaded));
+
+
+                    console.info(this.bytesLoaded + "=====" + this.bytesTotal + "=====" + this.duration);
                 }
             });
 
@@ -232,8 +228,36 @@
             }
         }
     });
+
+    function getShowTime(millisecond) {
+        var timeTotalCount_h = parseInt((millisecond / 1000 / 60 / 60) + "");
+        if (timeTotalCount_h) {
+            if (timeTotalCount_h < 10) {
+                timeTotalCount_h = '0' + timeTotalCount_h + ":"
+            }
+        } else {
+            timeTotalCount_h = '';
+        }
+        var timeTotalCount_m = parseInt((millisecond / 1000 / 60) + "");
+        if (timeTotalCount_m) {
+            if (timeTotalCount_m < 10) {
+                timeTotalCount_m = '0' + timeTotalCount_m + ":"
+            }
+        } else {
+            timeTotalCount_m = '00:';
+        }
+        var timeTotalCount_s = parseInt((millisecond / 1000 % 60) + '');
+        if (timeTotalCount_s) {
+            if (timeTotalCount_s < 10) {
+                timeTotalCount_s = '0' + timeTotalCount_s;
+            }
+        } else {
+            timeTotalCount_s = '00';
+        }
+        var timeTotalCount = timeTotalCount_h + timeTotalCount_m + timeTotalCount_s;
+        return timeTotalCount;
+    }
 </script>
-<script src="bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="bootstrap-slider-7.1.1/js/bootstrap-slider.min.js"></script>
+
 
 </html>
