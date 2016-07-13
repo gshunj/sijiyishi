@@ -97,7 +97,7 @@ soundManager.setup({
     onready: function () {
         sound = soundManager.createSound({
             id: 'sound',
-            url: 'http://7xwbuh.com1.z0.glb.clouddn.com/audio/20160713/henanzhuizi-daminqiyuan2.mp3',
+            url: 'http://7xwbuh.com1.z0.glb.clouddn.com/audio/20160713/henanzhuizi-daminqiyuan3.mp3',
             autoPlay: false, //same as default
             autoLoad: true,
             volume: 100,
