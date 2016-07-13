@@ -1,0 +1,131 @@
+.audio-control-wrapper {
+	height: 70px;
+	width: 700px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	/*margin-top: 200px;
+	margin-left: 100px;*/
+}
+
+.audio-control-wrapper .top-wrapper {
+	font-size: 13px;
+	color: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	width: 680px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.audio-control-wrapper .top-wrapper .title {
+	float: left;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.audio-control-wrapper .top-wrapper .time-and-play-wrapper {
+	float: right;
+	margin-right: 20px;
+}
+
+.audio-control-wrapper .top-wrapper .time-and-play-wrapper .cur-time {}
+
+.audio-control-wrapper .top-wrapper .time-and-play-wrapper .time-total {}
+
+.audio-control-wrapper .top-wrapper .time-and-play-wrapper .play-total {}
+
+.audio-control-wrapper .load-progress-wrapper {
+	width: 600px;
+	height: 1px;
+	position: absolute;
+	margin-top: 33px;
+	margin-left: 40px;
+}
+
+.audio-control-wrapper .load-progress-wrapper .no-load-progress {
+	width: 600px;
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.1);
+	position: absolute;
+}
+
+.audio-control-wrapper .load-progress-wrapper .loaded-progress {
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.3);
+	position: absolute;
+}
+
+.audio-control-wrapper .audio-control-bars {
+	width: 680px;
+	margin-top: 40px;
+	margin-left: 10px;
+	height: 25px;
+	position: absolute;
+}
+
+.audio-control-wrapper .audio-control-bars .play-bar {
+	float: left;
+	width: 20px;
+	margin-top: -3px;
+}
+
+.audio-control-wrapper .audio-control-bars .play-progress-bar {
+	float: left;
+	width: 600px;
+	margin-left: 10px;
+}
+
+.audio-control-wrapper .audio-control-bars .volume-bar {
+	float: right;
+	margin-right: 20px;
+	width: 20px;
+	margin-top: -3px;
+}
+
+.audio-control-wrapper .volume-progress-bar {
+	height: 100px;
+	position: absolute;
+	margin-top: -62px;
+	margin-left: 670px;
+	display: none;
+}
+
+
+/*==============================================================================*/
+
+
+/*进度条样式*/
+
+#play-progress-slider-id .slider-track {
+	height: 3px;
+}
+
+#play-progress-slider-id .slider-handle {
+	width: 13px;
+	height: 13px;
+	background: rgba(255, 0, 0, 1);
+}
+
+#play-progress-slider-id .slider-track-high {
+	/*height: 3px;*/
+}
+
+#play-progress-slider-id .slider-selection {
+	background: #BABABA;
+	/*height: 3px;*/
+}
+
+#volume-progress-bar-slider-id {
+	height: 100px;
+}
+
+#volume-progress-bar-slider-id .slider-track {
+	width: 3px;
+}
+
+#volume-progress-bar-slider-id .slider-handle {
+	width: 13px;
+	height: 13px;
+	background: rgba(255, 0, 0, 1);
+}
+
+#volume-progress-bar-slider-id .slider-track-high {
+	background: #BABABA;
+}
